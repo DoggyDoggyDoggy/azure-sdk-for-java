@@ -1,18 +1,18 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-package com.azure.data.appconfiguration;
+package com.azure.v2.data.appconfiguration;
 
-import com.azure.core.util.Configuration;
-import com.azure.data.appconfiguration.models.ConfigurationSetting;
-import com.azure.data.appconfiguration.models.SettingSelector;
+import com.azure.v2.data.appconfiguration.models.ConfigurationSetting;
+import com.azure.v2.data.appconfiguration.models.SettingSelector;
+import io.clientcore.core.utils.configuration.Configuration;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-import static com.azure.data.appconfiguration.implementation.Utility.getTagsFilterInString;
+import static com.azure.v2.data.appconfiguration.implementation.Utility.getTagsFilterInString;
 
 /**
  * how to list settings with tags filter.
@@ -32,8 +32,8 @@ public class ListSettingsWithTagsFilterAsync {
 
         // Instantiate a client that will be used to call the service.
         ConfigurationAsyncClient client = new ConfigurationClientBuilder()
-                .connectionString(connectionString)
-                .buildAsyncClient();
+            .connectionString(connectionString)
+            .buildAsyncClient();
 
         Map<String, String> tags = new HashMap<>();
         tags.put("release", "first");
@@ -42,22 +42,22 @@ public class ListSettingsWithTagsFilterAsync {
         tags2.put("release2", "second");
 
         client.setConfigurationSetting(new ConfigurationSetting().setKey("keyForTag1").setValue("value1").setTags(tags))
-                .subscribe(setting -> System.out.printf("Key: %s, Value: %s, Tags: %s%n", setting.getKey(), setting.getValue(), setting.getTags()));
+            .subscribe(setting -> System.out.printf("Key: %s, Value: %s, Tags: %s%n", setting.getKey(), setting.getValue(), setting.getTags()));
         TimeUnit.MILLISECONDS.sleep(1000);
 
         client.setConfigurationSetting(new ConfigurationSetting().setKey("keyForTag2").setValue("value2").setTags(tags2))
-                .subscribe(setting -> System.out.printf("Key: %s, Value: %s, Tags: %s%n", setting.getKey(), setting.getValue(), setting.getTags()));
+            .subscribe(setting -> System.out.printf("Key: %s, Value: %s, Tags: %s%n", setting.getKey(), setting.getValue(), setting.getTags()));
         TimeUnit.MILLISECONDS.sleep(1000);
 
         client.setConfigurationSetting(new ConfigurationSetting().setKey("key3WithoutTag").setValue("value3"))
-                .subscribe(setting -> System.out.printf("Key: %s, Value: %s, Tags: %s%n", setting.getKey(), setting.getValue(), setting.getTags()));
+            .subscribe(setting -> System.out.printf("Key: %s, Value: %s, Tags: %s%n", setting.getKey(), setting.getValue(), setting.getTags()));
         TimeUnit.MILLISECONDS.sleep(1000);
 
         List<String> tagsFilterInString = getTagsFilterInString(tags2);
         System.out.println("List settings with tags filter = " + tagsFilterInString);
         client.listConfigurationSettings(new SettingSelector().setTagsFilter(tagsFilterInString)).subscribe(
-                setting -> System.out.printf("\tKey: %s, Value: %s, Tags: %s%n",
-                        setting.getKey(), setting.getValue(), setting.getTags()));
+            setting -> System.out.printf("\tKey: %s, Value: %s, Tags: %s%n",
+                setting.getKey(), setting.getValue(), setting.getTags()));
         TimeUnit.MILLISECONDS.sleep(4000);
     }
 }
