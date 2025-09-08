@@ -96,6 +96,33 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
         // --- Public API Analysis (New Functionality) ---
         Set<MethodCall> publicApiMethodCalls = analyzePublicApi();
         outputMethodCallsToFile(publicApiMethodCalls, "public-api-method-usage.json");
+
+        Set<MethodCall> uncoveredMethods = findUncoveredMethods(publicApiMethodCalls, goldenImageMethodCalls);
+        outputMethodCallsToFile(uncoveredMethods, "uncovered-api-methods.json");
+    }
+
+    private Set<MethodCall> findUncoveredMethods(Set<MethodCall> publicApiMethods, Set<MethodCall> goldenImageMethods) {
+        getLog().info("Analyzing coverage gap between public API and golden image tests");
+
+        Set<MethodCall> uncoveredMethods = new HashSet<>();
+
+        for (MethodCall publicApiMethod : publicApiMethods) {
+            boolean isCovered = goldenImageMethods.stream()
+                .anyMatch(goldenMethod -> methodsMatch(publicApiMethod, goldenMethod));
+
+            if (!isCovered) {
+                uncoveredMethods.add(publicApiMethod);
+            }
+        }
+
+        getLog().info("Found " + uncoveredMethods.size() + " uncovered API methods");
+        return uncoveredMethods;
+    }
+
+    private boolean methodsMatch(MethodCall method1, MethodCall method2) {
+        return method1.getClassName().equals(method2.getClassName()) &&
+            method1.getMethodName().equals(method2.getMethodName()) &&
+            method1.getSignature().equals(method2.getSignature());
     }
 
     private Set<MethodCall> analyzePublicApi() throws MojoExecutionException {
@@ -382,9 +409,15 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
         try {
             ObjectMapper mapper = new ObjectMapper();
             ObjectNode root = mapper.createObjectNode();
+
             methodCalls.stream()
                 .collect(Collectors.groupingBy(MethodCall::getClassName))
-                .forEach((className, calls) -> {
+                .entrySet().stream()
+                .sorted(java.util.Map.Entry.comparingByKey())
+                .forEach(entry -> {
+                    String className = entry.getKey();
+                    List<MethodCall> calls = entry.getValue();
+
                     ArrayNode methodArray = mapper.createArrayNode();
                     calls.forEach(call -> {
                         ObjectNode methodNode = mapper.createObjectNode();
@@ -395,6 +428,7 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
                     });
                     root.set(className, methodArray);
                 });
+
             File outputFile = new File(baseDir, filename);
             mapper.writerWithDefaultPrettyPrinter().writeValue(outputFile, root);
             getLog().info("Method usage analysis written to: " + outputFile.getAbsolutePath());
