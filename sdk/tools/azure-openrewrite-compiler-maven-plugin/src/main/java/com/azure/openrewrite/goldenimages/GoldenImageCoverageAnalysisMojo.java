@@ -116,7 +116,7 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
             "io/clientcore/core");
         pathMappings.put("identity-v2/azure-identity/src/main/java/com/azure/v2/identity",
             "com/azure/v2/identity");
-        pathMappings.put("keyvault-v2/azure-security-keyvault-keys/src/samples/java/com/azure/v2/security/keyvault/keys",
+        pathMappings.put("keyvault-v2/azure-security-keyvault-keys/src/main/java/com/azure/v2/security/keyvault/keys",
             "com/azure/v2/security/keyvault/keys");
         pathMappings.put("keyvault-v2/azure-security-keyvault-administration/src/main/java/com/azure/v2/security/keyvault/administration",
             "com/azure/v2/security/keyvault/administration");
@@ -213,7 +213,9 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
         getLog().info(String.format("TOTAL: %d/%d method calls covered by Golden Images (%.1f%%)",
             totalCoveredMethods, totalPublicMethods, overallCoverage));
         getLog().info("Uncovered methods: " + uncoveredMethods.size());
+        getLog().info("");
         getLog().info("See uncovered-api-methods.json to view the uncovered methods.");
+        getLog().info("");
     }
 
     private Set<MethodCall> findUncoveredMethods(Set<MethodCall> publicApiMethods, Set<MethodCall> goldenImageMethods) {
@@ -247,9 +249,13 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
                 .filter(Files::isRegularFile)
                 .filter(path -> path.toString().endsWith(".java"))
                 .filter(path -> {
-                    boolean isInExcludedFolder = path.toString().contains("/implementation/")
-                        || path.toString().contains("/cryptography/");
-                    return !isInExcludedFolder;
+                    for (Path part : path) {
+                        String partName = part.toString();
+                        if ("implementation".equals(partName) || "cryptography".equals(partName)) {
+                            return false;
+                        }
+                    }
+                    return true;
                 })
                 .collect(Collectors.toList());
 
