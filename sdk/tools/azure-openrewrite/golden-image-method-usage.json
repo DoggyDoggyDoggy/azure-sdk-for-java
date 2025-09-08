@@ -1,0 +1,469 @@
+{
+  "com.azure.json.JsonWriter" : [ {
+    "methodName" : "writeEndObject",
+    "signature" : "writeEndObject()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample36/v2/ComplexConfiguration.java"
+  }, {
+    "methodName" : "writeIntField",
+    "signature" : "writeIntField(java.lang.String,int)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample36/v2/ComplexConfiguration.java"
+  }, {
+    "methodName" : "writeStringField",
+    "signature" : "writeStringField(java.lang.String,java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample36/v2/ComplexConfiguration.java"
+  }, {
+    "methodName" : "writeStartObject",
+    "signature" : "writeStartObject()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample36/v2/ComplexConfiguration.java"
+  } ],
+  "java.util.Arrays" : [ {
+    "methodName" : "asList",
+    "signature" : "asList(T[])",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample13/v2/FeatureFlagConfigurationSettingSample.java"
+  } ],
+  "com.azure.v2.identity.ClientCertificateCredentialBuilder" : [ {
+    "methodName" : "clientCertificate",
+    "signature" : "clientCertificate(java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/ClientCertificateCredentialSample/v2/ClientCertificateCredentialSample.java"
+  }, {
+    "methodName" : "clientCertificate",
+    "signature" : "clientCertificate(java.io.InputStream)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/ClientCertificateCredentialSample/v2/ClientCertificateCredentialSample.java"
+  }, {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/ClientCertificateCredentialSample/v2/ClientCertificateCredentialSample.java"
+  } ],
+  "java.util.Base64.Encoder" : [ {
+    "methodName" : "encodeToString",
+    "signature" : "encodeToString(byte[])",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/HttpBasicAuthExample/v2/HttpBasicAuthExample.java"
+  } ],
+  "java.net.URL" : [ {
+    "methodName" : "toURI",
+    "signature" : "toURI()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/HttpRequestApis/v2/HttpRequestApis.java"
+  } ],
+  "io.clientcore.core.http.models.HttpHeaderName" : [ {
+    "methodName" : "fromString",
+    "signature" : "fromString(java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/HttpPutExample/v2/HttpPutExample.java"
+  } ],
+  "io.clientcore.core.credentials.KeyCredential" : [ {
+    "methodName" : "update",
+    "signature" : "update(java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/sample38/v2/KeyCredentialApis.java"
+  } ],
+  "com.azure.v2.identity.WorkloadIdentityCredentialBuilder" : [ {
+    "methodName" : "tokenFilePath",
+    "signature" : "tokenFilePath(java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/WorkloadIdentityCredentialSample/v2/WorkloadIdentityCredentialSample.java"
+  }, {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/WorkloadIdentityCredentialSample/v2/WorkloadIdentityCredentialSample.java"
+  } ],
+  "java.lang.Iterable" : [ {
+    "methodName" : "forEach",
+    "signature" : "forEach(java.util.function.Consumer<? super T>)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample4/v2/ConditionalRequestForSettingsPagination.java"
+  } ],
+  "com.azure.v2.identity.AzureDeveloperCliCredentialBuilder" : [ {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/AzureDeveloperCliCredentialSample/v2/AzureDeveloperCliCredentialSample.java"
+  } ],
+  "io.clientcore.core.credentials.oauth.AccessTokenType" : [ {
+    "methodName" : "fromString",
+    "signature" : "fromString(java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/AccessTokenApis/v2/AccessTokenApis.java"
+  } ],
+  "io.clientcore.core.http.models.RequestContext.Builder" : [ {
+    "methodName" : "addQueryParam",
+    "signature" : "addQueryParam(java.lang.String,java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/RequestOptionsUse/v2/RequestOptionsUse.java"
+  }, {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/RequestOptionsUse/v2/RequestOptionsUse.java"
+  } ],
+  "com.azure.v2.identity.InteractiveBrowserCredentialBuilder" : [ {
+    "methodName" : "redirectUrl",
+    "signature" : "redirectUrl(java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/ChainedTokenCredentialSample/v2/ChainedTokenCredentialSample.java"
+  }, {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/ChainedTokenCredentialSample/v2/ChainedTokenCredentialSample.java"
+  }, {
+    "methodName" : "clientId",
+    "signature" : "clientId(java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/ChainedTokenCredentialSample/v2/ChainedTokenCredentialSample.java"
+  } ],
+  "com.azure.v2.identity.DeviceCodeCredentialBuilder" : [ {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/DeviceCodeCredentialSample/v2/DeviceCodeCredentialSample.java"
+  } ],
+  "io.clientcore.core.http.paging.PagedIterable" : [ {
+    "methodName" : "streamByPage",
+    "signature" : "streamByPage()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample4/v2/ConditionalRequestForSettingsPagination.java"
+  }, {
+    "methodName" : "iterableByPage",
+    "signature" : "iterableByPage()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample4/v2/ConditionalRequestForSettingsPagination.java"
+  } ],
+  "java.time.Duration" : [ {
+    "methodName" : "between",
+    "signature" : "between(java.time.temporal.Temporal,java.time.temporal.Temporal)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/AccessTokenApis/v2/AccessTokenApis.java"
+  } ],
+  "java.util.Map" : [ {
+    "methodName" : "put",
+    "signature" : "put(K,V)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample30/v2/ReadRevisionHistoryWIthTagsFilter.java"
+  }, {
+    "methodName" : "forEach",
+    "signature" : "forEach(java.util.function.BiConsumer<? super K, ? super V>)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample13/v2/FeatureFlagConfigurationSettingSample.java"
+  } ],
+  "com.azure.v2.data.appconfiguration.models.ComplexConfiguration" : [ {
+    "methodName" : "name",
+    "signature" : "name()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample36/v2/ComplexConfiguration.java"
+  }, {
+    "methodName" : "endpointUri",
+    "signature" : "endpointUri(java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample36/v2/ComplexConfiguration.java"
+  }, {
+    "methodName" : "endpointUri",
+    "signature" : "endpointUri()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample36/v2/ComplexConfiguration.java"
+  }, {
+    "methodName" : "numberOfInstances",
+    "signature" : "numberOfInstances(int)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample36/v2/ComplexConfiguration.java"
+  }, {
+    "methodName" : "name",
+    "signature" : "name(java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample36/v2/ComplexConfiguration.java"
+  }, {
+    "methodName" : "numberOfInstances",
+    "signature" : "numberOfInstances()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample36/v2/ComplexConfiguration.java"
+  } ],
+  "com.azure.v2.identity.CredentialBuilderBase" : [ {
+    "methodName" : "tenantId",
+    "signature" : "tenantId(java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/OboCredentialSample/v2/OboCredentialSample.java"
+  }, {
+    "methodName" : "clientId",
+    "signature" : "clientId(java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/OboCredentialSample/v2/OboCredentialSample.java"
+  } ],
+  "java.net.URI" : [ {
+    "methodName" : "toURL",
+    "signature" : "toURL()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/HttpRequestApis/v2/HttpRequestApis.java"
+  } ],
+  "com.azure.v2.identity.AzureCliCredentialBuilder" : [ {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/AzureCliCredentialSample/v2/AzureCliCredentialSample.java"
+  } ],
+  "com.azure.v2.core.credentials.AzureSasCredential" : [ {
+    "methodName" : "update",
+    "signature" : "update(java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/AzureSasCredentialApis/v2/AzureSasCredentialApis.java"
+  } ],
+  "com.azure.v2.data.appconfiguration.FeatureFlagConfigurationSettingSample" : [ {
+    "methodName" : "printFeatureFlagSetting",
+    "signature" : "printFeatureFlagSetting(com.azure.v2.data.appconfiguration.models.FeatureFlagConfigurationSetting)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample13/v2/FeatureFlagConfigurationSettingSample.java"
+  } ],
+  "com.azure.v2.identity.ChainedTokenCredentialBuilder" : [ {
+    "methodName" : "addLast",
+    "signature" : "addLast(com.azure.v2.core.credentials.TokenCredential)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/ChainedTokenCredentialSample/v2/ChainedTokenCredentialSample.java"
+  }, {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/ChainedTokenCredentialSample/v2/ChainedTokenCredentialSample.java"
+  } ],
+  "java.io.PrintStream" : [ {
+    "methodName" : "printf",
+    "signature" : "printf(java.lang.String,java.lang.Object[])",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample2/v2/ConditionalRequest.java"
+  }, {
+    "methodName" : "println",
+    "signature" : "println(java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample4/v2/ConditionalRequestForSettingsPagination.java"
+  } ],
+  "com.azure.v2.identity.AzurePowerShellCredentialBuilder" : [ {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/AzurePowershellCredentialSample/v2/AzurePowershellCredentialSample.java"
+  } ],
+  "com.azure.v2.identity.AzurePipelinesCredentialBuilder" : [ {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/AzurePipelinesCredentialSample/v2/AzurePipelinesCredentialSample.java"
+  }, {
+    "methodName" : "systemAccessToken",
+    "signature" : "systemAccessToken(java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/AzurePipelinesCredentialSample/v2/AzurePipelinesCredentialSample.java"
+  }, {
+    "methodName" : "serviceConnectionId",
+    "signature" : "serviceConnectionId(java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/AzurePipelinesCredentialSample/v2/AzurePipelinesCredentialSample.java"
+  } ],
+  "io.clientcore.core.models.binarydata.BinaryData" : [ {
+    "methodName" : "fromStream",
+    "signature" : "fromStream(java.io.InputStream)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/BinaryDataApis/v2/BinaryDataApis.java"
+  }, {
+    "methodName" : "fromStream",
+    "signature" : "fromStream(java.io.InputStream,java.lang.Long)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/BinaryDataApis/v2/BinaryDataApis.java"
+  }, {
+    "methodName" : "fromBytes",
+    "signature" : "fromBytes(byte[])",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/BinaryDataApis/v2/BinaryDataApis.java"
+  }, {
+    "methodName" : "fromFile",
+    "signature" : "fromFile(java.nio.file.Path,java.lang.Long,java.lang.Long,int)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/BinaryDataApis/v2/BinaryDataApis.java"
+  }, {
+    "methodName" : "fromFile",
+    "signature" : "fromFile(java.nio.file.Path,java.lang.Long,java.lang.Long)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/BinaryDataApis/v2/BinaryDataApis.java"
+  }, {
+    "methodName" : "fromObject",
+    "signature" : "fromObject(java.lang.Object)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/HttpResponseApis/v2/HttpResponseApis.java"
+  }, {
+    "methodName" : "writeTo",
+    "signature" : "writeTo(java.io.OutputStream)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/BinaryDataApis/v2/BinaryDataApis.java"
+  }, {
+    "methodName" : "fromString",
+    "signature" : "fromString(java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/HttpPutExample/v2/HttpPutExample.java"
+  }, {
+    "methodName" : "writeTo",
+    "signature" : "writeTo(java.nio.channels.WritableByteChannel)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/BinaryDataApis/v2/BinaryDataApis.java"
+  }, {
+    "methodName" : "toObject",
+    "signature" : "toObject(java.lang.reflect.Type)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/BinaryDataApis/v2/BinaryDataApis.java"
+  }, {
+    "methodName" : "toReplayableBinaryData",
+    "signature" : "toReplayableBinaryData()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/BinaryDataApis/v2/BinaryDataApis.java"
+  }, {
+    "methodName" : "toStream",
+    "signature" : "toStream()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/BinaryDataApis/v2/BinaryDataApis.java"
+  }, {
+    "methodName" : "toBytes",
+    "signature" : "toBytes()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/BinaryDataApis/v2/BinaryDataApis.java"
+  }, {
+    "methodName" : "fromFile",
+    "signature" : "fromFile(java.nio.file.Path)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/BinaryDataApis/v2/BinaryDataApis.java"
+  }, {
+    "methodName" : "toByteBuffer",
+    "signature" : "toByteBuffer()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/BinaryDataApis/v2/BinaryDataApis.java"
+  } ],
+  "io.clientcore.core.http.models.RequestContext" : [ {
+    "methodName" : "builder",
+    "signature" : "builder()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/RequestOptionsUse/v2/RequestOptionsUse.java"
+  }, {
+    "methodName" : "toBuilder",
+    "signature" : "toBuilder()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/RequestOptionsUse/v2/RequestOptionsUse.java"
+  }, {
+    "methodName" : "none",
+    "signature" : "none()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample2/v2/ConditionalRequest.java"
+  } ],
+  "java.util.Collection" : [ {
+    "methodName" : "stream",
+    "signature" : "stream()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample4/v2/ConditionalRequestForSettingsPagination.java"
+  } ],
+  "com.azure.v2.identity.EnvironmentCredentialBuilder" : [ {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/EnvironmentCredentialSample/v2/EnvironmentCredentialSample.java"
+  } ],
+  "com.azure.v2.identity.AuthorizationCodeCredentialBuilder" : [ {
+    "methodName" : "authorizationCode",
+    "signature" : "authorizationCode(java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/AuthorizationCodeCredentialsSample/v2/AuthorizationCodeCredentialsSample.java"
+  }, {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/AuthorizationCodeCredentialsSample/v2/AuthorizationCodeCredentialsSample.java"
+  }, {
+    "methodName" : "redirectUrl",
+    "signature" : "redirectUrl(java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/AuthorizationCodeCredentialsSample/v2/AuthorizationCodeCredentialsSample.java"
+  } ],
+  "com.azure.v2.identity.ClientAssertionCredentialBuilder" : [ {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/ClientAssertionCredentialSample/v2/ClientAssertionCredentialSample.java"
+  }, {
+    "methodName" : "clientAssertion",
+    "signature" : "clientAssertion(java.util.function.Supplier<java.lang.String>)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/ClientAssertionCredentialSample/v2/ClientAssertionCredentialSample.java"
+  } ],
+  "com.azure.v2.data.appconfiguration.SecretReferenceConfigurationSettingSample" : [ {
+    "methodName" : "printSecretReferenceConfigurationSetting",
+    "signature" : "printSecretReferenceConfigurationSetting(com.azure.v2.data.appconfiguration.models.SecretReferenceConfigurationSetting)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample32/v2/SecretReferenceConfigurationSettingSample.java"
+  } ],
+  "com.azure.v2.data.appconfiguration.ConfigurationClientBuilder" : [ {
+    "methodName" : "endpoint",
+    "signature" : "endpoint(java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample1/v2/AadAuthentication.java"
+  }, {
+    "methodName" : "connectionString",
+    "signature" : "connectionString(java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample2/v2/ConditionalRequest.java"
+  }, {
+    "methodName" : "credential",
+    "signature" : "credential(com.azure.v2.core.credentials.TokenCredential)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample1/v2/AadAuthentication.java"
+  }, {
+    "methodName" : "buildClient",
+    "signature" : "buildClient()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample2/v2/ConditionalRequest.java"
+  } ],
+  "com.azure.v2.identity.ManagedIdentityCredentialBuilder" : [ {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/ChainedTokenCredentialSample/v2/ChainedTokenCredentialSample.java"
+  }, {
+    "methodName" : "clientId",
+    "signature" : "clientId(java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/ManagedIdentityCredentialSample/v2/ManagedIdentityCredentialSample.java"
+  } ],
+  "java.util.stream.Collectors" : [ {
+    "methodName" : "toList",
+    "signature" : "toList()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample4/v2/ConditionalRequestForSettingsPagination.java"
+  } ],
+  "com.azure.v2.data.appconfiguration.WatchFeature" : [ {
+    "methodName" : "refresh",
+    "signature" : "refresh(com.azure.v2.data.appconfiguration.ConfigurationClient,java.util.List<com.azure.v2.data.appconfiguration.models.ConfigurationSetting>)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample34/v2/WatchFeature.java"
+  } ],
+  "com.azure.v2.identity.DefaultAzureCredentialBuilder" : [ {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample1/v2/AadAuthentication.java"
+  }, {
+    "methodName" : "managedIdentityClientId",
+    "signature" : "managedIdentityClientId(java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/DefaultAzureCredentialSample/v2/DefaultAzureCredentialSample.java"
+  } ],
+  "java.time.OffsetDateTime" : [ {
+    "methodName" : "now",
+    "signature" : "now()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/AccessTokenApis/v2/AccessTokenApis.java"
+  } ],
+  "java.util.stream.Stream" : [ {
+    "methodName" : "filter",
+    "signature" : "filter(java.util.function.Predicate<? super T>)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample34/v2/WatchFeature.java"
+  }, {
+    "methodName" : "collect",
+    "signature" : "collect(java.util.stream.Collector<? super T, A, R>)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample4/v2/ConditionalRequestForSettingsPagination.java"
+  }, {
+    "methodName" : "map",
+    "signature" : "map(java.util.function.Function<? super T, ? extends R>)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample4/v2/ConditionalRequestForSettingsPagination.java"
+  } ],
+  "com.azure.json.JsonReader" : [ {
+    "methodName" : "readObject",
+    "signature" : "readObject(com.azure.json.ReadValueCallback<com.azure.json.JsonReader, T>)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample36/v2/ComplexConfiguration.java"
+  }, {
+    "methodName" : "nextToken",
+    "signature" : "nextToken()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample36/v2/ComplexConfiguration.java"
+  }, {
+    "methodName" : "skipChildren",
+    "signature" : "skipChildren()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample36/v2/ComplexConfiguration.java"
+  } ],
+  "io.clientcore.core.credentials.NamedKeyCredential" : [ {
+    "methodName" : "update",
+    "signature" : "update(java.lang.String,java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-core/AzureNamedKeyCredentialApis/v2/AzureNamedKeyCredentialApis.java"
+  } ],
+  "com.azure.v2.identity.OnBehalfOfCredentialBuilder" : [ {
+    "methodName" : "clientSecret",
+    "signature" : "clientSecret(java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/OboCredentialSample/v2/OboCredentialSample.java"
+  }, {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/OboCredentialSample/v2/OboCredentialSample.java"
+  }, {
+    "methodName" : "userAssertion",
+    "signature" : "userAssertion(java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/OboCredentialSample/v2/OboCredentialSample.java"
+  } ],
+  "com.azure.v2.data.appconfiguration.models.FeatureFlagFilter" : [ {
+    "methodName" : "addParameter",
+    "signature" : "addParameter(java.lang.String,java.lang.Object)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample13/v2/FeatureFlagConfigurationSettingSample.java"
+  } ],
+  "com.azure.v2.identity.ClientSecretCredentialBuilder" : [ {
+    "methodName" : "clientSecret",
+    "signature" : "clientSecret(java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/ClientSecretCredentialSample/v2/ClientSecretCredentialSample.java"
+  }, {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-identity/ClientSecretCredentialSample/v2/ClientSecretCredentialSample.java"
+  } ],
+  "com.azure.v2.data.appconfiguration.ConfigurationClient" : [ {
+    "methodName" : "addConfigurationSetting",
+    "signature" : "addConfigurationSetting(java.lang.String,java.lang.String,java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample34/v2/WatchFeature.java"
+  }, {
+    "methodName" : "deleteConfigurationSetting",
+    "signature" : "deleteConfigurationSetting(com.azure.v2.data.appconfiguration.models.ConfigurationSetting)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample13/v2/FeatureFlagConfigurationSettingSample.java"
+  }, {
+    "methodName" : "listRevisions",
+    "signature" : "listRevisions(com.azure.v2.data.appconfiguration.models.SettingSelector)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample30/v2/ReadRevisionHistoryWIthTagsFilter.java"
+  }, {
+    "methodName" : "deleteConfigurationSettingWithResponse",
+    "signature" : "deleteConfigurationSettingWithResponse(com.azure.v2.data.appconfiguration.models.ConfigurationSetting,boolean,io.clientcore.core.http.models.RequestContext)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample2/v2/ConditionalRequest.java"
+  }, {
+    "methodName" : "listLabels",
+    "signature" : "listLabels(com.azure.v2.data.appconfiguration.models.SettingLabelSelector,io.clientcore.core.http.models.RequestContext)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample17/v2/ListLabels.java"
+  }, {
+    "methodName" : "listConfigurationSettings",
+    "signature" : "listConfigurationSettings(com.azure.v2.data.appconfiguration.models.SettingSelector)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample4/v2/ConditionalRequestForSettingsPagination.java"
+  }, {
+    "methodName" : "deleteConfigurationSetting",
+    "signature" : "deleteConfigurationSetting(java.lang.String,java.lang.String)",
+    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/tools/azure-openrewrite/src/test/resources/migrationExamples/azure-data-appconfiguration/sample15/v2/HelloWorld.java"
+  } ]
+}
