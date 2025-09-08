@@ -1,18 +1,4 @@
 {
-  "com.azure.v2.core.credentials.AzureSasCredential" : [ {
-    "methodName" : "getSignature",
-    "signature" : "getSignature()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/core-v2/azure-core/src/main/java/com/azure/v2/core/credentials/AzureSasCredential.java"
-  }, {
-    "methodName" : "update",
-    "signature" : "update(java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/core-v2/azure-core/src/main/java/com/azure/v2/core/credentials/AzureSasCredential.java"
-  } ],
-  "com.azure.v2.core.credentials.TokenCredential" : [ {
-    "methodName" : "getToken",
-    "signature" : "getToken(com.azure.v2.core.credentials.TokenRequestContext)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/core-v2/azure-core/src/main/java/com/azure/v2/core/credentials/TokenCredential.java"
-  } ],
   "com.azure.v2.core.credentials.TokenRequestContext" : [ {
     "methodName" : "setTenantId",
     "signature" : "setTenantId(java.lang.String)",
@@ -793,14 +779,6 @@
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/AzureAppConfigurationClientBuilder.java"
   } ],
   "com.azure.v2.data.appconfiguration.ConfigurationClient" : [ {
-    "methodName" : "getConfigurationSetting",
-    "signature" : "getConfigurationSetting(java.lang.String,java.lang.String,java.time.OffsetDateTime)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClient.java"
-  }, {
-    "methodName" : "getConfigurationSetting",
-    "signature" : "getConfigurationSetting(java.lang.String,java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClient.java"
-  }, {
     "methodName" : "addConfigurationSettingWithResponse",
     "signature" : "addConfigurationSettingWithResponse(com.azure.v2.data.appconfiguration.models.ConfigurationSetting,io.clientcore.core.http.models.RequestContext)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClient.java"
@@ -809,24 +787,8 @@
     "signature" : "listLabels(com.azure.v2.data.appconfiguration.models.SettingLabelSelector)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClient.java"
   }, {
-    "methodName" : "getConfigurationSetting",
-    "signature" : "getConfigurationSetting(com.azure.v2.data.appconfiguration.models.ConfigurationSetting)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClient.java"
-  }, {
     "methodName" : "setReadOnlyWithResponse",
     "signature" : "setReadOnlyWithResponse(com.azure.v2.data.appconfiguration.models.ConfigurationSetting,boolean,io.clientcore.core.http.models.RequestContext)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClient.java"
-  }, {
-    "methodName" : "getConfigurationSettingWithResponse",
-    "signature" : "getConfigurationSettingWithResponse(com.azure.v2.data.appconfiguration.models.ConfigurationSetting,java.time.OffsetDateTime,boolean,io.clientcore.core.http.models.RequestContext)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClient.java"
-  }, {
-    "methodName" : "listConfigurationSettings",
-    "signature" : "listConfigurationSettings(com.azure.v2.data.appconfiguration.models.SettingSelector)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClient.java"
-  }, {
-    "methodName" : "setConfigurationSetting",
-    "signature" : "setConfigurationSetting(com.azure.v2.data.appconfiguration.models.ConfigurationSetting)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClient.java"
   }, {
     "methodName" : "listConfigurationSettings",
@@ -837,28 +799,12 @@
     "signature" : "updateSyncToken(java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClient.java"
   }, {
-    "methodName" : "setConfigurationSetting",
-    "signature" : "setConfigurationSetting(java.lang.String,java.lang.String,java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClient.java"
-  }, {
     "methodName" : "setReadOnly",
     "signature" : "setReadOnly(com.azure.v2.data.appconfiguration.models.ConfigurationSetting,boolean)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClient.java"
   }, {
-    "methodName" : "deleteConfigurationSetting",
-    "signature" : "deleteConfigurationSetting(com.azure.v2.data.appconfiguration.models.ConfigurationSetting)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClient.java"
-  }, {
-    "methodName" : "listRevisions",
-    "signature" : "listRevisions(com.azure.v2.data.appconfiguration.models.SettingSelector)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClient.java"
-  }, {
     "methodName" : "getEndpoint",
     "signature" : "getEndpoint()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClient.java"
-  }, {
-    "methodName" : "addConfigurationSetting",
-    "signature" : "addConfigurationSetting(java.lang.String,java.lang.String,java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClient.java"
   }, {
     "methodName" : "addConfigurationSetting",
@@ -869,41 +815,13 @@
     "signature" : "listLabels()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClient.java"
   }, {
-    "methodName" : "listLabels",
-    "signature" : "listLabels(com.azure.v2.data.appconfiguration.models.SettingLabelSelector,io.clientcore.core.http.models.RequestContext)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClient.java"
-  }, {
-    "methodName" : "setConfigurationSettingWithResponse",
-    "signature" : "setConfigurationSettingWithResponse(com.azure.v2.data.appconfiguration.models.ConfigurationSetting,boolean,io.clientcore.core.http.models.RequestContext)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClient.java"
-  }, {
-    "methodName" : "deleteConfigurationSetting",
-    "signature" : "deleteConfigurationSetting(java.lang.String,java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClient.java"
-  }, {
-    "methodName" : "setReadOnly",
-    "signature" : "setReadOnly(java.lang.String,java.lang.String,boolean)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClient.java"
-  }, {
     "methodName" : "listRevisions",
     "signature" : "listRevisions(com.azure.v2.data.appconfiguration.models.SettingSelector,io.clientcore.core.http.models.RequestContext)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClient.java"
-  }, {
-    "methodName" : "deleteConfigurationSettingWithResponse",
-    "signature" : "deleteConfigurationSettingWithResponse(com.azure.v2.data.appconfiguration.models.ConfigurationSetting,boolean,io.clientcore.core.http.models.RequestContext)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClient.java"
   } ],
   "com.azure.v2.data.appconfiguration.ConfigurationClientBuilder" : [ {
-    "methodName" : "buildClient",
-    "signature" : "buildClient()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClientBuilder.java"
-  }, {
     "methodName" : "getDefaultScope",
     "signature" : "getDefaultScope(java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClientBuilder.java"
-  }, {
-    "methodName" : "endpoint",
-    "signature" : "endpoint(java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClientBuilder.java"
   }, {
     "methodName" : "configuration",
@@ -938,20 +856,12 @@
     "signature" : "httpRetryOptions(io.clientcore.core.http.pipeline.HttpRetryOptions)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClientBuilder.java"
   }, {
-    "methodName" : "credential",
-    "signature" : "credential(com.azure.v2.core.credentials.TokenCredential)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClientBuilder.java"
-  }, {
     "methodName" : "audience",
     "signature" : "audience(com.azure.v2.data.appconfiguration.models.ConfigurationAudience)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClientBuilder.java"
   }, {
     "methodName" : "buildInnerClient",
     "signature" : "buildInnerClient()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClientBuilder.java"
-  }, {
-    "methodName" : "connectionString",
-    "signature" : "connectionString(java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/ConfigurationClientBuilder.java"
   }, {
     "methodName" : "httpClient",
@@ -1005,10 +915,6 @@
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/ConfigurationAudience.java"
   } ],
   "com.azure.v2.data.appconfiguration.models.ConfigurationSetting" : [ {
-    "methodName" : "getContentType",
-    "signature" : "getContentType()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/ConfigurationSetting.java"
-  }, {
     "methodName" : "setContentType",
     "signature" : "setContentType(java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/ConfigurationSetting.java"
@@ -1017,28 +923,8 @@
     "signature" : "fromJson(io.clientcore.core.serialization.json.JsonReader)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/ConfigurationSetting.java"
   }, {
-    "methodName" : "setTags",
-    "signature" : "setTags(java.util.Map<java.lang.String, java.lang.String>)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/ConfigurationSetting.java"
-  }, {
     "methodName" : "getLastModified",
     "signature" : "getLastModified()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/ConfigurationSetting.java"
-  }, {
-    "methodName" : "getETag",
-    "signature" : "getETag()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/ConfigurationSetting.java"
-  }, {
-    "methodName" : "getValue",
-    "signature" : "getValue()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/ConfigurationSetting.java"
-  }, {
-    "methodName" : "getKey",
-    "signature" : "getKey()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/ConfigurationSetting.java"
-  }, {
-    "methodName" : "setValue",
-    "signature" : "setValue(java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/ConfigurationSetting.java"
   }, {
     "methodName" : "toJson",
@@ -1057,28 +943,8 @@
     "signature" : "toString()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/ConfigurationSetting.java"
   }, {
-    "methodName" : "getTags",
-    "signature" : "getTags()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/ConfigurationSetting.java"
-  }, {
-    "methodName" : "setLabel",
-    "signature" : "setLabel(java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/ConfigurationSetting.java"
-  }, {
     "methodName" : "setReadOnly",
     "signature" : "setReadOnly(boolean)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/ConfigurationSetting.java"
-  }, {
-    "methodName" : "setKey",
-    "signature" : "setKey(java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/ConfigurationSetting.java"
-  }, {
-    "methodName" : "getLabel",
-    "signature" : "getLabel()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/ConfigurationSetting.java"
-  }, {
-    "methodName" : "setETag",
-    "signature" : "setETag(java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/ConfigurationSetting.java"
   } ],
   "com.azure.v2.data.appconfiguration.models.ConfigurationSettingsFilter" : [ {
@@ -1230,10 +1096,6 @@
     "signature" : "tryWriteConditions(java.lang.Object,io.clientcore.core.serialization.json.JsonWriter)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/FeatureFlagConfigurationSetting.java"
   }, {
-    "methodName" : "getClientFilters",
-    "signature" : "getClientFilters()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/FeatureFlagConfigurationSetting.java"
-  }, {
     "methodName" : "tryParseValue",
     "signature" : "tryParseValue(java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/FeatureFlagConfigurationSetting.java"
@@ -1250,10 +1112,6 @@
     "signature" : "checkValid()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/FeatureFlagConfigurationSetting.java"
   }, {
-    "methodName" : "getFeatureId",
-    "signature" : "getFeatureId()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/FeatureFlagConfigurationSetting.java"
-  }, {
     "methodName" : "setETag",
     "signature" : "setETag(java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/FeatureFlagConfigurationSetting.java"
@@ -1264,10 +1122,6 @@
   }, {
     "methodName" : "setEnabled",
     "signature" : "setEnabled(boolean)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/FeatureFlagConfigurationSetting.java"
-  }, {
-    "methodName" : "getValue",
-    "signature" : "getValue()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/FeatureFlagConfigurationSetting.java"
   }, {
     "methodName" : "setValue",
@@ -1302,10 +1156,6 @@
     "signature" : "setDescription(java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/FeatureFlagConfigurationSetting.java"
   }, {
-    "methodName" : "setClientFilters",
-    "signature" : "setClientFilters(java.util.List<com.azure.v2.data.appconfiguration.models.FeatureFlagFilter>)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/FeatureFlagConfigurationSetting.java"
-  }, {
     "methodName" : "addClientFilter",
     "signature" : "addClientFilter(com.azure.v2.data.appconfiguration.models.FeatureFlagFilter)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/FeatureFlagConfigurationSetting.java"
@@ -1315,20 +1165,8 @@
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/FeatureFlagConfigurationSetting.java"
   } ],
   "com.azure.v2.data.appconfiguration.models.FeatureFlagFilter" : [ {
-    "methodName" : "getName",
-    "signature" : "getName()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/FeatureFlagFilter.java"
-  }, {
-    "methodName" : "addParameter",
-    "signature" : "addParameter(java.lang.String,java.lang.Object)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/FeatureFlagFilter.java"
-  }, {
     "methodName" : "setParameters",
     "signature" : "setParameters(java.util.Map<java.lang.String, java.lang.Object>)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/FeatureFlagFilter.java"
-  }, {
-    "methodName" : "getParameters",
-    "signature" : "getParameters()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/FeatureFlagFilter.java"
   } ],
   "com.azure.v2.data.appconfiguration.models.Key" : [ {
@@ -1472,10 +1310,6 @@
     "signature" : "tryParseValue(java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/SecretReferenceConfigurationSetting.java"
   }, {
-    "methodName" : "getValue",
-    "signature" : "getValue()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/SecretReferenceConfigurationSetting.java"
-  }, {
     "methodName" : "setTags",
     "signature" : "setTags(java.util.Map<java.lang.String, java.lang.String>)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/SecretReferenceConfigurationSetting.java"
@@ -1502,10 +1336,6 @@
   }, {
     "methodName" : "setLabel",
     "signature" : "setLabel(java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/SecretReferenceConfigurationSetting.java"
-  }, {
-    "methodName" : "getSecretId",
-    "signature" : "getSecretId()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/SecretReferenceConfigurationSetting.java"
   }, {
     "methodName" : "setValue",
@@ -1552,10 +1382,6 @@
   }, {
     "methodName" : "fromJson",
     "signature" : "fromJson(io.clientcore.core.serialization.json.JsonReader)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/SettingLabel.java"
-  }, {
-    "methodName" : "getName",
-    "signature" : "getName()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/SettingLabel.java"
   } ],
   "com.azure.v2.data.appconfiguration.models.SettingLabelFields" : [ {
@@ -1608,10 +1434,6 @@
     "signature" : "setFields(java.util.List<com.azure.v2.data.appconfiguration.models.SettingLabelFields>)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/SettingLabelSelector.java"
   }, {
-    "methodName" : "setNameFilter",
-    "signature" : "setNameFilter(java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/SettingLabelSelector.java"
-  }, {
     "methodName" : "getNameFilter",
     "signature" : "getNameFilter()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/SettingLabelSelector.java"
@@ -1649,16 +1471,8 @@
     "signature" : "setLabelFilter(java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/SettingSelector.java"
   }, {
-    "methodName" : "setKeyFilter",
-    "signature" : "setKeyFilter(java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/SettingSelector.java"
-  }, {
     "methodName" : "getLabelFilter",
     "signature" : "getLabelFilter()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/SettingSelector.java"
-  }, {
-    "methodName" : "setMatchConditions",
-    "signature" : "setMatchConditions(java.util.List<io.clientcore.core.http.models.HttpMatchConditions>)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/SettingSelector.java"
   }, {
     "methodName" : "getTagsFilter",
@@ -1667,10 +1481,6 @@
   }, {
     "methodName" : "getAcceptDateTime",
     "signature" : "getAcceptDateTime()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/SettingSelector.java"
-  }, {
-    "methodName" : "setTagsFilter",
-    "signature" : "setTagsFilter(java.util.List<java.lang.String>)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/SettingSelector.java"
   } ],
   "com.azure.v2.data.appconfiguration.models.SnapshotComposition" : [ {
@@ -1796,24 +1606,12 @@
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/AuthorizationCodeCredential.java"
   } ],
   "com.azure.v2.identity.AuthorizationCodeCredentialBuilder" : [ {
-    "methodName" : "redirectUrl",
-    "signature" : "redirectUrl(java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/AuthorizationCodeCredentialBuilder.java"
-  }, {
     "methodName" : "clientSecret",
     "signature" : "clientSecret(java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/AuthorizationCodeCredentialBuilder.java"
   }, {
     "methodName" : "getClientOptions",
     "signature" : "getClientOptions()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/AuthorizationCodeCredentialBuilder.java"
-  }, {
-    "methodName" : "authorizationCode",
-    "signature" : "authorizationCode(java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/AuthorizationCodeCredentialBuilder.java"
-  }, {
-    "methodName" : "build",
-    "signature" : "build()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/AuthorizationCodeCredentialBuilder.java"
   } ],
   "com.azure.v2.identity.AzureAuthorityHosts" : [ {
@@ -1827,10 +1625,6 @@
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/AzureCliCredential.java"
   } ],
   "com.azure.v2.identity.AzureCliCredentialBuilder" : [ {
-    "methodName" : "build",
-    "signature" : "build()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/AzureCliCredentialBuilder.java"
-  }, {
     "methodName" : "getClientOptions",
     "signature" : "getClientOptions()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/AzureCliCredentialBuilder.java"
@@ -1869,10 +1663,6 @@
     "signature" : "tenantId(java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/AzureDeveloperCliCredentialBuilder.java"
   }, {
-    "methodName" : "build",
-    "signature" : "build()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/AzureDeveloperCliCredentialBuilder.java"
-  }, {
     "methodName" : "processTimeout",
     "signature" : "processTimeout(java.time.Duration)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/AzureDeveloperCliCredentialBuilder.java"
@@ -1891,18 +1681,6 @@
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/AzurePipelinesCredential.java"
   } ],
   "com.azure.v2.identity.AzurePipelinesCredentialBuilder" : [ {
-    "methodName" : "serviceConnectionId",
-    "signature" : "serviceConnectionId(java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/AzurePipelinesCredentialBuilder.java"
-  }, {
-    "methodName" : "build",
-    "signature" : "build()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/AzurePipelinesCredentialBuilder.java"
-  }, {
-    "methodName" : "systemAccessToken",
-    "signature" : "systemAccessToken(java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/AzurePipelinesCredentialBuilder.java"
-  }, {
     "methodName" : "getClientOptions",
     "signature" : "getClientOptions()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/AzurePipelinesCredentialBuilder.java"
@@ -1917,10 +1695,6 @@
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/AzurePowerShellCredential.java"
   } ],
   "com.azure.v2.identity.AzurePowerShellCredentialBuilder" : [ {
-    "methodName" : "build",
-    "signature" : "build()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/AzurePowerShellCredentialBuilder.java"
-  }, {
     "methodName" : "tenantId",
     "signature" : "tenantId(java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/AzurePowerShellCredentialBuilder.java"
@@ -1988,14 +1762,6 @@
     "methodName" : "addFirst",
     "signature" : "addFirst(com.azure.v2.core.credentials.TokenCredential)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/ChainedTokenCredentialBuilder.java"
-  }, {
-    "methodName" : "build",
-    "signature" : "build()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/ChainedTokenCredentialBuilder.java"
-  }, {
-    "methodName" : "addLast",
-    "signature" : "addLast(com.azure.v2.core.credentials.TokenCredential)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/ChainedTokenCredentialBuilder.java"
   } ],
   "com.azure.v2.identity.ClientAssertionCredential" : [ {
     "methodName" : "getToken",
@@ -2003,20 +1769,12 @@
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/ClientAssertionCredential.java"
   } ],
   "com.azure.v2.identity.ClientAssertionCredentialBuilder" : [ {
-    "methodName" : "clientAssertion",
-    "signature" : "clientAssertion(java.util.function.Supplier<java.lang.String>)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/ClientAssertionCredentialBuilder.java"
-  }, {
     "methodName" : "tokenCachePersistenceOptions",
     "signature" : "tokenCachePersistenceOptions(com.azure.v2.identity.models.TokenCachePersistenceOptions)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/ClientAssertionCredentialBuilder.java"
   }, {
     "methodName" : "getClientOptions",
     "signature" : "getClientOptions()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/ClientAssertionCredentialBuilder.java"
-  }, {
-    "methodName" : "build",
-    "signature" : "build()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/ClientAssertionCredentialBuilder.java"
   } ],
   "com.azure.v2.identity.ClientCertificateCredential" : [ {
@@ -2027,18 +1785,6 @@
   "com.azure.v2.identity.ClientCertificateCredentialBuilder" : [ {
     "methodName" : "getClientOptions",
     "signature" : "getClientOptions()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/ClientCertificateCredentialBuilder.java"
-  }, {
-    "methodName" : "build",
-    "signature" : "build()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/ClientCertificateCredentialBuilder.java"
-  }, {
-    "methodName" : "clientCertificate",
-    "signature" : "clientCertificate(java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/ClientCertificateCredentialBuilder.java"
-  }, {
-    "methodName" : "clientCertificate",
-    "signature" : "clientCertificate(java.io.InputStream)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/ClientCertificateCredentialBuilder.java"
   }, {
     "methodName" : "clientCertificate",
@@ -2063,16 +1809,8 @@
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/ClientSecretCredential.java"
   } ],
   "com.azure.v2.identity.ClientSecretCredentialBuilder" : [ {
-    "methodName" : "clientSecret",
-    "signature" : "clientSecret(java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/ClientSecretCredentialBuilder.java"
-  }, {
     "methodName" : "tokenCachePersistenceOptions",
     "signature" : "tokenCachePersistenceOptions(com.azure.v2.identity.models.TokenCachePersistenceOptions)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/ClientSecretCredentialBuilder.java"
-  }, {
-    "methodName" : "build",
-    "signature" : "build()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/ClientSecretCredentialBuilder.java"
   }, {
     "methodName" : "getClientOptions",
@@ -2084,16 +1822,8 @@
     "signature" : "getClientOptions()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/CredentialBuilderBase.java"
   }, {
-    "methodName" : "clientId",
-    "signature" : "clientId(java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/CredentialBuilderBase.java"
-  }, {
     "methodName" : "getHttpPipelineOptions",
     "signature" : "getHttpPipelineOptions()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/CredentialBuilderBase.java"
-  }, {
-    "methodName" : "tenantId",
-    "signature" : "tenantId(java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/CredentialBuilderBase.java"
   }, {
     "methodName" : "configuration",
@@ -2103,10 +1833,6 @@
   "com.azure.v2.identity.DefaultAzureCredentialBuilder" : [ {
     "methodName" : "getClientOptions",
     "signature" : "getClientOptions()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/DefaultAzureCredentialBuilder.java"
-  }, {
-    "methodName" : "build",
-    "signature" : "build()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/DefaultAzureCredentialBuilder.java"
   }, {
     "methodName" : "workloadIdentityClientId",
@@ -2119,10 +1845,6 @@
   }, {
     "methodName" : "disableInstanceDiscovery",
     "signature" : "disableInstanceDiscovery()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/DefaultAzureCredentialBuilder.java"
-  }, {
-    "methodName" : "managedIdentityClientId",
-    "signature" : "managedIdentityClientId(java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/DefaultAzureCredentialBuilder.java"
   }, {
     "methodName" : "credentialProcessTimeout",
@@ -2185,10 +1907,6 @@
   }, {
     "methodName" : "challengeConsumer",
     "signature" : "challengeConsumer(java.util.function.Consumer<com.azure.v2.identity.models.DeviceCodeInfo>)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/DeviceCodeCredentialBuilder.java"
-  }, {
-    "methodName" : "build",
-    "signature" : "build()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/DeviceCodeCredentialBuilder.java"
   }, {
     "methodName" : "disableAutomaticAuthentication",
@@ -2258,10 +1976,6 @@
     "signature" : "getClientOptions()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/EnvironmentCredentialBuilder.java"
   }, {
-    "methodName" : "build",
-    "signature" : "build()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/EnvironmentCredentialBuilder.java"
-  }, {
     "methodName" : "authorityHost",
     "signature" : "authorityHost(java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/EnvironmentCredentialBuilder.java"
@@ -2292,14 +2006,6 @@
     "signature" : "additionallyAllowedTenants(java.util.List<java.lang.String>)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/InteractiveBrowserCredentialBuilder.java"
   }, {
-    "methodName" : "build",
-    "signature" : "build()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/InteractiveBrowserCredentialBuilder.java"
-  }, {
-    "methodName" : "clientId",
-    "signature" : "clientId(java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/InteractiveBrowserCredentialBuilder.java"
-  }, {
     "methodName" : "tokenCachePersistenceOptions",
     "signature" : "tokenCachePersistenceOptions(com.azure.v2.identity.models.TokenCachePersistenceOptions)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/InteractiveBrowserCredentialBuilder.java"
@@ -2320,10 +2026,6 @@
     "signature" : "authenticationRecord(com.azure.v2.identity.models.AuthenticationRecord)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/InteractiveBrowserCredentialBuilder.java"
   }, {
-    "methodName" : "redirectUrl",
-    "signature" : "redirectUrl(java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/InteractiveBrowserCredentialBuilder.java"
-  }, {
     "methodName" : "getClientOptions",
     "signature" : "getClientOptions()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/InteractiveBrowserCredentialBuilder.java"
@@ -2338,16 +2040,8 @@
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/ManagedIdentityCredential.java"
   } ],
   "com.azure.v2.identity.ManagedIdentityCredentialBuilder" : [ {
-    "methodName" : "build",
-    "signature" : "build()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/ManagedIdentityCredentialBuilder.java"
-  }, {
     "methodName" : "getClientOptions",
     "signature" : "getClientOptions()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/ManagedIdentityCredentialBuilder.java"
-  }, {
-    "methodName" : "clientId",
-    "signature" : "clientId(java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/ManagedIdentityCredentialBuilder.java"
   }, {
     "methodName" : "objectId",
@@ -2368,16 +2062,8 @@
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/OnBehalfOfCredential.java"
   } ],
   "com.azure.v2.identity.OnBehalfOfCredentialBuilder" : [ {
-    "methodName" : "build",
-    "signature" : "build()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/OnBehalfOfCredentialBuilder.java"
-  }, {
     "methodName" : "clientCertificatePassword",
     "signature" : "clientCertificatePassword(java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/OnBehalfOfCredentialBuilder.java"
-  }, {
-    "methodName" : "userAssertion",
-    "signature" : "userAssertion(java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/OnBehalfOfCredentialBuilder.java"
   }, {
     "methodName" : "getClientOptions",
@@ -2407,10 +2093,6 @@
     "methodName" : "clientCertificate",
     "signature" : "clientCertificate(java.io.InputStream)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/OnBehalfOfCredentialBuilder.java"
-  }, {
-    "methodName" : "clientSecret",
-    "signature" : "clientSecret(java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/OnBehalfOfCredentialBuilder.java"
   } ],
   "com.azure.v2.identity.WorkloadIdentityCredential" : [ {
     "methodName" : "parseClientAssertion",
@@ -2422,14 +2104,6 @@
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/WorkloadIdentityCredential.java"
   } ],
   "com.azure.v2.identity.WorkloadIdentityCredentialBuilder" : [ {
-    "methodName" : "tokenFilePath",
-    "signature" : "tokenFilePath(java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/WorkloadIdentityCredentialBuilder.java"
-  }, {
-    "methodName" : "build",
-    "signature" : "build()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/WorkloadIdentityCredentialBuilder.java"
-  }, {
     "methodName" : "getClientOptions",
     "signature" : "getClientOptions()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/WorkloadIdentityCredentialBuilder.java"
@@ -4675,57 +4349,10 @@
     "signature" : "setNotBefore(java.time.OffsetDateTime)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/keyvault-v2/azure-security-keyvault-secrets/src/main/java/com/azure/v2/security/keyvault/secrets/models/SecretProperties.java"
   } ],
-  "io.clientcore.core.credentials.KeyCredential" : [ {
-    "methodName" : "getKey",
-    "signature" : "getKey()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/credentials/KeyCredential.java"
-  }, {
-    "methodName" : "update",
-    "signature" : "update(java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/credentials/KeyCredential.java"
-  } ],
-  "io.clientcore.core.credentials.NamedKey" : [ {
-    "methodName" : "getName",
-    "signature" : "getName()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/credentials/NamedKey.java"
-  }, {
-    "methodName" : "getKey",
-    "signature" : "getKey()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/credentials/NamedKey.java"
-  } ],
   "io.clientcore.core.credentials.NamedKeyCredential" : [ {
-    "methodName" : "getNamedKey",
-    "signature" : "getNamedKey()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/credentials/NamedKeyCredential.java"
-  }, {
-    "methodName" : "update",
-    "signature" : "update(java.lang.String,java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/credentials/NamedKeyCredential.java"
-  }, {
     "methodName" : "validateInputParameters",
     "signature" : "validateInputParameters(java.lang.String,java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/credentials/NamedKeyCredential.java"
-  } ],
-  "io.clientcore.core.credentials.oauth.AccessToken" : [ {
-    "methodName" : "getExpiresAt",
-    "signature" : "getExpiresAt()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/credentials/oauth/AccessToken.java"
-  }, {
-    "methodName" : "getTokenType",
-    "signature" : "getTokenType()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/credentials/oauth/AccessToken.java"
-  }, {
-    "methodName" : "getRefreshAt",
-    "signature" : "getRefreshAt()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/credentials/oauth/AccessToken.java"
-  }, {
-    "methodName" : "isExpired",
-    "signature" : "isExpired()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/credentials/oauth/AccessToken.java"
-  }, {
-    "methodName" : "getToken",
-    "signature" : "getToken()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/credentials/oauth/AccessToken.java"
   } ],
   "io.clientcore.core.credentials.oauth.AccessTokenType" : [ {
     "methodName" : "hashCode",
@@ -4740,20 +4367,12 @@
     "signature" : "equals(java.lang.Object)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/credentials/oauth/AccessTokenType.java"
   }, {
-    "methodName" : "fromString",
-    "signature" : "fromString(java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/credentials/oauth/AccessTokenType.java"
-  }, {
     "methodName" : "toString",
     "signature" : "toString()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/credentials/oauth/AccessTokenType.java"
   }, {
     "methodName" : "getCaseInsensitiveName",
     "signature" : "getCaseInsensitiveName()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/credentials/oauth/AccessTokenType.java"
-  }, {
-    "methodName" : "getValue",
-    "signature" : "getValue()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/credentials/oauth/AccessTokenType.java"
   } ],
   "io.clientcore.core.credentials.oauth.OAuthTokenCredential" : [ {
@@ -4810,10 +4429,6 @@
   }, {
     "methodName" : "send",
     "signature" : "send(io.clientcore.core.http.models.HttpRequest)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/client/HttpClient.java"
-  }, {
-    "methodName" : "getSharedInstance",
-    "signature" : "getSharedInstance()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/client/HttpClient.java"
   } ],
   "io.clientcore.core.http.client.HttpClientProvider" : [ {
@@ -4967,10 +4582,6 @@
     "signature" : "hashCode()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/HttpHeaderName.java"
   }, {
-    "methodName" : "fromString",
-    "signature" : "fromString(java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/HttpHeaderName.java"
-  }, {
     "methodName" : "getCaseSensitiveName",
     "signature" : "getCaseSensitiveName()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/HttpHeaderName.java"
@@ -5008,14 +4619,6 @@
     "signature" : "get(io.clientcore.core.http.models.HttpHeaderName)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/HttpHeaders.java"
   }, {
-    "methodName" : "getValue",
-    "signature" : "getValue(io.clientcore.core.http.models.HttpHeaderName)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/HttpHeaders.java"
-  }, {
-    "methodName" : "set",
-    "signature" : "set(io.clientcore.core.http.models.HttpHeaderName,java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/HttpHeaders.java"
-  }, {
     "methodName" : "getValues",
     "signature" : "getValues(io.clientcore.core.http.models.HttpHeaderName)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/HttpHeaders.java"
@@ -5043,10 +4646,6 @@
   "io.clientcore.core.http.models.HttpMatchConditions" : [ {
     "methodName" : "getIfMatch",
     "signature" : "getIfMatch()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/HttpMatchConditions.java"
-  }, {
-    "methodName" : "setIfNoneMatch",
-    "signature" : "setIfNoneMatch(java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/HttpMatchConditions.java"
   }, {
     "methodName" : "setIfMatch",
@@ -5083,40 +4682,12 @@
     "signature" : "setTryCount(int)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/HttpRequest.java"
   }, {
-    "methodName" : "getBody",
-    "signature" : "getBody()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/HttpRequest.java"
-  }, {
     "methodName" : "getTryCount",
     "signature" : "getTryCount()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/HttpRequest.java"
   }, {
-    "methodName" : "setUri",
-    "signature" : "setUri(java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/HttpRequest.java"
-  }, {
     "methodName" : "getServerSentEventListener",
     "signature" : "getServerSentEventListener()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/HttpRequest.java"
-  }, {
-    "methodName" : "setUri",
-    "signature" : "setUri(java.net.URI)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/HttpRequest.java"
-  }, {
-    "methodName" : "setHeaders",
-    "signature" : "setHeaders(io.clientcore.core.http.models.HttpHeaders)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/HttpRequest.java"
-  }, {
-    "methodName" : "setMethod",
-    "signature" : "setMethod(io.clientcore.core.http.models.HttpMethod)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/HttpRequest.java"
-  }, {
-    "methodName" : "setBody",
-    "signature" : "setBody(io.clientcore.core.models.binarydata.BinaryData)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/HttpRequest.java"
-  }, {
-    "methodName" : "getUri",
-    "signature" : "getUri()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/HttpRequest.java"
   }, {
     "methodName" : "getContext",
@@ -5129,14 +4700,6 @@
   }, {
     "methodName" : "setContext",
     "signature" : "setContext(io.clientcore.core.http.models.RequestContext)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/HttpRequest.java"
-  }, {
-    "methodName" : "getHttpMethod",
-    "signature" : "getHttpMethod()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/HttpRequest.java"
-  }, {
-    "methodName" : "getHeaders",
-    "signature" : "getHeaders()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/HttpRequest.java"
   } ],
   "io.clientcore.core.http.models.HttpRequestConditions" : [ {
@@ -5260,16 +4823,8 @@
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/ProxyOptions.java"
   } ],
   "io.clientcore.core.http.models.RequestContext" : [ {
-    "methodName" : "none",
-    "signature" : "none()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/RequestContext.java"
-  }, {
     "methodName" : "getLogger",
     "signature" : "getLogger()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/RequestContext.java"
-  }, {
-    "methodName" : "builder",
-    "signature" : "builder()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/RequestContext.java"
   }, {
     "methodName" : "getInstrumentationContext",
@@ -5280,10 +4835,6 @@
     "signature" : "getMetadata(java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/RequestContext.java"
   }, {
-    "methodName" : "toBuilder",
-    "signature" : "toBuilder()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/RequestContext.java"
-  }, {
     "methodName" : "getRequestCallback",
     "signature" : "getRequestCallback()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/RequestContext.java"
@@ -5291,18 +4842,6 @@
   "io.clientcore.core.http.models.RequestContext.Builder" : [ {
     "methodName" : "setInstrumentationContext",
     "signature" : "setInstrumentationContext(io.clientcore.core.instrumentation.InstrumentationContext)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/RequestContext.java"
-  }, {
-    "methodName" : "setHeader",
-    "signature" : "setHeader(io.clientcore.core.http.models.HttpHeaderName,java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/RequestContext.java"
-  }, {
-    "methodName" : "addQueryParam",
-    "signature" : "addQueryParam(java.lang.String,java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/RequestContext.java"
-  }, {
-    "methodName" : "build",
-    "signature" : "build()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/RequestContext.java"
   }, {
     "methodName" : "addRequestCallback",
@@ -5324,22 +4863,6 @@
   "io.clientcore.core.http.models.Response" : [ {
     "methodName" : "close",
     "signature" : "close()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/Response.java"
-  }, {
-    "methodName" : "getValue",
-    "signature" : "getValue()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/Response.java"
-  }, {
-    "methodName" : "getRequest",
-    "signature" : "getRequest()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/Response.java"
-  }, {
-    "methodName" : "getStatusCode",
-    "signature" : "getStatusCode()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/Response.java"
-  }, {
-    "methodName" : "getHeaders",
-    "signature" : "getHeaders()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/Response.java"
   } ],
   "io.clientcore.core.http.models.ServerSentEvent" : [ {
@@ -5403,10 +4926,6 @@
   } ],
   "io.clientcore.core.http.paging.PagedIterable" : [ {
     "methodName" : "iterableByPage",
-    "signature" : "iterableByPage()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/paging/PagedIterable.java"
-  }, {
-    "methodName" : "iterableByPage",
     "signature" : "iterableByPage(io.clientcore.core.http.paging.PagingOptions)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/paging/PagedIterable.java"
   }, {
@@ -5420,10 +4939,6 @@
   }, {
     "methodName" : "iterator",
     "signature" : "iterator()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/paging/PagedIterable.java"
-  }, {
-    "methodName" : "streamByPage",
-    "signature" : "streamByPage()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/paging/PagedIterable.java"
   }, {
     "methodName" : "iterableByPageInternal",
@@ -5487,10 +5002,6 @@
   }, {
     "methodName" : "getLastLink",
     "signature" : "getLastLink()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/paging/PagedResponse.java"
-  }, {
-    "methodName" : "getContinuationToken",
-    "signature" : "getContinuationToken()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/paging/PagedResponse.java"
   }, {
     "methodName" : "getFirstLink",
@@ -6595,88 +6106,24 @@
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/ServerSentResult.java"
   } ],
   "io.clientcore.core.models.binarydata.BinaryData" : [ {
-    "methodName" : "fromStream",
-    "signature" : "fromStream(java.io.InputStream)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/binarydata/BinaryData.java"
-  }, {
-    "methodName" : "fromObject",
-    "signature" : "fromObject(java.lang.Object)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/binarydata/BinaryData.java"
-  }, {
     "methodName" : "toObject",
     "signature" : "toObject(java.lang.reflect.Type,io.clientcore.core.serialization.ObjectSerializer)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/binarydata/BinaryData.java"
-  }, {
-    "methodName" : "fromFile",
-    "signature" : "fromFile(java.nio.file.Path,java.lang.Long,java.lang.Long,int)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/binarydata/BinaryData.java"
   }, {
     "methodName" : "empty",
     "signature" : "empty()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/binarydata/BinaryData.java"
   }, {
-    "methodName" : "toReplayableBinaryData",
-    "signature" : "toReplayableBinaryData()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/binarydata/BinaryData.java"
-  }, {
     "methodName" : "fromObject",
     "signature" : "fromObject(java.lang.Object,io.clientcore.core.serialization.ObjectSerializer)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/binarydata/BinaryData.java"
-  }, {
-    "methodName" : "toBytes",
-    "signature" : "toBytes()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/binarydata/BinaryData.java"
   }, {
     "methodName" : "fromListByteBuffer",
     "signature" : "fromListByteBuffer(java.util.List<java.nio.ByteBuffer>)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/binarydata/BinaryData.java"
   }, {
-    "methodName" : "fromStream",
-    "signature" : "fromStream(java.io.InputStream,java.lang.Long)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/binarydata/BinaryData.java"
-  }, {
-    "methodName" : "getLength",
-    "signature" : "getLength()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/binarydata/BinaryData.java"
-  }, {
     "methodName" : "writeTo",
     "signature" : "writeTo(io.clientcore.core.serialization.json.JsonWriter)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/binarydata/BinaryData.java"
-  }, {
-    "methodName" : "writeTo",
-    "signature" : "writeTo(java.io.OutputStream)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/binarydata/BinaryData.java"
-  }, {
-    "methodName" : "toObject",
-    "signature" : "toObject(java.lang.reflect.Type)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/binarydata/BinaryData.java"
-  }, {
-    "methodName" : "fromFile",
-    "signature" : "fromFile(java.nio.file.Path)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/binarydata/BinaryData.java"
-  }, {
-    "methodName" : "writeTo",
-    "signature" : "writeTo(java.nio.channels.WritableByteChannel)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/binarydata/BinaryData.java"
-  }, {
-    "methodName" : "fromFile",
-    "signature" : "fromFile(java.nio.file.Path,java.lang.Long,java.lang.Long)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/binarydata/BinaryData.java"
-  }, {
-    "methodName" : "fromString",
-    "signature" : "fromString(java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/binarydata/BinaryData.java"
-  }, {
-    "methodName" : "toStream",
-    "signature" : "toStream()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/binarydata/BinaryData.java"
-  }, {
-    "methodName" : "toString",
-    "signature" : "toString()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/binarydata/BinaryData.java"
-  }, {
-    "methodName" : "fromBytes",
-    "signature" : "fromBytes(byte[])",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/binarydata/BinaryData.java"
   }, {
     "methodName" : "fromByteBuffer",
@@ -6687,16 +6134,8 @@
     "signature" : "fromFile(java.nio.file.Path,int)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/binarydata/BinaryData.java"
   }, {
-    "methodName" : "isReplayable",
-    "signature" : "isReplayable()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/binarydata/BinaryData.java"
-  }, {
     "methodName" : "close",
     "signature" : "close()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/binarydata/BinaryData.java"
-  }, {
-    "methodName" : "toByteBuffer",
-    "signature" : "toByteBuffer()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/binarydata/BinaryData.java"
   } ],
   "io.clientcore.core.models.binarydata.ByteArrayBinaryData" : [ {
@@ -9662,16 +9101,8 @@
     "signature" : "getInternal(java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/utils/configuration/Configuration.java"
   }, {
-    "methodName" : "getGlobalConfiguration",
-    "signature" : "getGlobalConfiguration()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/utils/configuration/Configuration.java"
-  }, {
     "methodName" : "get",
     "signature" : "get(java.lang.String,java.lang.String[])",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/utils/configuration/Configuration.java"
-  }, {
-    "methodName" : "get",
-    "signature" : "get(java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/utils/configuration/Configuration.java"
   } ],
   "io.clientcore.core.utils.configuration.ConfigurationSource" : [ {
