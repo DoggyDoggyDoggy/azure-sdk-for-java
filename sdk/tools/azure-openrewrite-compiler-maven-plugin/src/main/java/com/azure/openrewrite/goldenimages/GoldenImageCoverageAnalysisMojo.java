@@ -37,13 +37,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -66,7 +60,6 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
     private ProjectBuilder projectBuilder;
 
     public void execute() throws MojoExecutionException {
-        // --- Golden Image Analysis (Existing Functionality) ---
         String testResourcesPath = baseDir.getAbsolutePath() + "/src/test/resources/migrationExamples";
         File testResourcesDir = new File(testResourcesPath);
 
@@ -96,12 +89,131 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
         }
         outputMethodCallsToFile(goldenImageMethodCalls, "golden-image-method-usage.json");
 
-        // --- Public API Analysis (New Functionality) ---
-        Set<MethodCall> publicApiMethodCalls = analyzePublicApi();
+        Map<String, Set<MethodCall>> publicApiByModule = analyzePublicApiByModule();
+        Set<MethodCall> publicApiMethodCalls = publicApiByModule.values().stream()
+            .flatMap(Set::stream)
+            .collect(Collectors.toSet());
         outputMethodCallsToFile(publicApiMethodCalls, "public-api-method-usage.json");
 
         Set<MethodCall> uncoveredMethods = findUncoveredMethods(publicApiMethodCalls, goldenImageMethodCalls);
         outputMethodCallsToFile(uncoveredMethods, "uncovered-api-methods.json");
+
+        logDetailedCoverageMetrics(publicApiByModule, goldenImageMethodCalls, uncoveredMethods);
+    }
+
+    private Map<String, Set<MethodCall>> analyzePublicApiByModule() throws MojoExecutionException {
+        getLog().info("Starting public API analysis for Azure V2 SDKs.");
+
+        File repoRoot = baseDir.getParentFile().getParentFile();
+
+        // Define the relative paths to the source directories with their simplified names
+        Map<String, String> pathMappings = new java.util.LinkedHashMap<>();
+        pathMappings.put("appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration",
+            "com/azure/v2/data/appconfiguration");
+        pathMappings.put("core-v2/azure-core/src/main/java/com/azure/v2/core",
+            "com/azure/v2/core");
+        pathMappings.put("clientcore/core/src/main/java/io/clientcore/core",
+            "io/clientcore/core");
+        pathMappings.put("identity-v2/azure-identity/src/main/java/com/azure/v2/identity",
+            "com/azure/v2/identity");
+        pathMappings.put("keyvault-v2/azure-security-keyvault-keys/src/samples/java/com/azure/v2/security/keyvault/keys",
+            "com/azure/v2/security/keyvault/keys");
+        pathMappings.put("keyvault-v2/azure-security-keyvault-administration/src/main/java/com/azure/v2/security/keyvault/administration",
+            "com/azure/v2/security/keyvault/administration");
+        pathMappings.put("keyvault-v2/azure-security-keyvault-certificates/src/main/java/com/azure/v2/security/keyvault/certificates",
+            "com/azure/v2/security/keyvault/certificates");
+        pathMappings.put("keyvault-v2/azure-security-keyvault-secrets/src/main/java/com/azure/v2/security/keyvault/secrets",
+            "com/azure/v2/security/keyvault/secrets");
+
+        Map<String, Set<MethodCall>> methodsByModule = new java.util.LinkedHashMap<>();
+        List<String> classpathElements = getClasspathForProfile("v2");
+
+        CombinedTypeSolver combinedTypeSolver = new CombinedTypeSolver(new ReflectionTypeSolver());
+        for (String fullPath : pathMappings.keySet()) {
+            File sourceDir = new File(repoRoot, fullPath);
+            if (sourceDir.exists()) {
+                combinedTypeSolver.add(new JavaParserTypeSolver(sourceDir));
+            }
+        }
+        for (String classpathElement : classpathElements) {
+            try {
+                if (classpathElement.endsWith(".jar")) {
+                    combinedTypeSolver.add(new JarTypeSolver(classpathElement));
+                }
+            } catch (IOException e) {
+                getLog().warn("Could not add JAR to type solver: " + classpathElement);
+            }
+        }
+
+        JavaSymbolSolver symbolSolver = new JavaSymbolSolver(combinedTypeSolver);
+        JavaParser javaParser = new JavaParser();
+        javaParser.getParserConfiguration().setSymbolResolver(symbolSolver);
+
+        for (Map.Entry<String, String> entry : pathMappings.entrySet()) {
+            String fullPath = entry.getKey();
+            String simplePath = entry.getValue();
+            File sourceDir = new File(repoRoot, fullPath);
+
+            if (sourceDir.exists()) {
+                try {
+                    Set<MethodCall> moduleMethods = extractDeclaredMethodsFromDirectory(sourceDir, javaParser);
+                    methodsByModule.put(simplePath, moduleMethods);
+                    getLog().info("Found " + moduleMethods.size() + " methods in " + simplePath);
+                } catch (IOException e) {
+                    getLog().error("Failed to analyze source directory " + sourceDir.getAbsolutePath(), e);
+                    methodsByModule.put(simplePath, new HashSet<>());
+                }
+            } else {
+                getLog().warn("Skipping missing source directory: " + sourceDir.getAbsolutePath());
+                methodsByModule.put(simplePath, new HashSet<>());
+            }
+        }
+
+        int totalMethods = methodsByModule.values().stream().mapToInt(Set::size).sum();
+        getLog().info("Total unique public API methods found across all modules: " + totalMethods);
+        return methodsByModule;
+    }
+    private void logDetailedCoverageMetrics(Map<String, Set<MethodCall>> publicApiByModule,
+                                            Set<MethodCall> goldenImageMethods,
+                                            Set<MethodCall> uncoveredMethods) {
+        getLog().info("=== DETAILED COVERAGE ANALYSIS BY MODULE ===");
+
+        int totalPublicMethods = 0;
+        int totalCoveredMethods = 0;
+
+        for (Map.Entry<String, Set<MethodCall>> entry : publicApiByModule.entrySet()) {
+            String modulePath = entry.getKey();
+            Set<MethodCall> moduleMethods = entry.getValue();
+
+            int modulePublicMethods = moduleMethods.size();
+            int moduleCoveredMethods = 0;
+
+            // Count how many methods from this module are covered
+            for (MethodCall moduleMethod : moduleMethods) {
+                boolean isCovered = goldenImageMethods.stream()
+                    .anyMatch(goldenMethod -> methodsMatch(moduleMethod, goldenMethod));
+                if (isCovered) {
+                    moduleCoveredMethods++;
+                }
+            }
+
+            totalPublicMethods += modulePublicMethods;
+            totalCoveredMethods += moduleCoveredMethods;
+
+            double coveragePercentage = modulePublicMethods > 0 ?
+                ((double) moduleCoveredMethods / modulePublicMethods) * 100 : 0;
+
+            getLog().info(String.format("%s: %d/%d method calls covered by Golden Images (%.1f%%)",
+                modulePath, moduleCoveredMethods, modulePublicMethods, coveragePercentage));
+        }
+
+        getLog().info("=== OVERALL COVERAGE SUMMARY ===");
+        double overallCoverage = totalPublicMethods > 0 ?
+            ((double) totalCoveredMethods / totalPublicMethods) * 100 : 0;
+        getLog().info(String.format("TOTAL: %d/%d method calls covered by Golden Images (%.1f%%)",
+            totalCoveredMethods, totalPublicMethods, overallCoverage));
+        getLog().info("Uncovered methods: " + uncoveredMethods.size());
+        getLog().info("See uncovered-api-methods.json to view the uncovered methods.");
     }
 
     private Set<MethodCall> findUncoveredMethods(Set<MethodCall> publicApiMethods, Set<MethodCall> goldenImageMethods) {
@@ -128,65 +240,6 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
             method1.getSignature().equals(method2.getSignature());
     }
 
-    private Set<MethodCall> analyzePublicApi() throws MojoExecutionException {
-        getLog().info("Starting public API analysis for Azure V2 SDKs.");
-
-        // Resolve the root of the repository from the plugin's base directory
-        File repoRoot = baseDir.getParentFile().getParentFile();
-
-        // Define the relative paths to the source directories
-        List<String> relativePaths = Arrays.asList(
-            "appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration",
-            "core-v2/azure-core/src/main/java/com/azure/v2/core",
-            "clientcore/core/src/main/java/io/clientcore/core",
-            "identity-v2/azure-identity/src/main/java/com/azure/v2/identity",
-            "keyvault-v2/azure-security-keyvault-keys/src/samples/java/com/azure/v2/security/keyvault/keys",
-            "keyvault-v2/azure-security-keyvault-administration/src/main/java/com/azure/v2/security/keyvault/administration",
-            "keyvault-v2/azure-security-keyvault-certificates/src/main/java/com/azure/v2/security/keyvault/certificates",
-            "keyvault-v2/azure-security-keyvault-secrets/src/main/java/com/azure/v2/security/keyvault/secrets"
-        );
-
-        Set<MethodCall> allDeclaredMethods = new HashSet<>();
-        List<String> classpathElements = getClasspathForProfile("v2");
-
-        CombinedTypeSolver combinedTypeSolver = new CombinedTypeSolver(new ReflectionTypeSolver());
-        for (String path : relativePaths) {
-            File sourceDir = new File(repoRoot, path);
-            if (sourceDir.exists()) {
-                combinedTypeSolver.add(new JavaParserTypeSolver(sourceDir));
-            }
-        }
-        for (String classpathElement : classpathElements) {
-            try {
-                if (classpathElement.endsWith(".jar")) {
-                    combinedTypeSolver.add(new JarTypeSolver(classpathElement));
-                }
-            } catch (IOException e) {
-                getLog().warn("Could not add JAR to type solver: " + classpathElement);
-            }
-        }
-
-        JavaSymbolSolver symbolSolver = new JavaSymbolSolver(combinedTypeSolver);
-        JavaParser javaParser = new JavaParser();
-        javaParser.getParserConfiguration().setSymbolResolver(symbolSolver);
-
-        for (String path : relativePaths) {
-            File sourceDir = new File(repoRoot, path);
-            if (sourceDir.exists()) {
-                try {
-                    allDeclaredMethods.addAll(extractDeclaredMethodsFromDirectory(sourceDir, javaParser));
-                } catch (IOException e) {
-                    getLog().error("Failed to analyze source directory " + sourceDir.getAbsolutePath(), e);
-                }
-            } else {
-                getLog().warn("Skipping missing source directory: " + sourceDir.getAbsolutePath());
-            }
-        }
-
-        getLog().info("Total unique public API methods found: " + allDeclaredMethods.size());
-        return allDeclaredMethods;
-    }
-
     private Set<MethodCall> extractDeclaredMethodsFromDirectory(File directory, JavaParser javaParser) throws IOException {
         Set<MethodCall> declaredMethods = new HashSet<>();
         try (Stream<Path> paths = Files.walk(directory.toPath())) {
@@ -194,11 +247,9 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
                 .filter(Files::isRegularFile)
                 .filter(path -> path.toString().endsWith(".java"))
                 .filter(path -> {
-                    boolean isImplementation = path.toString().contains("/implementation/");
-                    if (isImplementation) {
-                        getLog().info("Skipping implementation file: " + path.toString());
-                    }
-                    return !isImplementation;
+                    boolean isInExcludedFolder = path.toString().contains("/implementation/")
+                        || path.toString().contains("/cryptography/");
+                    return !isInExcludedFolder;
                 })
                 .collect(Collectors.toList());
 
@@ -307,37 +358,6 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
         return signature.toString();
     }
 
-    private boolean hasEqualFileContents(File file1, File file2) throws IOException {
-        String before = Files.readAllLines(file1.toPath()).stream().collect(Collectors.joining("\n"));
-        String after = Files.readAllLines(file2.toPath()).stream().collect(Collectors.joining("\n"));
-        return before.equals(after);
-    }
-
-    private boolean hasChanges(File profileDir, File previousProfileDir) throws MojoExecutionException {
-        getLog().info("Comparing files in " + profileDir.getAbsolutePath() + " with " + previousProfileDir.getAbsolutePath());
-        try (Stream<Path> profilePaths = Files.walk(profileDir.toPath())) {
-            return profilePaths
-                .filter(Files::isRegularFile)
-                .filter(path -> path.toString().endsWith(".java"))
-                .anyMatch(profileFile -> {
-                    Path relativePath = profileDir.toPath().relativize(profileFile);
-                    Path previousFile = previousProfileDir.toPath().resolve(relativePath);
-                    try {
-                        if (!Files.exists(previousFile) || !hasEqualFileContents(profileFile.toFile(), previousFile.toFile())) {
-                            getLog().info("Changes detected in " + profileFile.toString());
-                            return true;
-                        }
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
-                    }
-                    getLog().info("No changes detected in " + profileFile.toString());
-                    return false;
-                });
-        } catch (IOException e) {
-            throw new MojoExecutionException("Failed to compare files in " + profileDir.getAbsolutePath() + " and " + previousProfileDir.getAbsolutePath(), e);
-        }
-    }
-
     private List<File> findTestFoldersWithV1(File baseDir) throws MojoExecutionException {
         try (Stream<Path> paths = Files.walk(baseDir.toPath())) {
             return paths
@@ -365,6 +385,19 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
         }
         getLog().info("Found " + methodCalls.size() + " unique method calls in " + profileDir.getAbsolutePath());
         return methodCalls;
+    }
+
+    private String buildMethodSignature(ResolvedMethodDeclaration method) {
+        StringBuilder signature = new StringBuilder();
+        signature.append(method.getName()).append("(");
+        for (int i = 0; i < method.getNumberOfParams(); i++) {
+            if (i > 0) {
+                signature.append(",");
+            }
+            signature.append(method.getParam(i).getType().describe());
+        }
+        signature.append(")");
+        return signature.toString();
     }
 
     private TypeSolver createTypeSolver(File profileDir, List<String> classpathElements) {
@@ -438,23 +471,41 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
         return methodCalls;
     }
 
+    private boolean hasEqualFileContents(File file1, File file2) throws IOException {
+        String before = Files.readAllLines(file1.toPath()).stream().collect(Collectors.joining("\n"));
+        String after = Files.readAllLines(file2.toPath()).stream().collect(Collectors.joining("\n"));
+        return before.equals(after);
+    }
+
+    private boolean hasChanges(File profileDir, File previousProfileDir) throws MojoExecutionException {
+        getLog().info("Comparing files in " + profileDir.getAbsolutePath() + " with " + previousProfileDir.getAbsolutePath());
+        try (Stream<Path> profilePaths = Files.walk(profileDir.toPath())) {
+            return profilePaths
+                .filter(Files::isRegularFile)
+                .filter(path -> path.toString().endsWith(".java"))
+                .anyMatch(profileFile -> {
+                    Path relativePath = profileDir.toPath().relativize(profileFile);
+                    Path previousFile = previousProfileDir.toPath().resolve(relativePath);
+                    try {
+                        if (!Files.exists(previousFile) || !hasEqualFileContents(profileFile.toFile(), previousFile.toFile())) {
+                            getLog().info("Changes detected in " + profileFile.toString());
+                            return true;
+                        }
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    getLog().info("No changes detected in " + profileFile.toString());
+                    return false;
+                });
+        } catch (IOException e) {
+            throw new MojoExecutionException("Failed to compare files in " + profileDir.getAbsolutePath() + " and " + previousProfileDir.getAbsolutePath(), e);
+        }
+    }
+
     private boolean isSyntheticClass(String className) {
         return className.contains(".Anonymous-")
             || className.contains("$Lambda$")
             || className.matches(".*\\$\\d+.*"); // e.g., MyClass$1
-    }
-
-    private String buildMethodSignature(ResolvedMethodDeclaration method) {
-        StringBuilder signature = new StringBuilder();
-        signature.append(method.getName()).append("(");
-        for (int i = 0; i < method.getNumberOfParams(); i++) {
-            if (i > 0) {
-                signature.append(",");
-            }
-            signature.append(method.getParam(i).getType().describe());
-        }
-        signature.append(")");
-        return signature.toString();
     }
 
     private void outputMethodCallsToFile(Set<MethodCall> methodCalls, String filename) {
@@ -484,9 +535,9 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
             File outputFile = new File(baseDir, filename);
             mapper.writerWithDefaultPrettyPrinter().writeValue(outputFile, root);
             getLog().info("Method usage analysis written to: " + outputFile.getAbsolutePath());
-            getLog().info("Total unique method calls found in " + filename + ": " + methodCalls.size());
-            getLog().info("Classes with method calls: " +
-                methodCalls.stream().map(MethodCall::getClassName).collect(Collectors.toSet()).size());
+//            getLog().info("Total unique method calls found in " + filename + ": " + methodCalls.size());
+//            getLog().info("Classes with method calls: " +
+//                methodCalls.stream().map(MethodCall::getClassName).collect(Collectors.toSet()).size());
         } catch (IOException e) {
             getLog().error("Failed to write method usage analysis to file", e);
         }
