@@ -13,6 +13,9 @@ import com.github.javaparser.symbolsolver.resolution.typesolvers.JarTypeSolver;
 import com.github.javaparser.symbolsolver.resolution.typesolvers.JavaParserTypeSolver;
 import com.github.javaparser.symbolsolver.resolution.typesolvers.ReflectionTypeSolver;
 import com.github.javaparser.resolution.declarations.ResolvedMethodDeclaration;
+import com.github.javaparser.ast.body.ConstructorDeclaration;
+import com.github.javaparser.ast.expr.ObjectCreationExpr;
+import com.github.javaparser.resolution.declarations.ResolvedConstructorDeclaration;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -240,6 +243,24 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
                 }
                 super.visit(n, arg);
             }
+
+            @Override
+            public void visit(ConstructorDeclaration n, Void arg) {
+                try {
+                    ResolvedConstructorDeclaration resolved = n.resolve();
+                    String className = resolved.declaringType().getQualifiedName();
+                    if (isSyntheticClass(className)) {
+                        return;
+                    }
+                    String signature = buildConstructorSignature(resolved);
+                    // Use "<init>" as the method name for constructors (JVM convention)
+                    MethodCall methodCall = new MethodCall(className, "<init>", signature, sourceFile);
+                    declaredMethods.add(methodCall);
+                } catch (Exception e) {
+                    getLog().debug("Could not resolve constructor declaration in " + sourceFile);
+                }
+                super.visit(n, arg);
+            }
         }, null);
         return declaredMethods;
     }
@@ -271,6 +292,19 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
             }
         }
         return methodCalls;
+    }
+
+    private String buildConstructorSignature(ResolvedConstructorDeclaration constructor) {
+        StringBuilder signature = new StringBuilder();
+        signature.append("<init>(");
+        for (int i = 0; i < constructor.getNumberOfParams(); i++) {
+            if (i > 0) {
+                signature.append(",");
+            }
+            signature.append(constructor.getParam(i).getType().describe());
+        }
+        signature.append(")");
+        return signature.toString();
     }
 
     private boolean hasEqualFileContents(File file1, File file2) throws IOException {
@@ -379,6 +413,24 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
                     methodCalls.add(methodCall);
                 } catch (Exception e) {
                     getLog().debug("Could not resolve method call: " + n.getNameAsString() + " in " + sourceFile);
+                }
+                super.visit(n, arg);
+            }
+
+            @Override
+            public void visit(ObjectCreationExpr n, Void arg) {
+                try {
+                    ResolvedConstructorDeclaration resolved = n.resolve();
+                    String className = resolved.declaringType().getQualifiedName();
+                    if (isSyntheticClass(className)) {
+                        return;
+                    }
+                    String signature = buildConstructorSignature(resolved);
+                    // Use "<init>" as the method name for constructor calls
+                    MethodCall methodCall = new MethodCall(className, "<init>", signature, sourceFile);
+                    methodCalls.add(methodCall);
+                } catch (Exception e) {
+                    getLog().debug("Could not resolve constructor call in " + sourceFile);
                 }
                 super.visit(n, arg);
             }
