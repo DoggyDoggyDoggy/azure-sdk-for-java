@@ -72,11 +72,6 @@
     "signature" : "toJson(io.clientcore.core.serialization.json.JsonWriter)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/keyvault-v2/azure-security-keyvault-secrets/src/main/java/com/azure/v2/security/keyvault/secrets/models/KeyVaultSecret.java"
   } ],
-  "com.azure.v2.data.appconfiguration.models.ConfigurationSetting.Anonymous-07da6ec6-6e84-4926-b0c9-e4d1824a6f29" : [ {
-    "methodName" : "setLastModified",
-    "signature" : "setLastModified(com.azure.v2.data.appconfiguration.models.ConfigurationSetting,java.time.OffsetDateTime)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/ConfigurationSetting.java"
-  } ],
   "com.azure.v2.core.models.AzureCloud" : [ {
     "methodName" : "toString",
     "signature" : "toString()",
@@ -520,11 +515,6 @@
     "signature" : "getStartTime()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/keyvault-v2/azure-security-keyvault-administration/src/main/java/com/azure/v2/security/keyvault/administration/models/KeyVaultLongRunningOperation.java"
   } ],
-  "io.clientcore.core.http.paging.PagedIterable.Anonymous-d2a2d844-381a-41e6-ae43-31d2a70a2e2f" : [ {
-    "methodName" : "getNext",
-    "signature" : "getNext()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/paging/PagedIterable.java"
-  } ],
   "com.azure.v2.security.keyvault.administration.models.SetRoleDefinitionOptions" : [ {
     "methodName" : "getDescription",
     "signature" : "getDescription()",
@@ -707,11 +697,6 @@
     "methodName" : "getTenantId",
     "signature" : "getTenantId()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/core-v2/azure-core/src/main/java/com/azure/v2/core/credentials/TokenRequestContext.java"
-  } ],
-  "io.clientcore.core.http.models.ServerSentEvent.Anonymous-14e712a5-fa48-407e-bd17-91a891eb5cd9" : [ {
-    "methodName" : "getRetryAfter",
-    "signature" : "getRetryAfter(io.clientcore.core.http.models.ServerSentEvent)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/ServerSentEvent.java"
   } ],
   "com.azure.v2.data.appconfiguration.models.OperationState" : [ {
     "methodName" : "toString",
@@ -1768,11 +1753,6 @@
     "signature" : "update(java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/credentials/KeyCredential.java"
   } ],
-  "io.clientcore.core.http.paging.PagedIterable.Anonymous-15e82047-9e9c-4849-9d1e-ce1840cb7235" : [ {
-    "methodName" : "needToRequestPage",
-    "signature" : "needToRequestPage()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/paging/PagedIterable.java"
-  } ],
   "io.clientcore.core.instrumentation.Instrumentation" : [ {
     "methodName" : "instrumentWithResponse",
     "signature" : "instrumentWithResponse(java.lang.String,io.clientcore.core.http.models.RequestContext,java.util.function.Function<io.clientcore.core.http.models.RequestContext, TResponse>)",
@@ -2400,11 +2380,6 @@
     "signature" : "setEnabled(java.lang.Boolean)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/keyvault-v2/azure-security-keyvault-certificates/src/main/java/com/azure/v2/security/keyvault/certificates/models/CertificatePolicy.java"
   } ],
-  "io.clientcore.core.instrumentation.SdkInstrumentationOptions.Anonymous-33eb5fa4-96f5-4d09-ba20-6fdf67e6fd8d" : [ {
-    "methodName" : "disableSpanSuppression",
-    "signature" : "disableSpanSuppression(io.clientcore.core.instrumentation.SdkInstrumentationOptions)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/instrumentation/SdkInstrumentationOptions.java"
-  } ],
   "com.azure.v2.identity.EnvironmentCredentialBuilder" : [ {
     "methodName" : "getClientOptions",
     "signature" : "getClientOptions()",
@@ -2552,11 +2527,6 @@
     "methodName" : "toJson",
     "signature" : "toJson(io.clientcore.core.serialization.json.JsonWriter)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/geo/GeoObject.java"
-  } ],
-  "io.clientcore.core.utils.CoreUtils.Anonymous-7cc8c6a8-0b30-4bd8-8bd1-15b37da287f5" : [ {
-    "methodName" : "getActualTypeArguments",
-    "signature" : "getActualTypeArguments()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/utils/CoreUtils.java"
   } ],
   "io.clientcore.core.serialization.ObjectSerializer" : [ {
     "methodName" : "deserializeFromStream",
@@ -3150,11 +3120,6 @@
     "methodName" : "send",
     "signature" : "send(io.clientcore.core.http.models.HttpRequest)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/pipeline/HttpPipeline.java"
-  } ],
-  "io.clientcore.core.utils.CoreUtils.Anonymous-d3aff440-78aa-4638-bfa4-189875a88415" : [ {
-    "methodName" : "getRawType",
-    "signature" : "getRawType()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/utils/CoreUtils.java"
   } ],
   "io.clientcore.core.instrumentation.tracing.NoopSpan" : [ {
     "methodName" : "setAttribute",
@@ -3821,11 +3786,6 @@
     "methodName" : "httpRetryOptions",
     "signature" : "httpRetryOptions(io.clientcore.core.http.pipeline.HttpRetryOptions)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/traits/HttpTrait.java"
-  } ],
-  "io.clientcore.core.http.models.ServerSentEvent.Anonymous-4b1620d4-65c7-49a8-b0a3-861df507b2b7" : [ {
-    "methodName" : "setComment",
-    "signature" : "setComment(io.clientcore.core.http.models.ServerSentEvent,java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/ServerSentEvent.java"
   } ],
   "com.azure.v2.core.http.polling.LongRunningOperationStatus" : [ {
     "methodName" : "getValue",
@@ -4568,11 +4528,6 @@
     "signature" : "getDefaultScope(java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/AzureAuthorityHosts.java"
   } ],
-  "com.azure.v2.data.appconfiguration.models.ConfigurationSetting.Anonymous-f6b91796-6438-4db1-b9a3-e914dcfeb210" : [ {
-    "methodName" : "setReadOnly",
-    "signature" : "setReadOnly(com.azure.v2.data.appconfiguration.models.ConfigurationSetting,boolean)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration/models/ConfigurationSetting.java"
-  } ],
   "io.clientcore.core.http.pipeline.HttpInstrumentationOptions.HttpLogLevel" : [ {
     "methodName" : "fromConfiguration",
     "signature" : "fromConfiguration(io.clientcore.core.utils.configuration.Configuration)",
@@ -5019,11 +4974,6 @@
     "methodName" : "canPoll",
     "signature" : "canPoll(io.clientcore.core.http.models.Response<T>)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/core-v2/azure-core/src/main/java/com/azure/v2/core/http/polling/LocationPollingStrategy.java"
-  } ],
-  "io.clientcore.core.http.models.ServerSentEvent.Anonymous-7b89cc5e-3c7b-43fd-910b-6932268e923f" : [ {
-    "methodName" : "setEvent",
-    "signature" : "setEvent(io.clientcore.core.http.models.ServerSentEvent,java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/ServerSentEvent.java"
   } ],
   "io.clientcore.core.instrumentation.tracing.TraceContextPropagator" : [ {
     "methodName" : "extract",
@@ -5537,11 +5487,6 @@
     "signature" : "setHeaders(io.clientcore.core.http.models.HttpHeaders,io.clientcore.core.http.models.HttpHeaders)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/pipeline/AddHeadersPolicy.java"
   } ],
-  "io.clientcore.core.http.paging.PagedIterable.Anonymous-3ef3f3ab-e343-47d3-bf79-2a405dba40ae" : [ {
-    "methodName" : "isNextAvailable",
-    "signature" : "isNextAvailable()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/paging/PagedIterable.java"
-  } ],
   "com.azure.v2.identity.WorkloadIdentityCredentialBuilder" : [ {
     "methodName" : "tokenFilePath",
     "signature" : "tokenFilePath(java.lang.String)",
@@ -5554,11 +5499,6 @@
     "methodName" : "getClientOptions",
     "signature" : "getClientOptions()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/identity-v2/azure-identity/src/main/java/com/azure/v2/identity/WorkloadIdentityCredentialBuilder.java"
-  } ],
-  "io.clientcore.core.http.paging.PagedIterable.Anonymous-abc38034-e724-4bff-8153-ee5393680a5a" : [ {
-    "methodName" : "needToRequestPage",
-    "signature" : "needToRequestPage()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/paging/PagedIterable.java"
   } ],
   "com.azure.v2.identity.AzureDeveloperCliCredentialBuilder" : [ {
     "methodName" : "additionallyAllowedTenants",
@@ -5710,11 +5650,6 @@
     "methodName" : "isRedactedHeaderNamesLoggingEnabled",
     "signature" : "isRedactedHeaderNamesLoggingEnabled()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/pipeline/HttpInstrumentationOptions.java"
-  } ],
-  "io.clientcore.core.http.models.ServerSentEvent.Anonymous-8cd26b91-a926-466f-b4b7-a9c4b735a54a" : [ {
-    "methodName" : "setId",
-    "signature" : "setId(io.clientcore.core.http.models.ServerSentEvent,java.lang.String)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/ServerSentEvent.java"
   } ],
   "io.clientcore.core.http.pipeline.UserAgentOptions" : [ {
     "methodName" : "setSdkName",
@@ -6410,11 +6345,6 @@
     "signature" : "getHeaders()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/Response.java"
   } ],
-  "io.clientcore.core.http.paging.PagedIterable.Anonymous-d1f9fadb-1306-471a-b6d3-037f1851611d" : [ {
-    "methodName" : "addPage",
-    "signature" : "addPage(io.clientcore.core.http.paging.PagedResponse<T>)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/paging/PagedIterable.java"
-  } ],
   "io.clientcore.core.traits.NamedKeyCredentialTrait" : [ {
     "methodName" : "credential",
     "signature" : "credential(io.clientcore.core.credentials.NamedKeyCredential)",
@@ -6823,11 +6753,6 @@
     "signature" : "getShouldRedirectCondition()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/pipeline/HttpRedirectOptions.java"
   } ],
-  "io.clientcore.core.http.models.HttpRequest.Anonymous-23edf1cd-284f-46fc-b3ca-ec04565f5daf" : [ {
-    "methodName" : "getTryCount",
-    "signature" : "getTryCount(io.clientcore.core.http.models.HttpRequest)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/HttpRequest.java"
-  } ],
   "com.azure.v2.security.keyvault.administration.models.KeyVaultSettingType" : [ {
     "methodName" : "toJson",
     "signature" : "toJson(io.clientcore.core.serialization.json.JsonWriter)",
@@ -6907,11 +6832,6 @@
     "methodName" : "update",
     "signature" : "update(java.lang.String)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/core-v2/azure-core/src/main/java/com/azure/v2/core/credentials/AzureSasCredential.java"
-  } ],
-  "io.clientcore.core.http.models.ServerSentEvent.Anonymous-34254334-faab-4ef5-9e88-ab4f4ff3ef2b" : [ {
-    "methodName" : "setData",
-    "signature" : "setData(io.clientcore.core.http.models.ServerSentEvent,java.util.List<java.lang.String>)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/ServerSentEvent.java"
   } ],
   "io.clientcore.core.utils.CompositeChallengeHandler" : [ {
     "methodName" : "canHandle",
@@ -7168,11 +7088,6 @@
     "methodName" : "main",
     "signature" : "main(java.lang.String[])",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/keyvault-v2/azure-security-keyvault-keys/src/samples/java/com/azure/v2/security/keyvault/keys/KeyRotation.java"
-  } ],
-  "io.clientcore.core.http.paging.PagedIterable.Anonymous-e5cdce10-b707-4653-a412-ea617eef0d5b" : [ {
-    "methodName" : "addPage",
-    "signature" : "addPage(io.clientcore.core.http.paging.PagedResponse<T>)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/paging/PagedIterable.java"
   } ],
   "io.clientcore.core.utils.configuration.Configuration" : [ {
     "methodName" : "from",
@@ -8293,11 +8208,6 @@
     "signature" : "getData()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/models/ServerSentResult.java"
   } ],
-  "io.clientcore.core.utils.CoreUtils.Anonymous-dd3d7897-fa03-4b02-b898-e979e724bcef" : [ {
-    "methodName" : "getOwnerType",
-    "signature" : "getOwnerType()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/utils/CoreUtils.java"
-  } ],
   "com.azure.v2.identity.ManagedIdentityCredential" : [ {
     "methodName" : "fetchManagedIdentityId",
     "signature" : "fetchManagedIdentityId(com.azure.v2.identity.implementation.models.ManagedIdentityClientOptions)",
@@ -9156,11 +9066,6 @@
     "signature" : "poll(com.azure.v2.core.http.polling.PollingContext<T>,java.lang.reflect.Type)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/core-v2/azure-core/src/main/java/com/azure/v2/core/http/polling/PollingStrategy.java"
   } ],
-  "io.clientcore.core.instrumentation.SdkInstrumentationOptions.Anonymous-6d0efa3f-d52a-45df-a8ee-526832192290" : [ {
-    "methodName" : "isSpanSuppressionDisabled",
-    "signature" : "isSpanSuppressionDisabled(io.clientcore.core.instrumentation.SdkInstrumentationOptions)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/instrumentation/SdkInstrumentationOptions.java"
-  } ],
   "com.azure.v2.identity.CredentialBuilderBase" : [ {
     "methodName" : "getClientOptions",
     "signature" : "getClientOptions()",
@@ -9321,11 +9226,6 @@
     "methodName" : "add",
     "signature" : "add(long,io.clientcore.core.instrumentation.InstrumentationAttributes,io.clientcore.core.instrumentation.InstrumentationContext)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/instrumentation/metrics/LongCounter.java"
-  } ],
-  "io.clientcore.core.http.models.ServerSentEvent.Anonymous-925e4670-aac9-438c-95f7-910bdb0c1209" : [ {
-    "methodName" : "setRetryAfter",
-    "signature" : "setRetryAfter(io.clientcore.core.http.models.ServerSentEvent,java.time.Duration)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/ServerSentEvent.java"
   } ],
   "io.clientcore.core.http.models.HttpRequest" : [ {
     "methodName" : "setTryCount",
@@ -9562,20 +9462,10 @@
     "signature" : "toJson(io.clientcore.core.serialization.json.JsonWriter)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/serialization/json/models/JsonPatchOperation.java"
   } ],
-  "io.clientcore.core.http.models.HttpRequest.Anonymous-38cee7da-636b-4ddd-bb25-b982d120ee21" : [ {
-    "methodName" : "setTryCount",
-    "signature" : "setTryCount(io.clientcore.core.http.models.HttpRequest,int)",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/models/HttpRequest.java"
-  } ],
   "com.azure.v2.security.keyvault.keys.cryptography.SignVerifyOperations" : [ {
     "methodName" : "main",
     "signature" : "main(java.lang.String[])",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/keyvault-v2/azure-security-keyvault-keys/src/samples/java/com/azure/v2/security/keyvault/keys/cryptography/SignVerifyOperations.java"
-  } ],
-  "io.clientcore.core.http.paging.PagedIterable.Anonymous-e8f14978-2eb3-4829-b447-99c8fc69a088" : [ {
-    "methodName" : "isNextAvailable",
-    "signature" : "isNextAvailable()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/paging/PagedIterable.java"
   } ],
   "io.clientcore.core.http.pipeline.HttpInstrumentationPolicy" : [ {
     "methodName" : "process",
@@ -9633,11 +9523,6 @@
     "methodName" : "logException",
     "signature" : "logException(io.clientcore.core.instrumentation.logging.ClientLogger,io.clientcore.core.http.models.HttpRequest,io.clientcore.core.http.models.Response<io.clientcore.core.models.binarydata.BinaryData>,T,long,java.lang.Long,long,java.lang.String,int,io.clientcore.core.instrumentation.InstrumentationContext)",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/pipeline/HttpInstrumentationPolicy.java"
-  } ],
-  "io.clientcore.core.http.paging.PagedIterable.Anonymous-020ec5e3-e15f-47c4-be27-ad2fa407178c" : [ {
-    "methodName" : "getNext",
-    "signature" : "getNext()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/clientcore/core/src/main/java/io/clientcore/core/http/paging/PagedIterable.java"
   } ],
   "com.azure.v2.data.appconfiguration.models.SecretReferenceConfigurationSetting" : [ {
     "methodName" : "tryParseValue",

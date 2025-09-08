@@ -202,6 +202,9 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
                     ResolvedMethodDeclaration resolved = n.resolve();
                     String methodName = resolved.getName();
                     String className = resolved.declaringType().getQualifiedName();
+                    if (isSyntheticClass(className)) {
+                        return;
+                    }
                     String signature = buildMethodSignature(resolved);
                     MethodCall methodCall = new MethodCall(className, methodName, signature, sourceFile);
                     declaredMethods.add(methodCall);
@@ -341,6 +344,9 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
                     ResolvedMethodDeclaration resolved = n.resolve();
                     String methodName = resolved.getName();
                     String className = resolved.declaringType().getQualifiedName();
+                    if (isSyntheticClass(className)) {
+                        return;
+                    }
                     String signature = buildMethodSignature(resolved);
                     MethodCall methodCall = new MethodCall(className, methodName, signature, sourceFile);
                     methodCalls.add(methodCall);
@@ -353,16 +359,11 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
         return methodCalls;
     }
 
-//    private boolean shouldIncludeMethod(String methodName) {
-//        if (methodName.startsWith("get") || methodName.startsWith("set") || methodName.startsWith("is")) {
-//            return false;
-//        }
-//        if (methodName.equals("toString") || methodName.equals("equals") ||
-//            methodName.equals("hashCode") || methodName.equals("clone")) {
-//            return false;
-//        }
-//        return true;
-//    }
+    private boolean isSyntheticClass(String className) {
+        return className.contains(".Anonymous-")
+            || className.contains("$Lambda$")
+            || className.matches(".*\\$\\d+.*"); // e.g., MyClass$1
+    }
 
     private String buildMethodSignature(ResolvedMethodDeclaration method) {
         StringBuilder signature = new StringBuilder();
