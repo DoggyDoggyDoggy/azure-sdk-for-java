@@ -4898,62 +4898,6 @@
     "signature" : "createCryptographyClient()",
     "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/keyvault-v2/azure-security-keyvault-keys/src/samples/java/com/azure/v2/security/keyvault/keys/ReadmeSamples.java"
   } ],
-  "com.azure.v2.security.keyvault.keys.cryptography.CryptographyClientJavaDocCodeSnippets" : [ {
-    "methodName" : "getKeyWithResponse",
-    "signature" : "getKeyWithResponse()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/keyvault-v2/azure-security-keyvault-keys/src/samples/java/com/azure/v2/security/keyvault/keys/cryptography/CryptographyClientJavaDocCodeSnippets.java"
-  }, {
-    "methodName" : "encrypt",
-    "signature" : "encrypt()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/keyvault-v2/azure-security-keyvault-keys/src/samples/java/com/azure/v2/security/keyvault/keys/cryptography/CryptographyClientJavaDocCodeSnippets.java"
-  }, {
-    "methodName" : "createClient",
-    "signature" : "createClient()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/keyvault-v2/azure-security-keyvault-keys/src/samples/java/com/azure/v2/security/keyvault/keys/cryptography/CryptographyClientJavaDocCodeSnippets.java"
-  }, {
-    "methodName" : "signVerify",
-    "signature" : "signVerify()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/keyvault-v2/azure-security-keyvault-keys/src/samples/java/com/azure/v2/security/keyvault/keys/cryptography/CryptographyClientJavaDocCodeSnippets.java"
-  }, {
-    "methodName" : "createClientWithHttpClient",
-    "signature" : "createClientWithHttpClient()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/keyvault-v2/azure-security-keyvault-keys/src/samples/java/com/azure/v2/security/keyvault/keys/cryptography/CryptographyClientJavaDocCodeSnippets.java"
-  }, {
-    "methodName" : "getKey",
-    "signature" : "getKey()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/keyvault-v2/azure-security-keyvault-keys/src/samples/java/com/azure/v2/security/keyvault/keys/cryptography/CryptographyClientJavaDocCodeSnippets.java"
-  }, {
-    "methodName" : "wrapKeyUnwrapKey",
-    "signature" : "wrapKeyUnwrapKey()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/keyvault-v2/azure-security-keyvault-keys/src/samples/java/com/azure/v2/security/keyvault/keys/cryptography/CryptographyClientJavaDocCodeSnippets.java"
-  }, {
-    "methodName" : "createClientWithJsonWebKey",
-    "signature" : "createClientWithJsonWebKey()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/keyvault-v2/azure-security-keyvault-keys/src/samples/java/com/azure/v2/security/keyvault/keys/cryptography/CryptographyClientJavaDocCodeSnippets.java"
-  }, {
-    "methodName" : "signDataVerifyData",
-    "signature" : "signDataVerifyData()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/keyvault-v2/azure-security-keyvault-keys/src/samples/java/com/azure/v2/security/keyvault/keys/cryptography/CryptographyClientJavaDocCodeSnippets.java"
-  }, {
-    "methodName" : "decrypt",
-    "signature" : "decrypt()",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/keyvault-v2/azure-security-keyvault-keys/src/samples/java/com/azure/v2/security/keyvault/keys/cryptography/CryptographyClientJavaDocCodeSnippets.java"
-  } ],
-  "com.azure.v2.security.keyvault.keys.cryptography.EncryptDecryptOperations" : [ {
-    "methodName" : "main",
-    "signature" : "main(java.lang.String[])",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/keyvault-v2/azure-security-keyvault-keys/src/samples/java/com/azure/v2/security/keyvault/keys/cryptography/EncryptDecryptOperations.java"
-  } ],
-  "com.azure.v2.security.keyvault.keys.cryptography.KeyWrapUnwrapOperations" : [ {
-    "methodName" : "main",
-    "signature" : "main(java.lang.String[])",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/keyvault-v2/azure-security-keyvault-keys/src/samples/java/com/azure/v2/security/keyvault/keys/cryptography/KeyWrapUnwrapOperations.java"
-  } ],
-  "com.azure.v2.security.keyvault.keys.cryptography.SignVerifyOperations" : [ {
-    "methodName" : "main",
-    "signature" : "main(java.lang.String[])",
-    "sourceFile" : "/Users/rachelstandeven/Documents/SWE_Capstone_Repo/Untitled/sdk/keyvault-v2/azure-security-keyvault-keys/src/samples/java/com/azure/v2/security/keyvault/keys/cryptography/SignVerifyOperations.java"
-  } ],
   "com.azure.v2.security.keyvault.secrets.SecretClient" : [ {
     "methodName" : "getDeletedSecret",
     "signature" : "getDeletedSecret(java.lang.String)",
