@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-package com.azure.v2.data.appconfiguration;
-
+import com.azure.v2.data.appconfiguration.ConfigurationClient;
+import com.azure.v2.data.appconfiguration.ConfigurationClientBuilder;
 import com.azure.v2.data.appconfiguration.models.ConfigurationSetting;
 import com.azure.v2.data.appconfiguration.models.SettingSelector;
 import io.clientcore.core.http.models.HttpHeaderName;
