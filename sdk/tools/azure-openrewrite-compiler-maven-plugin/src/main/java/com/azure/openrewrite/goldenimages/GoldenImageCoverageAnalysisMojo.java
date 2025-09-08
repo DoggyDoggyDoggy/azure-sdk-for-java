@@ -532,7 +532,7 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
                     root.set(className, methodArray);
                 });
 
-            File outputFile = new File(baseDir, filename);
+            File outputFile = new File("azure-openrewrite-compiler-maven-plugin", filename);
             mapper.writerWithDefaultPrettyPrinter().writeValue(outputFile, root);
             getLog().info("Method usage analysis written to: " + outputFile.getAbsolutePath());
 //            getLog().info("Total unique method calls found in " + filename + ": " + methodCalls.size());
