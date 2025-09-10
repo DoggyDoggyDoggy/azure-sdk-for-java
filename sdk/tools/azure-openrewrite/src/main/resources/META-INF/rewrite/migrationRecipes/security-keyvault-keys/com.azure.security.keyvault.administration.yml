@@ -8,11 +8,11 @@ recipeList:
   #- org.openrewrite.java.ChangeMethodName:
   #    methodPattern: com.azure.security.keyvault.administration.KeyVaultAccessControlClientBuilder vaultUrl(..)
   #    newMethodName: endpoint
-#
+
   #- org.openrewrite.java.ChangeType:
   #    oldFullyQualifiedTypeName: com.azure.security.keyvault.administration.KeyVaultAccessControlClientBuilder
   #    newFullyQualifiedTypeName: com.azure.v2.security.keyvault.administration.KeyVaultAccessControlClientBuilder
-#
+
   #- org.openrewrite.java.ChangeType:
   #    oldFullyQualifiedTypeName: com.azure.security.keyvault.administration.KeyVaultAccessControlClient
   #    newFullyQualifiedTypeName: com.azure.v2.security.keyvault.administration.KeyVaultAccessControlClient
