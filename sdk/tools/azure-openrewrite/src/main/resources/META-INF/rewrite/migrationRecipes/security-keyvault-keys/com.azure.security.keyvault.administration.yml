@@ -5,17 +5,17 @@ name: com.azure.openrewrite.recipe.azure.security.keyvault.administration
 displayName: Migrate from azure.security.keyvault.administration to next generation stack
 description: This recipe migrates the azure.security.keyvault.administration package to the next generation stack.
 recipeList:
-  - org.openrewrite.java.ChangeMethodName:
-      methodPattern: com.azure.security.keyvault.administration.KeyVaultAccessControlClientBuilder vaultUrl(..)
-      newMethodName: endpoint
-
-  - org.openrewrite.java.ChangeType:
-      oldFullyQualifiedTypeName: com.azure.security.keyvault.administration.KeyVaultAccessControlClientBuilder
-      newFullyQualifiedTypeName: com.azure.v2.security.keyvault.administration.KeyVaultAccessControlClientBuilder
-
-  - org.openrewrite.java.ChangeType:
-      oldFullyQualifiedTypeName: com.azure.security.keyvault.administration.KeyVaultAccessControlClient
-      newFullyQualifiedTypeName: com.azure.v2.security.keyvault.administration.KeyVaultAccessControlClient
+  #- org.openrewrite.java.ChangeMethodName:
+  #    methodPattern: com.azure.security.keyvault.administration.KeyVaultAccessControlClientBuilder vaultUrl(..)
+  #    newMethodName: endpoint
+#
+  #- org.openrewrite.java.ChangeType:
+  #    oldFullyQualifiedTypeName: com.azure.security.keyvault.administration.KeyVaultAccessControlClientBuilder
+  #    newFullyQualifiedTypeName: com.azure.v2.security.keyvault.administration.KeyVaultAccessControlClientBuilder
+#
+  #- org.openrewrite.java.ChangeType:
+  #    oldFullyQualifiedTypeName: com.azure.security.keyvault.administration.KeyVaultAccessControlClient
+  #    newFullyQualifiedTypeName: com.azure.v2.security.keyvault.administration.KeyVaultAccessControlClient
 
   - org.openrewrite.java.ChangePackage:
       oldPackageName: com.azure.security.keyvault.administration
