@@ -36,3 +36,23 @@ recipeList:
       oldFullyQualifiedTypeName: com.azure.security.keyvault.administration.models.KeyVaultRoleDefinition
       newFullyQualifiedTypeName: com.azure.v2.security.keyvault.administration.models.KeyVaultRoleDefinition
 
+  # --------------------------------------------------------------------
+  # KeyVaultBackupOperation
+  # --------------------------------------------------------------------
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: com.azure.security.keyvault.administration.models.KeyVaultBackupOperation
+      newFullyQualifiedTypeName: com.azure.v2.security.keyvault.administration.models.KeyVaultBackupOperation
+
+  # --------------------------------------------------------------------
+  # KeyVaultRestoreOperation
+  # --------------------------------------------------------------------
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: com.azure.security.keyvault.administration.models.KeyVaultRestoreOperation
+      newFullyQualifiedTypeName: com.azure.v2.security.keyvault.administration.models.KeyVaultRestoreOperation
+
+  # --------------------------------------------------------------------
+  # KeyVaultRestoreResult
+  # --------------------------------------------------------------------
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: com.azure.security.keyvault.administration.models.KeyVaultRestoreResult
+      newFullyQualifiedTypeName: com.azure.v2.security.keyvault.administration.models.KeyVaultRestoreResult
