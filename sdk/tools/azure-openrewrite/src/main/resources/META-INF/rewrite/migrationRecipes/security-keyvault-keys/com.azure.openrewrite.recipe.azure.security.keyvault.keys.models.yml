@@ -14,3 +14,25 @@ recipeList:
       oldPackageName: com.azure.security.keyvault.keys
       newPackageName: com.azure.v2.security.keyvault.keys
       recursive: true
+
+  # --------------------------------------------------------------------
+  # KeyVaultRoleAssignment
+  # --------------------------------------------------------------------
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: com.azure.security.keyvault.administration.models.KeyVaultRoleAssignment
+      newFullyQualifiedTypeName: com.azure.v2.security.keyvault.administration.models.KeyVaultRoleAssignment
+
+  # --------------------------------------------------------------------
+  # KeyVaultRoleScope
+  # --------------------------------------------------------------------
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: com.azure.security.keyvault.administration.models.KeyVaultRoleScope
+      newFullyQualifiedTypeName: com.azure.v2.security.keyvault.administration.models.KeyVaultRoleScope
+
+  # --------------------------------------------------------------------
+  # KeyVaultRoleDefinition
+  # --------------------------------------------------------------------
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: com.azure.security.keyvault.administration.models.KeyVaultRoleDefinition
+      newFullyQualifiedTypeName: com.azure.v2.security.keyvault.administration.models.KeyVaultRoleDefinition
+
