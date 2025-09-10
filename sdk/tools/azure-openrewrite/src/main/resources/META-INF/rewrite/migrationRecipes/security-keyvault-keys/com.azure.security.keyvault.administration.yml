@@ -11,3 +11,7 @@ recipeList:
       oldPackageName: com.azure.security.keyvault.administration
       newPackageName: com.azure.v2.security.keyvault.administration
       recursive: true
+
+  - org.openrewrite.java.ChangeMethodName:
+      methodPattern: com.azure.security.keyvault.administration.KeyVaultAccessControlClient vaultUrl(..)
+      newMethodName: endpoint
