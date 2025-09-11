@@ -30,7 +30,7 @@ public class AccessControlHelloWorld {
         (https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/keyvault/azure-security-keyvault-administration/README.md)
         for links and instructions. */
         KeyVaultAccessControlClient accessControlClient = new KeyVaultAccessControlClientBuilder()
-            .vaultUrl("<your-managed-hsm-url>")
+            .endpoint("<your-managed-hsm-url>")
             .credential(new DefaultAzureCredentialBuilder().build())
             .buildClient();
 
