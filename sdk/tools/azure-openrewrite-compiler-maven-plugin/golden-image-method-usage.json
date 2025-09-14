@@ -1,0 +1,975 @@
+{
+  "com.azure.json.JsonReader" : [ {
+    "methodName" : "getString",
+    "signature" : "getString()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample36\\v2\\ComplexConfiguration.java"
+  }, {
+    "methodName" : "skipChildren",
+    "signature" : "skipChildren()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample36\\v2\\ComplexConfiguration.java"
+  }, {
+    "methodName" : "readObject",
+    "signature" : "readObject(com.azure.json.ReadValueCallback<com.azure.json.JsonReader, T>)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample36\\v2\\ComplexConfiguration.java"
+  }, {
+    "methodName" : "getFieldName",
+    "signature" : "getFieldName()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample36\\v2\\ComplexConfiguration.java"
+  }, {
+    "methodName" : "getInt",
+    "signature" : "getInt()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample36\\v2\\ComplexConfiguration.java"
+  }, {
+    "methodName" : "nextToken",
+    "signature" : "nextToken()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample36\\v2\\ComplexConfiguration.java"
+  } ],
+  "com.azure.json.JsonWriter" : [ {
+    "methodName" : "writeStringField",
+    "signature" : "writeStringField(java.lang.String,java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample36\\v2\\ComplexConfiguration.java"
+  }, {
+    "methodName" : "writeStartObject",
+    "signature" : "writeStartObject()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample36\\v2\\ComplexConfiguration.java"
+  }, {
+    "methodName" : "writeEndObject",
+    "signature" : "writeEndObject()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample36\\v2\\ComplexConfiguration.java"
+  }, {
+    "methodName" : "writeIntField",
+    "signature" : "writeIntField(java.lang.String,int)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample36\\v2\\ComplexConfiguration.java"
+  } ],
+  "com.azure.v2.core.credentials.AzureSasCredential" : [ {
+    "methodName" : "update",
+    "signature" : "update(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\AzureSasCredentialApis\\v2\\AzureSasCredentialApis.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\AzureSasCredentialApis\\v2\\AzureSasCredentialApis.java"
+  }, {
+    "methodName" : "getSignature",
+    "signature" : "getSignature()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\AzureSasCredentialApis\\v2\\AzureSasCredentialApis.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>(java.lang.String,java.util.function.Function<java.lang.String, java.lang.String>)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\AzureSasCredentialApis\\v2\\AzureSasCredentialApis.java"
+  } ],
+  "com.azure.v2.core.credentials.TokenCredential" : [ {
+    "methodName" : "getToken",
+    "signature" : "getToken(com.azure.v2.core.credentials.TokenRequestContext)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\TokenCredentialApis\\v2\\TokenCredentialApis.java"
+  } ],
+  "com.azure.v2.core.credentials.TokenRequestContext" : [ {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\TokenCredentialApis\\v2\\TokenCredentialApis.java"
+  } ],
+  "com.azure.v2.data.appconfiguration.ConfigurationClient" : [ {
+    "methodName" : "addConfigurationSetting",
+    "signature" : "addConfigurationSetting(java.lang.String,java.lang.String,java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample34\\v2\\WatchFeature.java"
+  }, {
+    "methodName" : "getConfigurationSetting",
+    "signature" : "getConfigurationSetting(java.lang.String,java.lang.String,java.time.OffsetDateTime)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample1\\v2\\AadAuthentication.java"
+  }, {
+    "methodName" : "listConfigurationSettings",
+    "signature" : "listConfigurationSettings(com.azure.v2.data.appconfiguration.models.SettingSelector)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample13\\v2\\FeatureFlagConfigurationSettingSample.java"
+  }, {
+    "methodName" : "setConfigurationSettingWithResponse",
+    "signature" : "setConfigurationSettingWithResponse(com.azure.v2.data.appconfiguration.models.ConfigurationSetting,boolean,io.clientcore.core.http.models.RequestContext)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample2\\v2\\ConditionalRequest.java"
+  }, {
+    "methodName" : "setConfigurationSetting",
+    "signature" : "setConfigurationSetting(com.azure.v2.data.appconfiguration.models.ConfigurationSetting)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample13\\v2\\FeatureFlagConfigurationSettingSample.java"
+  }, {
+    "methodName" : "getConfigurationSetting",
+    "signature" : "getConfigurationSetting(java.lang.String,java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample34\\v2\\WatchFeature.java"
+  }, {
+    "methodName" : "setConfigurationSetting",
+    "signature" : "setConfigurationSetting(java.lang.String,java.lang.String,java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample1\\v2\\AadAuthentication.java"
+  }, {
+    "methodName" : "getConfigurationSettingWithResponse",
+    "signature" : "getConfigurationSettingWithResponse(com.azure.v2.data.appconfiguration.models.ConfigurationSetting,java.time.OffsetDateTime,boolean,io.clientcore.core.http.models.RequestContext)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample2\\v2\\ConditionalRequest.java"
+  }, {
+    "methodName" : "deleteConfigurationSetting",
+    "signature" : "deleteConfigurationSetting(com.azure.v2.data.appconfiguration.models.ConfigurationSetting)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample13\\v2\\FeatureFlagConfigurationSettingSample.java"
+  }, {
+    "methodName" : "listRevisions",
+    "signature" : "listRevisions(com.azure.v2.data.appconfiguration.models.SettingSelector)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample30\\v2\\ReadRevisionHistoryWIthTagsFilter.java"
+  }, {
+    "methodName" : "getConfigurationSetting",
+    "signature" : "getConfigurationSetting(com.azure.v2.data.appconfiguration.models.ConfigurationSetting)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample13\\v2\\FeatureFlagConfigurationSettingSample.java"
+  }, {
+    "methodName" : "deleteConfigurationSettingWithResponse",
+    "signature" : "deleteConfigurationSettingWithResponse(com.azure.v2.data.appconfiguration.models.ConfigurationSetting,boolean,io.clientcore.core.http.models.RequestContext)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample2\\v2\\ConditionalRequest.java"
+  }, {
+    "methodName" : "listLabels",
+    "signature" : "listLabels(com.azure.v2.data.appconfiguration.models.SettingLabelSelector,io.clientcore.core.http.models.RequestContext)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample17\\v2\\ListLabels.java"
+  }, {
+    "methodName" : "deleteConfigurationSetting",
+    "signature" : "deleteConfigurationSetting(java.lang.String,java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample1\\v2\\AadAuthentication.java"
+  }, {
+    "methodName" : "setReadOnly",
+    "signature" : "setReadOnly(java.lang.String,java.lang.String,boolean)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample26\\v2\\ReadOnlySample.java"
+  } ],
+  "com.azure.v2.data.appconfiguration.ConfigurationClientBuilder" : [ {
+    "methodName" : "endpoint",
+    "signature" : "endpoint(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample1\\v2\\AadAuthentication.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample1\\v2\\AadAuthentication.java"
+  }, {
+    "methodName" : "credential",
+    "signature" : "credential(com.azure.v2.core.credentials.TokenCredential)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample1\\v2\\AadAuthentication.java"
+  }, {
+    "methodName" : "buildClient",
+    "signature" : "buildClient()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample1\\v2\\AadAuthentication.java"
+  }, {
+    "methodName" : "connectionString",
+    "signature" : "connectionString(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample13\\v2\\FeatureFlagConfigurationSettingSample.java"
+  } ],
+  "com.azure.v2.data.appconfiguration.FeatureFlagConfigurationSettingSample" : [ {
+    "methodName" : "printFeatureFlagSetting",
+    "signature" : "printFeatureFlagSetting(com.azure.v2.data.appconfiguration.models.FeatureFlagConfigurationSetting)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample13\\v2\\FeatureFlagConfigurationSettingSample.java"
+  } ],
+  "com.azure.v2.data.appconfiguration.SecretReferenceConfigurationSettingSample" : [ {
+    "methodName" : "printSecretReferenceConfigurationSetting",
+    "signature" : "printSecretReferenceConfigurationSetting(com.azure.v2.data.appconfiguration.models.SecretReferenceConfigurationSetting)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample32\\v2\\SecretReferenceConfigurationSettingSample.java"
+  } ],
+  "com.azure.v2.data.appconfiguration.WatchFeature" : [ {
+    "methodName" : "refresh",
+    "signature" : "refresh(com.azure.v2.data.appconfiguration.ConfigurationClient,java.util.List<com.azure.v2.data.appconfiguration.models.ConfigurationSetting>)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample34\\v2\\WatchFeature.java"
+  } ],
+  "com.azure.v2.data.appconfiguration.implementation.Utility" : [ {
+    "methodName" : "getTagsFilterInString",
+    "signature" : "getTagsFilterInString(java.util.Map<java.lang.String, java.lang.String>)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample19\\v2\\ListSettingsWithTagsFilter.java"
+  } ],
+  "com.azure.v2.data.appconfiguration.models.ComplexConfiguration" : [ {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample36\\v2\\ComplexConfiguration.java"
+  }, {
+    "methodName" : "endpointUri",
+    "signature" : "endpointUri()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample36\\v2\\ComplexConfiguration.java"
+  }, {
+    "methodName" : "name",
+    "signature" : "name(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample36\\v2\\ComplexConfiguration.java"
+  }, {
+    "methodName" : "name",
+    "signature" : "name()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample36\\v2\\ComplexConfiguration.java"
+  }, {
+    "methodName" : "endpointUri",
+    "signature" : "endpointUri(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample36\\v2\\ComplexConfiguration.java"
+  }, {
+    "methodName" : "numberOfInstances",
+    "signature" : "numberOfInstances(int)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample36\\v2\\ComplexConfiguration.java"
+  }, {
+    "methodName" : "numberOfInstances",
+    "signature" : "numberOfInstances()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample36\\v2\\ComplexConfiguration.java"
+  } ],
+  "com.azure.v2.data.appconfiguration.models.ConfigurationSetting" : [ {
+    "methodName" : "getETag",
+    "signature" : "getETag()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample34\\v2\\WatchFeature.java"
+  }, {
+    "methodName" : "getValue",
+    "signature" : "getValue()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample1\\v2\\AadAuthentication.java"
+  }, {
+    "methodName" : "getContentType",
+    "signature" : "getContentType()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample13\\v2\\FeatureFlagConfigurationSettingSample.java"
+  }, {
+    "methodName" : "setTags",
+    "signature" : "setTags(java.util.Map<java.lang.String, java.lang.String>)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample19\\v2\\ListSettingsWithTagsFilter.java"
+  }, {
+    "methodName" : "getTags",
+    "signature" : "getTags()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample19\\v2\\ListSettingsWithTagsFilter.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample19\\v2\\ListSettingsWithTagsFilter.java"
+  }, {
+    "methodName" : "getKey",
+    "signature" : "getKey()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample1\\v2\\AadAuthentication.java"
+  }, {
+    "methodName" : "setValue",
+    "signature" : "setValue(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample19\\v2\\ListSettingsWithTagsFilter.java"
+  }, {
+    "methodName" : "setKey",
+    "signature" : "setKey(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample19\\v2\\ListSettingsWithTagsFilter.java"
+  }, {
+    "methodName" : "getLabel",
+    "signature" : "getLabel()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample17\\v2\\ListLabels.java"
+  }, {
+    "methodName" : "setLabel",
+    "signature" : "setLabel(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample2\\v2\\ConditionalRequest.java"
+  }, {
+    "methodName" : "setETag",
+    "signature" : "setETag(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample34\\v2\\WatchFeature.java"
+  } ],
+  "com.azure.v2.data.appconfiguration.models.FeatureFlagConfigurationSetting" : [ {
+    "methodName" : "getValue",
+    "signature" : "getValue()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample13\\v2\\FeatureFlagConfigurationSettingSample.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>(java.lang.String,boolean)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample13\\v2\\FeatureFlagConfigurationSettingSample.java"
+  }, {
+    "methodName" : "getClientFilters",
+    "signature" : "getClientFilters()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample13\\v2\\FeatureFlagConfigurationSettingSample.java"
+  }, {
+    "methodName" : "getFeatureId",
+    "signature" : "getFeatureId()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample13\\v2\\FeatureFlagConfigurationSettingSample.java"
+  }, {
+    "methodName" : "setClientFilters",
+    "signature" : "setClientFilters(java.util.List<com.azure.v2.data.appconfiguration.models.FeatureFlagFilter>)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample13\\v2\\FeatureFlagConfigurationSettingSample.java"
+  } ],
+  "com.azure.v2.data.appconfiguration.models.FeatureFlagFilter" : [ {
+    "methodName" : "getName",
+    "signature" : "getName()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample13\\v2\\FeatureFlagConfigurationSettingSample.java"
+  }, {
+    "methodName" : "getParameters",
+    "signature" : "getParameters()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample13\\v2\\FeatureFlagConfigurationSettingSample.java"
+  }, {
+    "methodName" : "addParameter",
+    "signature" : "addParameter(java.lang.String,java.lang.Object)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample13\\v2\\FeatureFlagConfigurationSettingSample.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample13\\v2\\FeatureFlagConfigurationSettingSample.java"
+  } ],
+  "com.azure.v2.data.appconfiguration.models.SecretReferenceConfigurationSetting" : [ {
+    "methodName" : "getValue",
+    "signature" : "getValue()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample32\\v2\\SecretReferenceConfigurationSettingSample.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>(java.lang.String,java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample32\\v2\\SecretReferenceConfigurationSettingSample.java"
+  }, {
+    "methodName" : "getSecretId",
+    "signature" : "getSecretId()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample32\\v2\\SecretReferenceConfigurationSettingSample.java"
+  } ],
+  "com.azure.v2.data.appconfiguration.models.SettingLabel" : [ {
+    "methodName" : "getName",
+    "signature" : "getName()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample17\\v2\\ListLabels.java"
+  } ],
+  "com.azure.v2.data.appconfiguration.models.SettingLabelSelector" : [ {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample17\\v2\\ListLabels.java"
+  }, {
+    "methodName" : "setNameFilter",
+    "signature" : "setNameFilter(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample17\\v2\\ListLabels.java"
+  } ],
+  "com.azure.v2.data.appconfiguration.models.SettingSelector" : [ {
+    "methodName" : "setKeyFilter",
+    "signature" : "setKeyFilter(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample19\\v2\\ListSettingsWithTagsFilter.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample13\\v2\\FeatureFlagConfigurationSettingSample.java"
+  }, {
+    "methodName" : "setTagsFilter",
+    "signature" : "setTagsFilter(java.util.List<java.lang.String>)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample19\\v2\\ListSettingsWithTagsFilter.java"
+  }, {
+    "methodName" : "setMatchConditions",
+    "signature" : "setMatchConditions(java.util.List<io.clientcore.core.http.models.HttpMatchConditions>)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample4\\v2\\ConditionalRequestForSettingsPagination.java"
+  } ],
+  "com.azure.v2.identity.AuthorizationCodeCredentialBuilder" : [ {
+    "methodName" : "redirectUrl",
+    "signature" : "redirectUrl(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\AuthorizationCodeCredentialsSample\\v2\\AuthorizationCodeCredentialsSample.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\AuthorizationCodeCredentialsSample\\v2\\AuthorizationCodeCredentialsSample.java"
+  }, {
+    "methodName" : "authorizationCode",
+    "signature" : "authorizationCode(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\AuthorizationCodeCredentialsSample\\v2\\AuthorizationCodeCredentialsSample.java"
+  }, {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\AuthorizationCodeCredentialsSample\\v2\\AuthorizationCodeCredentialsSample.java"
+  } ],
+  "com.azure.v2.identity.AzureCliCredentialBuilder" : [ {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\AzureCliCredentialSample\\v2\\AzureCliCredentialSample.java"
+  }, {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\AzureCliCredentialSample\\v2\\AzureCliCredentialSample.java"
+  } ],
+  "com.azure.v2.identity.AzureDeveloperCliCredentialBuilder" : [ {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\AzureDeveloperCliCredentialSample\\v2\\AzureDeveloperCliCredentialSample.java"
+  }, {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\AzureDeveloperCliCredentialSample\\v2\\AzureDeveloperCliCredentialSample.java"
+  } ],
+  "com.azure.v2.identity.AzurePipelinesCredentialBuilder" : [ {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\AzurePipelinesCredentialSample\\v2\\AzurePipelinesCredentialSample.java"
+  }, {
+    "methodName" : "serviceConnectionId",
+    "signature" : "serviceConnectionId(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\AzurePipelinesCredentialSample\\v2\\AzurePipelinesCredentialSample.java"
+  }, {
+    "methodName" : "systemAccessToken",
+    "signature" : "systemAccessToken(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\AzurePipelinesCredentialSample\\v2\\AzurePipelinesCredentialSample.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\AzurePipelinesCredentialSample\\v2\\AzurePipelinesCredentialSample.java"
+  } ],
+  "com.azure.v2.identity.AzurePowerShellCredentialBuilder" : [ {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\AzurePowershellCredentialSample\\v2\\AzurePowershellCredentialSample.java"
+  }, {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\AzurePowershellCredentialSample\\v2\\AzurePowershellCredentialSample.java"
+  } ],
+  "com.azure.v2.identity.ChainedTokenCredentialBuilder" : [ {
+    "methodName" : "addLast",
+    "signature" : "addLast(com.azure.v2.core.credentials.TokenCredential)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\ChainedTokenCredentialSample\\v2\\ChainedTokenCredentialSample.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\ChainedTokenCredentialSample\\v2\\ChainedTokenCredentialSample.java"
+  }, {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\ChainedTokenCredentialSample\\v2\\ChainedTokenCredentialSample.java"
+  } ],
+  "com.azure.v2.identity.ClientAssertionCredentialBuilder" : [ {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\ClientAssertionCredentialSample\\v2\\ClientAssertionCredentialSample.java"
+  }, {
+    "methodName" : "clientAssertion",
+    "signature" : "clientAssertion(java.util.function.Supplier<java.lang.String>)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\ClientAssertionCredentialSample\\v2\\ClientAssertionCredentialSample.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\ClientAssertionCredentialSample\\v2\\ClientAssertionCredentialSample.java"
+  } ],
+  "com.azure.v2.identity.ClientCertificateCredentialBuilder" : [ {
+    "methodName" : "clientCertificate",
+    "signature" : "clientCertificate(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\ClientCertificateCredentialSample\\v2\\ClientCertificateCredentialSample.java"
+  }, {
+    "methodName" : "clientCertificate",
+    "signature" : "clientCertificate(java.io.InputStream)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\ClientCertificateCredentialSample\\v2\\ClientCertificateCredentialSample.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\ClientCertificateCredentialSample\\v2\\ClientCertificateCredentialSample.java"
+  }, {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\ClientCertificateCredentialSample\\v2\\ClientCertificateCredentialSample.java"
+  } ],
+  "com.azure.v2.identity.ClientSecretCredentialBuilder" : [ {
+    "methodName" : "clientSecret",
+    "signature" : "clientSecret(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\ClientSecretCredentialSample\\v2\\ClientSecretCredentialSample.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\ClientSecretCredentialSample\\v2\\ClientSecretCredentialSample.java"
+  }, {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\ClientSecretCredentialSample\\v2\\ClientSecretCredentialSample.java"
+  } ],
+  "com.azure.v2.identity.CredentialBuilderBase" : [ {
+    "methodName" : "tenantId",
+    "signature" : "tenantId(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\AzurePipelinesCredentialSample\\v2\\AzurePipelinesCredentialSample.java"
+  }, {
+    "methodName" : "clientId",
+    "signature" : "clientId(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\AuthorizationCodeCredentialsSample\\v2\\AuthorizationCodeCredentialsSample.java"
+  } ],
+  "com.azure.v2.identity.DefaultAzureCredentialBuilder" : [ {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample1\\v2\\AadAuthentication.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample1\\v2\\AadAuthentication.java"
+  }, {
+    "methodName" : "managedIdentityClientId",
+    "signature" : "managedIdentityClientId(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\DefaultAzureCredentialSample\\v2\\DefaultAzureCredentialSample.java"
+  } ],
+  "com.azure.v2.identity.DeviceCodeCredentialBuilder" : [ {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\DeviceCodeCredentialSample\\v2\\DeviceCodeCredentialSample.java"
+  }, {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\DeviceCodeCredentialSample\\v2\\DeviceCodeCredentialSample.java"
+  } ],
+  "com.azure.v2.identity.EnvironmentCredentialBuilder" : [ {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\EnvironmentCredentialSample\\v2\\EnvironmentCredentialSample.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\EnvironmentCredentialSample\\v2\\EnvironmentCredentialSample.java"
+  } ],
+  "com.azure.v2.identity.InteractiveBrowserCredentialBuilder" : [ {
+    "methodName" : "redirectUrl",
+    "signature" : "redirectUrl(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\ChainedTokenCredentialSample\\v2\\ChainedTokenCredentialSample.java"
+  }, {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\ChainedTokenCredentialSample\\v2\\ChainedTokenCredentialSample.java"
+  }, {
+    "methodName" : "clientId",
+    "signature" : "clientId(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\ChainedTokenCredentialSample\\v2\\ChainedTokenCredentialSample.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\ChainedTokenCredentialSample\\v2\\ChainedTokenCredentialSample.java"
+  } ],
+  "com.azure.v2.identity.ManagedIdentityCredentialBuilder" : [ {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\ChainedTokenCredentialSample\\v2\\ChainedTokenCredentialSample.java"
+  }, {
+    "methodName" : "clientId",
+    "signature" : "clientId(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\ManagedIdentityCredentialSample\\v2\\ManagedIdentityCredentialSample.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\ChainedTokenCredentialSample\\v2\\ChainedTokenCredentialSample.java"
+  } ],
+  "com.azure.v2.identity.OnBehalfOfCredentialBuilder" : [ {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\OboCredentialSample\\v2\\OboCredentialSample.java"
+  }, {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\OboCredentialSample\\v2\\OboCredentialSample.java"
+  }, {
+    "methodName" : "clientSecret",
+    "signature" : "clientSecret(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\OboCredentialSample\\v2\\OboCredentialSample.java"
+  }, {
+    "methodName" : "userAssertion",
+    "signature" : "userAssertion(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\OboCredentialSample\\v2\\OboCredentialSample.java"
+  } ],
+  "com.azure.v2.identity.WorkloadIdentityCredentialBuilder" : [ {
+    "methodName" : "tokenFilePath",
+    "signature" : "tokenFilePath(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\WorkloadIdentityCredentialSample\\v2\\WorkloadIdentityCredentialSample.java"
+  }, {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\WorkloadIdentityCredentialSample\\v2\\WorkloadIdentityCredentialSample.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\WorkloadIdentityCredentialSample\\v2\\WorkloadIdentityCredentialSample.java"
+  } ],
+  "io.clientcore.core.credentials.KeyCredential" : [ {
+    "methodName" : "getKey",
+    "signature" : "getKey()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\KeyCredentialApis\\v2\\KeyCredentialApis.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\AzureKeyCredentialApis\\v2\\AzureKeyCredentialApis.java"
+  }, {
+    "methodName" : "update",
+    "signature" : "update(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\AzureKeyCredentialApis\\v2\\AzureKeyCredentialApis.java"
+  } ],
+  "io.clientcore.core.credentials.NamedKey" : [ {
+    "methodName" : "getKey",
+    "signature" : "getKey()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\AzureNamedKeyApis\\v2\\AzureNamedKeyApis.java"
+  }, {
+    "methodName" : "getName",
+    "signature" : "getName()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\AzureNamedKeyApis\\v2\\AzureNamedKeyApis.java"
+  } ],
+  "io.clientcore.core.credentials.NamedKeyCredential" : [ {
+    "methodName" : "<init>",
+    "signature" : "<init>(java.lang.String,java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\AzureNamedKeyCredentialApis\\v2\\AzureNamedKeyCredentialApis.java"
+  }, {
+    "methodName" : "update",
+    "signature" : "update(java.lang.String,java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\AzureNamedKeyCredentialApis\\v2\\AzureNamedKeyCredentialApis.java"
+  }, {
+    "methodName" : "getNamedKey",
+    "signature" : "getNamedKey()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\AzureNamedKeyCredentialApis\\v2\\AzureNamedKeyCredentialApis.java"
+  } ],
+  "io.clientcore.core.credentials.oauth.AccessToken" : [ {
+    "methodName" : "getTokenType",
+    "signature" : "getTokenType()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\AccessTokenApis\\v2\\AccessTokenApis.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>(java.lang.String,java.time.OffsetDateTime,java.time.OffsetDateTime)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\AccessTokenApis\\v2\\AccessTokenApis.java"
+  }, {
+    "methodName" : "getExpiresAt",
+    "signature" : "getExpiresAt()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\AccessTokenApis\\v2\\AccessTokenApis.java"
+  }, {
+    "methodName" : "getToken",
+    "signature" : "getToken()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\AccessTokenApis\\v2\\AccessTokenApis.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>(java.lang.String,java.time.OffsetDateTime,java.time.OffsetDateTime,io.clientcore.core.credentials.oauth.AccessTokenType)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\AccessTokenApis\\v2\\AccessTokenApis.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>(java.lang.String,java.time.OffsetDateTime)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\AccessTokenApis\\v2\\AccessTokenApis.java"
+  }, {
+    "methodName" : "isExpired",
+    "signature" : "isExpired()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\AccessTokenApis\\v2\\AccessTokenApis.java"
+  }, {
+    "methodName" : "getRefreshAt",
+    "signature" : "getRefreshAt()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\AccessTokenApis\\v2\\AccessTokenApis.java"
+  } ],
+  "io.clientcore.core.credentials.oauth.AccessTokenType" : [ {
+    "methodName" : "fromString",
+    "signature" : "fromString(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\AccessTokenApis\\v2\\AccessTokenApis.java"
+  }, {
+    "methodName" : "getValue",
+    "signature" : "getValue()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\AccessTokenApis\\v2\\AccessTokenApis.java"
+  } ],
+  "io.clientcore.core.http.client.HttpClient" : [ {
+    "methodName" : "getSharedInstance",
+    "signature" : "getSharedInstance()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\HttpBasicAuthExample\\v2\\HttpBasicAuthExample.java"
+  } ],
+  "io.clientcore.core.http.models.HttpHeaderName" : [ {
+    "methodName" : "fromString",
+    "signature" : "fromString(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\HttpBasicAuthExample\\v2\\HttpBasicAuthExample.java"
+  } ],
+  "io.clientcore.core.http.models.HttpHeaders" : [ {
+    "methodName" : "<init>",
+    "signature" : "<init>(int)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\HttpRequestApis\\v2\\HttpRequestApis.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>(io.clientcore.core.http.models.HttpHeaders)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\HttpRequestApis\\v2\\HttpRequestApis.java"
+  }, {
+    "methodName" : "set",
+    "signature" : "set(io.clientcore.core.http.models.HttpHeaderName,java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\HttpBasicAuthExample\\v2\\HttpBasicAuthExample.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\HttpBasicAuthExample\\v2\\HttpBasicAuthExample.java"
+  }, {
+    "methodName" : "getValue",
+    "signature" : "getValue(io.clientcore.core.http.models.HttpHeaderName)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\HttpResponseApis\\v2\\HttpResponseApis.java"
+  } ],
+  "io.clientcore.core.http.models.HttpMatchConditions" : [ {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample4\\v2\\ConditionalRequestForSettingsPagination.java"
+  }, {
+    "methodName" : "setIfNoneMatch",
+    "signature" : "setIfNoneMatch(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample4\\v2\\ConditionalRequestForSettingsPagination.java"
+  } ],
+  "io.clientcore.core.http.models.HttpRequest" : [ {
+    "methodName" : "setHeaders",
+    "signature" : "setHeaders(io.clientcore.core.http.models.HttpHeaders)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\HttpBasicAuthExample\\v2\\HttpBasicAuthExample.java"
+  }, {
+    "methodName" : "getHeaders",
+    "signature" : "getHeaders()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\HttpRequestApis\\v2\\HttpRequestApis.java"
+  }, {
+    "methodName" : "getBody",
+    "signature" : "getBody()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\HttpRequestApis\\v2\\HttpRequestApis.java"
+  }, {
+    "methodName" : "setBody",
+    "signature" : "setBody(io.clientcore.core.models.binarydata.BinaryData)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\HttpPatchExample\\v2\\HttpPatchExample.java"
+  }, {
+    "methodName" : "setMethod",
+    "signature" : "setMethod(io.clientcore.core.http.models.HttpMethod)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\HttpBasicAuthExample\\v2\\HttpBasicAuthExample.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\HttpBasicAuthExample\\v2\\HttpBasicAuthExample.java"
+  }, {
+    "methodName" : "setUri",
+    "signature" : "setUri(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\HttpBasicAuthExample\\v2\\HttpBasicAuthExample.java"
+  }, {
+    "methodName" : "getUri",
+    "signature" : "getUri()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\HttpRequestApis\\v2\\HttpRequestApis.java"
+  }, {
+    "methodName" : "setUri",
+    "signature" : "setUri(java.net.URI)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\HttpRequestApis\\v2\\HttpRequestApis.java"
+  }, {
+    "methodName" : "getHttpMethod",
+    "signature" : "getHttpMethod()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\HttpRequestApis\\v2\\HttpRequestApis.java"
+  } ],
+  "io.clientcore.core.http.models.RequestContext" : [ {
+    "methodName" : "builder",
+    "signature" : "builder()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\RequestOptionsUse\\v2\\RequestOptionsUse.java"
+  }, {
+    "methodName" : "toBuilder",
+    "signature" : "toBuilder()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\RequestOptionsUse\\v2\\RequestOptionsUse.java"
+  }, {
+    "methodName" : "none",
+    "signature" : "none()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\ContextApis\\v2\\ContextApis.java"
+  } ],
+  "io.clientcore.core.http.models.RequestContext.Builder" : [ {
+    "methodName" : "setHeader",
+    "signature" : "setHeader(io.clientcore.core.http.models.HttpHeaderName,java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\RequestOptionsUse\\v2\\RequestOptionsUse.java"
+  }, {
+    "methodName" : "addQueryParam",
+    "signature" : "addQueryParam(java.lang.String,java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\RequestOptionsUse\\v2\\RequestOptionsUse.java"
+  }, {
+    "methodName" : "build",
+    "signature" : "build()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\RequestOptionsUse\\v2\\RequestOptionsUse.java"
+  } ],
+  "io.clientcore.core.http.models.Response" : [ {
+    "methodName" : "getHeaders",
+    "signature" : "getHeaders()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\HttpResponseApis\\v2\\HttpResponseApis.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>(io.clientcore.core.http.models.HttpRequest,int,io.clientcore.core.http.models.HttpHeaders,T)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\SimpleResponseApis\\v2\\SimpleResponseApis.java"
+  }, {
+    "methodName" : "getStatusCode",
+    "signature" : "getStatusCode()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\HttpResponseApis\\v2\\HttpResponseApis.java"
+  }, {
+    "methodName" : "getValue",
+    "signature" : "getValue()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\HttpResponseApis\\v2\\HttpResponseApis.java"
+  }, {
+    "methodName" : "getRequest",
+    "signature" : "getRequest()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\HttpResponseApis\\v2\\HttpResponseApis.java"
+  } ],
+  "io.clientcore.core.http.paging.PagedIterable" : [ {
+    "methodName" : "streamByPage",
+    "signature" : "streamByPage()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample4\\v2\\ConditionalRequestForSettingsPagination.java"
+  }, {
+    "methodName" : "iterableByPage",
+    "signature" : "iterableByPage()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample4\\v2\\ConditionalRequestForSettingsPagination.java"
+  } ],
+  "io.clientcore.core.http.paging.PagedResponse" : [ {
+    "methodName" : "getContinuationToken",
+    "signature" : "getContinuationToken()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample4\\v2\\ConditionalRequestForSettingsPagination.java"
+  } ],
+  "io.clientcore.core.models.binarydata.BinaryData" : [ {
+    "methodName" : "fromStream",
+    "signature" : "fromStream(java.io.InputStream)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\BinaryDataApis\\v2\\BinaryDataApis.java"
+  }, {
+    "methodName" : "fromStream",
+    "signature" : "fromStream(java.io.InputStream,java.lang.Long)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\BinaryDataApis\\v2\\BinaryDataApis.java"
+  }, {
+    "methodName" : "getLength",
+    "signature" : "getLength()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\BinaryDataApis\\v2\\BinaryDataApis.java"
+  }, {
+    "methodName" : "fromFile",
+    "signature" : "fromFile(java.nio.file.Path,java.lang.Long,java.lang.Long)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\BinaryDataApis\\v2\\BinaryDataApis.java"
+  }, {
+    "methodName" : "fromObject",
+    "signature" : "fromObject(java.lang.Object)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\BinaryDataApis\\v2\\BinaryDataApis.java"
+  }, {
+    "methodName" : "writeTo",
+    "signature" : "writeTo(java.io.OutputStream)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\BinaryDataApis\\v2\\BinaryDataApis.java"
+  }, {
+    "methodName" : "fromString",
+    "signature" : "fromString(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\BinaryDataApis\\v2\\BinaryDataApis.java"
+  }, {
+    "methodName" : "toString",
+    "signature" : "toString()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\BinaryDataApis\\v2\\BinaryDataApis.java"
+  }, {
+    "methodName" : "toObject",
+    "signature" : "toObject(java.lang.reflect.Type)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\BinaryDataApis\\v2\\BinaryDataApis.java"
+  }, {
+    "methodName" : "toBytes",
+    "signature" : "toBytes()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\BinaryDataApis\\v2\\BinaryDataApis.java"
+  }, {
+    "methodName" : "fromFile",
+    "signature" : "fromFile(java.nio.file.Path)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\BinaryDataApis\\v2\\BinaryDataApis.java"
+  }, {
+    "methodName" : "isReplayable",
+    "signature" : "isReplayable()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\BinaryDataApis\\v2\\BinaryDataApis.java"
+  }, {
+    "methodName" : "fromBytes",
+    "signature" : "fromBytes(byte[])",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\BinaryDataApis\\v2\\BinaryDataApis.java"
+  }, {
+    "methodName" : "fromFile",
+    "signature" : "fromFile(java.nio.file.Path,java.lang.Long,java.lang.Long,int)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\BinaryDataApis\\v2\\BinaryDataApis.java"
+  }, {
+    "methodName" : "writeTo",
+    "signature" : "writeTo(java.nio.channels.WritableByteChannel)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\BinaryDataApis\\v2\\BinaryDataApis.java"
+  }, {
+    "methodName" : "toReplayableBinaryData",
+    "signature" : "toReplayableBinaryData()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\BinaryDataApis\\v2\\BinaryDataApis.java"
+  }, {
+    "methodName" : "toStream",
+    "signature" : "toStream()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\BinaryDataApis\\v2\\BinaryDataApis.java"
+  }, {
+    "methodName" : "toByteBuffer",
+    "signature" : "toByteBuffer()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\BinaryDataApis\\v2\\BinaryDataApis.java"
+  } ],
+  "io.clientcore.core.utils.configuration.Configuration" : [ {
+    "methodName" : "get",
+    "signature" : "get(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample17\\v2\\ListLabels.java"
+  }, {
+    "methodName" : "getGlobalConfiguration",
+    "signature" : "getGlobalConfiguration()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample17\\v2\\ListLabels.java"
+  } ],
+  "java.io.ByteArrayInputStream" : [ {
+    "methodName" : "<init>",
+    "signature" : "<init>(byte[])",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\BinaryDataApis\\v2\\BinaryDataApis.java"
+  } ],
+  "java.io.ByteArrayOutputStream" : [ {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\BinaryDataApis\\v2\\BinaryDataApis.java"
+  } ],
+  "java.io.PrintStream" : [ {
+    "methodName" : "printf",
+    "signature" : "printf(java.lang.String,java.lang.Object[])",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample1\\v2\\AadAuthentication.java"
+  }, {
+    "methodName" : "println",
+    "signature" : "println(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample1\\v2\\AadAuthentication.java"
+  } ],
+  "java.lang.Iterable" : [ {
+    "methodName" : "forEach",
+    "signature" : "forEach(java.util.function.Consumer<? super T>)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample17\\v2\\ListLabels.java"
+  } ],
+  "java.lang.Object" : [ {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\BinaryDataApis\\v2\\BinaryDataApis.java"
+  } ],
+  "java.lang.String" : [ {
+    "methodName" : "equals",
+    "signature" : "equals(java.lang.Object)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample34\\v2\\WatchFeature.java"
+  }, {
+    "methodName" : "getBytes",
+    "signature" : "getBytes()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\HttpBasicAuthExample\\v2\\HttpBasicAuthExample.java"
+  } ],
+  "java.lang.System" : [ {
+    "methodName" : "getenv",
+    "signature" : "getenv(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-identity\\AzurePipelinesCredentialSample\\v2\\AzurePipelinesCredentialSample.java"
+  } ],
+  "java.net.URI" : [ {
+    "methodName" : "toURL",
+    "signature" : "toURL()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\HttpRequestApis\\v2\\HttpRequestApis.java"
+  } ],
+  "java.net.URL" : [ {
+    "methodName" : "toURI",
+    "signature" : "toURI()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\HttpRequestApis\\v2\\HttpRequestApis.java"
+  }, {
+    "methodName" : "<init>",
+    "signature" : "<init>(java.lang.String)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\HttpRequestApis\\v2\\HttpRequestApis.java"
+  } ],
+  "java.nio.file.Paths" : [ {
+    "methodName" : "get",
+    "signature" : "get(java.lang.String,java.lang.String[])",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\BinaryDataApis\\v2\\BinaryDataApis.java"
+  } ],
+  "java.time.Duration" : [ {
+    "methodName" : "between",
+    "signature" : "between(java.time.temporal.Temporal,java.time.temporal.Temporal)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\AccessTokenApis\\v2\\AccessTokenApis.java"
+  } ],
+  "java.time.OffsetDateTime" : [ {
+    "methodName" : "now",
+    "signature" : "now()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\AccessTokenApis\\v2\\AccessTokenApis.java"
+  } ],
+  "java.util.Arrays" : [ {
+    "methodName" : "asList",
+    "signature" : "asList(T[])",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample13\\v2\\FeatureFlagConfigurationSettingSample.java"
+  } ],
+  "java.util.Base64" : [ {
+    "methodName" : "getEncoder",
+    "signature" : "getEncoder()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\HttpBasicAuthExample\\v2\\HttpBasicAuthExample.java"
+  } ],
+  "java.util.Base64.Encoder" : [ {
+    "methodName" : "encodeToString",
+    "signature" : "encodeToString(byte[])",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-core\\HttpBasicAuthExample\\v2\\HttpBasicAuthExample.java"
+  } ],
+  "java.util.Collection" : [ {
+    "methodName" : "stream",
+    "signature" : "stream()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample34\\v2\\WatchFeature.java"
+  } ],
+  "java.util.HashMap" : [ {
+    "methodName" : "<init>",
+    "signature" : "<init>()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample19\\v2\\ListSettingsWithTagsFilter.java"
+  } ],
+  "java.util.Map" : [ {
+    "methodName" : "put",
+    "signature" : "put(K,V)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample19\\v2\\ListSettingsWithTagsFilter.java"
+  }, {
+    "methodName" : "forEach",
+    "signature" : "forEach(java.util.function.BiConsumer<? super K, ? super V>)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample13\\v2\\FeatureFlagConfigurationSettingSample.java"
+  } ],
+  "java.util.stream.Collectors" : [ {
+    "methodName" : "toList",
+    "signature" : "toList()",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample34\\v2\\WatchFeature.java"
+  } ],
+  "java.util.stream.Stream" : [ {
+    "methodName" : "filter",
+    "signature" : "filter(java.util.function.Predicate<? super T>)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample34\\v2\\WatchFeature.java"
+  }, {
+    "methodName" : "map",
+    "signature" : "map(java.util.function.Function<? super T, ? extends R>)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample4\\v2\\ConditionalRequestForSettingsPagination.java"
+  }, {
+    "methodName" : "collect",
+    "signature" : "collect(java.util.stream.Collector<? super T, A, R>)",
+    "sourceFile" : "C:\\Users\\Andre\\IdeaProjects\\Azure_SDK_for_Java\\azure-sdk-for-java\\sdk\\tools\\azure-openrewrite\\src\\test\\resources\\migrationExamples\\azure-data-appconfiguration\\sample34\\v2\\WatchFeature.java"
+  } ]
+}
