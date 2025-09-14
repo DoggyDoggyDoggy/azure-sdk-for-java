@@ -69,3 +69,34 @@ recipeList:
       methodPattern: "*..KeyVaultRoleScope fromString(..)"
       newMethodName: fromValue
 
+  # --------------------------------------------------------------------
+  # KeyVaultGetSettingsResult
+  # --------------------------------------------------------------------
+
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: com.azure.security.keyvault.administration.models.KeyVaultGetSettingsResult
+      newFullyQualifiedTypeName: com.azure.v2.security.keyvault.administration.models.KeyVaultGetSettingsResult
+
+  # --------------------------------------------------------------------
+  # KeyVaultSetting
+  # --------------------------------------------------------------------
+
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: com.azure.security.keyvault.administration.models.KeyVaultSetting
+      newFullyQualifiedTypeName: com.azure.v2.security.keyvault.administration.models.KeyVaultSetting
+
+  # --------------------------------------------------------------------
+  # KeyVaultSelectiveKeyRestoreResult
+  # --------------------------------------------------------------------
+
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: com.azure.security.keyvault.administration.models.KeyVaultSelectiveKeyRestoreResult
+      newFullyQualifiedTypeName: com.azure.v2.security.keyvault.administration.models.KeyVaultSelectiveKeyRestoreResult
+
+  # --------------------------------------------------------------------
+  # KeyVaultSelectiveKeyRestoreOperation
+  # --------------------------------------------------------------------
+
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: com.azure.security.keyvault.administration.models.KeyVaultSelectiveKeyRestoreOperation
+      newFullyQualifiedTypeName: com.azure.v2.security.keyvault.administration.models.KeyVaultSelectiveKeyRestoreOperation
