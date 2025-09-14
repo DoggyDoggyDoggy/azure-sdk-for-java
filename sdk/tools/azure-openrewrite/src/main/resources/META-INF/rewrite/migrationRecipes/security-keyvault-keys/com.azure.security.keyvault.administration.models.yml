@@ -61,10 +61,6 @@ recipeList:
   # --------------------------------------------------------------------
   # KeyVaultRoleScope
   # --------------------------------------------------------------------
-
-  # --------------------------------------------------------------------
-  # KeyVaultRoleScope
-  # --------------------------------------------------------------------
   - org.openrewrite.java.ChangeType:
       oldFullyQualifiedTypeName: com.azure.security.keyvault.administration.models.KeyVaultRoleScope
       newFullyQualifiedTypeName: com.azure.v2.security.keyvault.administration.models.KeyVaultRoleScope
