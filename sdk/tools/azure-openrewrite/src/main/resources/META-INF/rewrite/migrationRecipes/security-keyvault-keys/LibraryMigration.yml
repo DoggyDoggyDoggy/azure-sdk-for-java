@@ -11,6 +11,7 @@ recipeList:
 
   - com.azure.openrewrite.recipe.azure.security.keyvault.keys
   - com.azure.openrewrite.recipe.azure.security.keyvault.administration
+  - com.azure.openrewrite.recipe.azure.security.keyvault.administration.models
   - com.azure.openrewrite.recipe.azure.security.keyvault.keys.cryptography
   - com.azure.openrewrite.recipe.azure.security.keyvault.keys.cryptography.models
   - com.azure.openrewrite.recipe.azure.security.keyvault.keys.models
