@@ -406,7 +406,7 @@ recipeList:
   # --------------------------------------------------------------------
   # NoopMeter
   # --------------------------------------------------------------------
-  
+
   # paging
 
   # --------------------------------------------------------------------
@@ -594,6 +594,10 @@ recipeList:
   # --------------------------------------------------------------------
   # SyncPoller
   # --------------------------------------------------------------------
+
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: com.azure.core.util.polling.SyncPoller
+      newFullyQualifiedTypeName: com.azure.v2.core.http.polling.Poller
 
   # TODO: API Removed. Triage replacement
 
