@@ -19,15 +19,14 @@ recipeList:
   # --------------------------------------------------------------------
   # CertificateClient
   # --------------------------------------------------------------------
-  - org.openrewrite.java.ChangeType:
-      oldFullyQualifiedTypeName: com.azure.security.keyvault.certificates.CertificateClient
-      newFullyQualifiedTypeName: com.azure.v2.security.keyvault.certificates.CertificateClient
 
-  # --------------------------------------------------------------------
+  - org.openrewrite.java.ChangeMethodName:
+      methodPattern: com.azure.security.keyvault.certificates.CertificateClient getCertificateVersion(..)
+      newMethodName: getCertificate
+
   # Handle purgeDeletedCertificate variants:
   # - remove second arg (Context/RequestContext) if present
   # - rename purgeDeletedCertificateWithResponse -> purgeDeletedCertificate
-  # --------------------------------------------------------------------
 
   - org.openrewrite.java.DeleteMethodArgument:
       methodPattern: com.azure.security.keyvault.certificates.CertificateClient purgeDeletedCertificateWithResponse(..)
@@ -36,22 +35,14 @@ recipeList:
   - org.openrewrite.java.ChangeMethodName:
       methodPattern: com.azure.security.keyvault.certificates.CertificateClient purgeDeletedCertificateWithResponse(..)
       newMethodName: purgeDeletedCertificate
-
-  - org.openrewrite.java.DeleteMethodArgument:
-      methodPattern: com.azure.v2.security.keyvault.certificates.CertificateClient purgeDeletedCertificateWithResponse(..)
-      argumentIndex: 1
-
-  - org.openrewrite.java.ChangeMethodName:
-      methodPattern: com.azure.v2.security.keyvault.certificates.CertificateClient purgeDeletedCertificateWithResponse(..)
-      newMethodName: purgeDeletedCertificate
-
-  - org.openrewrite.java.DeleteMethodArgument:
-      methodPattern: com.azure.v2.security.keyvault.certificates.CertificateClient purgeDeletedCertificate(..)
-      argumentIndex: 1
 
   - org.openrewrite.java.DeleteMethodArgument:
       methodPattern: com.azure.security.keyvault.certificates.CertificateClient purgeDeletedCertificate(..)
       argumentIndex: 1
+
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: com.azure.security.keyvault.certificates.CertificateClient
+      newFullyQualifiedTypeName: com.azure.v2.security.keyvault.certificates.CertificateClient
 
   # --------------------------------------------------------------------
   # Placeholder

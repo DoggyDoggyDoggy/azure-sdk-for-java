@@ -84,3 +84,27 @@ recipeList:
   - org.openrewrite.java.ChangeType:
       oldFullyQualifiedTypeName: com.azure.security.keyvault.certificates.models.CertificateKeyType
       newFullyQualifiedTypeName: com.azure.v2.security.keyvault.certificates.models.CertificateKeyType
+
+  # --------------------------------------------------------------------
+  # CertificateContact
+  # --------------------------------------------------------------------
+
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: com.azure.security.keyvault.certificates.models.CertificateContact
+      newFullyQualifiedTypeName: com.azure.v2.security.keyvault.certificates.models.CertificateContact
+
+  # --------------------------------------------------------------------
+  # CertificateProperties
+  # --------------------------------------------------------------------
+
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: com.azure.security.keyvault.certificates.models.CertificateProperties
+      newFullyQualifiedTypeName: com.azure.v2.security.keyvault.certificates.models.CertificateProperties
+
+  # --------------------------------------------------------------------
+  # IssuerProperties
+  # --------------------------------------------------------------------
+
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: com.azure.security.keyvault.certificates.models.IssuerProperties
+      newFullyQualifiedTypeName: com.azure.v2.security.keyvault.certificates.models.IssuerProperties
