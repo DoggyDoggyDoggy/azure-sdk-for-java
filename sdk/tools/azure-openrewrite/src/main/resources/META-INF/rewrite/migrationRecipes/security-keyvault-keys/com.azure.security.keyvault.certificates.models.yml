@@ -1,0 +1,10 @@
+type: specs.openrewrite.org/v1beta/recipe
+name: com.azure.openrewrite.recipe.azure.security.keyvault.certificates.models
+displayName: Migrate from azure.security.keyvault.certificates.models to next generation stack
+description: This recipe migrates the azure.security.keyvault.certificates.models package to the next generation stack.
+recipeList:
+  # placeholder recipe
+  - org.openrewrite.java.ChangePackage:
+      oldPackageName: com.azure.security.keyvault.certificates
+      newPackageName: com.azure.v2.security.keyvault.certificates
+      recursive: true
