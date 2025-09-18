@@ -30,6 +30,30 @@ recipeList:
       oldFullyQualifiedTypeName: com.azure.security.keyvault.keys.models.KeyVaultKey
       newFullyQualifiedTypeName: com.azure.v2.security.keyvault.keys.models.KeyVaultKey
 
+  # --------------------------------------------------------------------
+  # KeyRotationLifetimeAction
+  # --------------------------------------------------------------------
+
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: com.azure.security.keyvault.keys.models.KeyRotationLifetimeAction
+      newFullyQualifiedTypeName: com.azure.v2.security.keyvault.keys.models.KeyRotationLifetimeAction
+
+  # --------------------------------------------------------------------
+  # KeyRotationPolicy
+  # --------------------------------------------------------------------
+
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: com.azure.security.keyvault.keys.models.KeyRotationPolicy
+      newFullyQualifiedTypeName: com.azure.v2.security.keyvault.keys.models.KeyRotationPolicy
+
+  # --------------------------------------------------------------------
+  # KeyRotationPolicyAction
+  # --------------------------------------------------------------------
+
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: com.azure.security.keyvault.keys.models.KeyRotationPolicyAction
+      newFullyQualifiedTypeName: com.azure.v2.security.keyvault.keys.models.KeyRotationPolicyAction
+
   # placeholder recipe - will need to delete
   - org.openrewrite.java.ChangePackage:
       oldPackageName: com.azure.security.keyvault.keys
