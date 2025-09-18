@@ -300,6 +300,12 @@
           <version>5.0.0-beta.1</version>
           <scope>test</scope>
         </dependency>
+        <dependency>
+          <groupId>com.azure.v2</groupId>
+          <artifactId>azure-security-keyvault-secrets</artifactId>
+          <version>5.0.0-beta.1</version>
+          <scope>test</scope>
+        </dependency>
       </dependencies>
     </profile>
 
@@ -417,6 +423,12 @@
         <dependency>
           <groupId>com.azure.v2</groupId>
           <artifactId>azure-security-keyvault-certificates</artifactId>
+          <version>5.0.0-beta.1</version>
+          <scope>provided</scope>
+        </dependency>
+        <dependency>
+          <groupId>com.azure.v2</groupId>
+          <artifactId>azure-security-keyvault-secrets</artifactId>
           <version>5.0.0-beta.1</version>
           <scope>provided</scope>
         </dependency>
