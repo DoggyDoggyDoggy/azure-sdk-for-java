@@ -57,6 +57,30 @@ recipeList:
       oldFullyQualifiedTypeName: com.azure.security.keyvault.keys.cryptography.models.WrapResult
       newFullyQualifiedTypeName: com.azure.v2.security.keyvault.keys.cryptography.models.WrapResult
 
+  # --------------------------------------------------------------------
+  # SignResult
+  # --------------------------------------------------------------------
+
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: com.azure.security.keyvault.keys.cryptography.models.SignResult
+      newFullyQualifiedTypeName: com.azure.v2.security.keyvault.keys.cryptography.models.SignResult
+
+  # --------------------------------------------------------------------
+  # SignatureAlgorithm
+  # --------------------------------------------------------------------
+
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: com.azure.security.keyvault.keys.cryptography.models.SignatureAlgorithm
+      newFullyQualifiedTypeName: com.azure.v2.security.keyvault.keys.cryptography.models.SignatureAlgorithm
+
+  # --------------------------------------------------------------------
+  # VerifyResult
+  # --------------------------------------------------------------------
+
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: com.azure.security.keyvault.keys.cryptography.models.VerifyResult
+      newFullyQualifiedTypeName: com.azure.v2.security.keyvault.keys.cryptography.models.VerifyResult
+
   # placeholder recipe
   - org.openrewrite.java.ChangePackage:
       oldPackageName: com.azure.security.keyvault.keys
