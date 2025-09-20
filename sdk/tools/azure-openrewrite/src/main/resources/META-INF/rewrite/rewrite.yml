@@ -14,6 +14,9 @@ recipeList:
   - com.azure.openrewrite.migration.identity
   - com.azure.openrewrite.migration.data.appconfiguration
   - com.azure.openrewrite.migration.security.keyvault.keys
+  - com.azure.openrewrite.migration.security.keyvault.secrets
+  - com.azure.openrewrite.migration.security.keyvault.certificates
+  - com.azure.openrewrite.migration.security.keyvault.administration
 
   # Code Styling recipes
   - org.openrewrite.java.OrderImports:
