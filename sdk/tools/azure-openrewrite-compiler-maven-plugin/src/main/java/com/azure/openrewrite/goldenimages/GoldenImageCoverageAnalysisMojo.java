@@ -99,6 +99,8 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
         outputMethodCallsToFile(uncoveredMethods, "uncovered-api-methods.json");
 
         logDetailedCoverageMetrics(publicApiByModule, goldenImageMethodCalls, uncoveredMethods);
+
+        generateHtmlReport(publicApiByModule, goldenImageMethodCalls, uncoveredMethods);
     }
 
     private Map<String, Set<MethodCall>> analyzePublicApiByModule() throws MojoExecutionException {
@@ -596,6 +598,316 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
         @Override
         public String toString() {
             return className + "." + signature;
+        }
+    }
+    
+    private void generateHtmlReport(Map<String, Set<MethodCall>> publicApiByModule,
+                                    Set<MethodCall> goldenImageMethodCalls,
+                                    Set<MethodCall> uncoveredMethods) {
+        try {
+            // Calculate overall metrics
+            int totalPublicMethods = publicApiByModule.values().stream()
+                .mapToInt(Set::size).sum();
+            int totalCoveredMethods = totalPublicMethods - uncoveredMethods.size();
+            double overallCoverage = totalPublicMethods > 0 ?
+                ((double) totalCoveredMethods / totalPublicMethods) * 100 : 0;
+
+            // Build module data structure
+            Map<String, ModuleData> moduleDataMap = new LinkedHashMap<>();
+
+            for (Map.Entry<String, Set<MethodCall>> entry : publicApiByModule.entrySet()) {
+                String modulePath = entry.getKey();
+                Set<MethodCall> moduleMethods = entry.getValue();
+
+                // Group methods by class
+                Map<String, List<MethodCall>> methodsByClass = moduleMethods.stream()
+                    .collect(Collectors.groupingBy(MethodCall::getClassName));
+
+                // Calculate class-level coverage
+                Map<String, ClassData> classDataMap = new LinkedHashMap<>();
+                int moduleCovered = 0;
+
+                for (Map.Entry<String, List<MethodCall>> classEntry : methodsByClass.entrySet()) {
+                    String className = classEntry.getKey();
+                    List<MethodCall> classMethods = classEntry.getValue();
+
+                    List<MethodData> methodDataList = new ArrayList<>();
+                    int classCovered = 0;
+
+                    for (MethodCall method : classMethods) {
+                        boolean isCovered = goldenImageMethodCalls.stream()
+                            .anyMatch(gm -> methodsMatch(method, gm));
+
+                        methodDataList.add(new MethodData(
+                            method.getMethodName(),
+                            method.getSignature(),
+                            isCovered
+                        ));
+
+                        if (isCovered) {
+                            classCovered++;
+                        }
+                    }
+
+                    moduleCovered += classCovered;
+                    double classCoverage = classMethods.size() > 0 ?
+                        ((double) classCovered / classMethods.size()) * 100 : 0;
+
+                    classDataMap.put(className, new ClassData(
+                        className,
+                        classMethods.size(),
+                        classCovered,
+                        classCoverage,
+                        methodDataList
+                    ));
+                }
+
+                double moduleCoverage = moduleMethods.size() > 0 ?
+                    ((double) moduleCovered / moduleMethods.size()) * 100 : 0;
+
+                moduleDataMap.put(modulePath, new ModuleData(
+                    modulePath,
+                    moduleMethods.size(),
+                    moduleCovered,
+                    moduleCoverage,
+                    classDataMap
+                ));
+            }
+
+            // Generate HTML
+            String html = generateHtmlContent(
+                totalPublicMethods,
+                totalCoveredMethods,
+                overallCoverage,
+                moduleDataMap
+            );
+
+            // Write to file
+            File outputFile = new File("azure-openrewrite-compiler-maven-plugin", "coverage-report.html");
+            Files.write(outputFile.toPath(), html.getBytes());
+            getLog().info("HTML coverage report written to: " + outputFile.getAbsolutePath());
+
+        } catch (IOException e) {
+            getLog().error("Failed to generate HTML report", e);
+        }
+    }
+
+    private String generateHtmlContent(int totalMethods, int coveredMethods,
+                                       double overallCoverage,
+                                       Map<String, ModuleData> modules) {
+        StringBuilder html = new StringBuilder();
+
+        html.append("<!DOCTYPE html>\n");
+        html.append("<html lang=\"en\">\n");
+        html.append("<head>\n");
+        html.append("    <meta charset=\"UTF-8\">\n");
+        html.append("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n");
+        html.append("    <title>Azure SDK Golden Image Coverage Report</title>\n");
+        html.append("    <style>\n");
+        html.append(getStyles());
+        html.append("    </style>\n");
+        html.append("</head>\n");
+        html.append("<body>\n");
+        html.append("    <div class=\"container\">\n");
+        html.append("        <h1>Azure SDK Golden Image Coverage Report</h1>\n");
+
+        // Overall coverage section
+        html.append("        <div class=\"overall-coverage\">\n");
+        html.append("            <h2>Overall Coverage</h2>\n");
+        html.append("            <div class=\"metric-card\">\n");
+        html.append("                <div class=\"metric-value\">").append(String.format("%.1f%%", overallCoverage)).append("</div>\n");
+        html.append("                <div class=\"metric-label\">").append(coveredMethods).append(" / ").append(totalMethods).append(" methods covered</div>\n");
+        html.append("                <div class=\"progress-bar\">\n");
+        html.append("                    <div class=\"progress-fill\" style=\"width: ").append(String.format("%.1f%%", overallCoverage)).append("\"></div>\n");
+        html.append("                </div>\n");
+        html.append("            </div>\n");
+        html.append("        </div>\n");
+
+        // Module list
+        html.append("        <div class=\"modules\">\n");
+        html.append("            <h2>Modules</h2>\n");
+
+        for (Map.Entry<String, ModuleData> moduleEntry : modules.entrySet()) {
+            ModuleData module = moduleEntry.getValue();
+            html.append(generateModuleHtml(module));
+        }
+
+        html.append("        </div>\n");
+        html.append("    </div>\n");
+        html.append(getJavaScript());
+        html.append("</body>\n");
+        html.append("</html>\n");
+
+        return html.toString();
+    }
+
+    private String generateModuleHtml(ModuleData module) {
+        StringBuilder html = new StringBuilder();
+        String moduleId = sanitizeId(module.name);
+
+        html.append("            <div class=\"module\">\n");
+        html.append("                <div class=\"module-header\" onclick=\"toggleSection('").append(moduleId).append("')\">\n");
+        html.append("                    <span class=\"toggle-icon\" id=\"icon-").append(moduleId).append("\">▶</span>\n");
+        html.append("                    <span class=\"module-name\">").append(escapeHtml(module.name)).append("</span>\n");
+        html.append("                    <span class=\"coverage-badge\">").append(String.format("%.1f%%", module.coverage)).append("</span>\n");
+        html.append("                    <span class=\"method-count\">").append(module.coveredMethods).append(" / ").append(module.totalMethods).append(" methods</span>\n");
+        html.append("                </div>\n");
+        html.append("                <div class=\"module-content\" id=\"").append(moduleId).append("\" style=\"display: none;\">\n");
+
+        for (Map.Entry<String, ClassData> classEntry : module.classes.entrySet()) {
+            ClassData classData = classEntry.getValue();
+            html.append(generateClassHtml(classData, moduleId));
+        }
+
+        html.append("                </div>\n");
+        html.append("            </div>\n");
+
+        return html.toString();
+    }
+
+    private String generateClassHtml(ClassData classData, String moduleId) {
+        StringBuilder html = new StringBuilder();
+        String classId = sanitizeId(moduleId + "-" + classData.className);
+
+        html.append("                    <div class=\"class\">\n");
+        html.append("                        <div class=\"class-header\" onclick=\"toggleSection('").append(classId).append("')\">\n");
+        html.append("                            <span class=\"toggle-icon\" id=\"icon-").append(classId).append("\">▶</span>\n");
+        html.append("                            <span class=\"class-name\">").append(escapeHtml(classData.className)).append("</span>\n");
+        html.append("                            <span class=\"coverage-badge\">").append(String.format("%.1f%%", classData.coverage)).append("</span>\n");
+        html.append("                            <span class=\"method-count\">").append(classData.coveredMethods).append(" / ").append(classData.totalMethods).append(" methods</span>\n");
+        html.append("                        </div>\n");
+        html.append("                        <div class=\"class-content\" id=\"").append(classId).append("\" style=\"display: none;\">\n");
+        html.append("                            <table class=\"methods-table\">\n");
+        html.append("                                <thead>\n");
+        html.append("                                    <tr>\n");
+        html.append("                                        <th>Method</th>\n");
+        html.append("                                        <th>Signature</th>\n");
+        html.append("                                    </tr>\n");
+        html.append("                                </thead>\n");
+        html.append("                                <tbody>\n");
+
+        for (MethodData method : classData.methods) {
+            String statusClass = method.isCovered ? "covered" : "uncovered";
+
+            html.append("                                    <tr class=\"").append(statusClass).append("\">\n");
+            html.append("                                        <td>").append(escapeHtml(method.methodName)).append("</td>\n");
+            html.append("                                        <td><code>").append(escapeHtml(method.signature)).append("</code></td>\n");
+            html.append("                                    </tr>\n");
+        }
+
+        html.append("                                </tbody>\n");
+        html.append("                            </table>\n");
+        html.append("                        </div>\n");
+        html.append("                    </div>\n");
+
+        return html.toString();
+    }
+
+    private String getStyles() {
+        return "* { margin: 0; padding: 0; box-sizing: border-box; }\n" +
+            "body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; background: #f5f5f5; color: #333; line-height: 1.6; }\n" +
+            ".container { max-width: 1200px; margin: 0 auto; padding: 20px; }\n" +
+            "h1 { margin-bottom: 30px; color: #2c3e50; }\n" +
+            "h2 { margin: 20px 0 15px 0; color: #34495e; font-size: 1.5em; }\n" +
+            ".overall-coverage { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 30px; }\n" +
+            ".metric-card { text-align: center; }\n" +
+            ".metric-value { font-size: 3em; font-weight: bold; color: #3498db; margin-bottom: 10px; }\n" +
+            ".metric-label { font-size: 1.1em; color: #7f8c8d; margin-bottom: 20px; }\n" +
+            ".progress-bar { width: 100%; height: 30px; background: #ecf0f1; border-radius: 15px; overflow: hidden; }\n" +
+            ".progress-fill { height: 100%; background: linear-gradient(90deg, #3498db, #2ecc71); transition: width 0.3s ease; }\n" +
+            ".modules { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }\n" +
+            ".module { border: 1px solid #e0e0e0; border-radius: 6px; margin-bottom: 15px; overflow: hidden; }\n" +
+            ".module-header, .class-header { padding: 15px; background: #f8f9fa; cursor: pointer; display: flex; align-items: center; gap: 10px; transition: background 0.2s; }\n" +
+            ".module-header:hover, .class-header:hover { background: #e9ecef; }\n" +
+            ".toggle-icon { font-size: 0.8em; width: 20px; transition: transform 0.2s; }\n" +
+            ".toggle-icon.expanded { transform: rotate(90deg); }\n" +
+            ".module-name, .class-name { flex: 1; font-weight: 600; }\n" +
+            ".coverage-badge { padding: 4px 12px; border-radius: 12px; font-size: 0.9em; font-weight: bold; background: #3498db; color: white; }\n" +
+            ".method-count { color: #7f8c8d; font-size: 0.9em; }\n" +
+            ".module-content, .class-content { display: none; }\n" +
+            ".class { margin: 10px; border: 1px solid #e0e0e0; border-radius: 4px; }\n" +
+            ".class-header { background: #ffffff; }\n" +
+            ".methods-table { width: 100%; border-collapse: collapse; margin: 10px; }\n" +
+            ".methods-table th { background: #f8f9fa; padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid #dee2e6; }\n" +
+            ".methods-table td { padding: 5px 12px; border-bottom: 1px solid #e9ecef; }\n" +
+            ".methods-table tr.covered { background: #f0f8f2; }\n" +
+            ".methods-table tr.uncovered { background: #fff5f5; }\n" +
+            ".status-badge { padding: 3px 8px; border-radius: 4px; font-size: 0.85em; font-weight: 600; }\n" +
+            ".status-badge.covered { background: #d4edda; color: #155724; }\n" +
+            ".status-badge.uncovered { background: #f8d7da; color: #721c24; }\n" +
+            "code { font-family: 'Courier New', monospace; font-size: 0.9em; background: #f4f4f4; padding: 2px 6px; border-radius: 3px; }\n";
+    }
+
+    private String getJavaScript() {
+        return "<script>\n" +
+            "function toggleSection(id) {\n" +
+            "    const content = document.getElementById(id);\n" +
+            "    const icon = document.getElementById('icon-' + id);\n" +
+            "    if (content.style.display === 'none') {\n" +
+            "        content.style.display = 'block';\n" +
+            "        icon.classList.add('expanded');\n" +
+            "    } else {\n" +
+            "        content.style.display = 'none';\n" +
+            "        icon.classList.remove('expanded');\n" +
+            "    }\n" +
+            "}\n" +
+            "</script>\n";
+    }
+
+    private String sanitizeId(String input) {
+        return input.replaceAll("[^a-zA-Z0-9-]", "-");
+    }
+
+    private String escapeHtml(String input) {
+        return input.replace("&", "&amp;")
+            .replace("<", "&lt;")
+            .replace(">", "&gt;")
+            .replace("\"", "&quot;")
+            .replace("'", "&#39;");
+    }
+
+    // Data classes
+    private static class ModuleData {
+        String name;
+        int totalMethods;
+        int coveredMethods;
+        double coverage;
+        Map<String, ClassData> classes;
+
+        ModuleData(String name, int totalMethods, int coveredMethods, double coverage, Map<String, ClassData> classes) {
+            this.name = name;
+            this.totalMethods = totalMethods;
+            this.coveredMethods = coveredMethods;
+            this.coverage = coverage;
+            this.classes = classes;
+        }
+    }
+
+    private static class ClassData {
+        String className;
+        int totalMethods;
+        int coveredMethods;
+        double coverage;
+        List<MethodData> methods;
+
+        ClassData(String className, int totalMethods, int coveredMethods, double coverage, List<MethodData> methods) {
+            this.className = className;
+            this.totalMethods = totalMethods;
+            this.coveredMethods = coveredMethods;
+            this.coverage = coverage;
+            this.methods = methods;
+        }
+    }
+
+    private static class MethodData {
+        String methodName;
+        String signature;
+        boolean isCovered;
+
+        MethodData(String methodName, String signature, boolean isCovered) {
+            this.methodName = methodName;
+            this.signature = signature;
+            this.isCovered = isCovered;
         }
     }
 }
