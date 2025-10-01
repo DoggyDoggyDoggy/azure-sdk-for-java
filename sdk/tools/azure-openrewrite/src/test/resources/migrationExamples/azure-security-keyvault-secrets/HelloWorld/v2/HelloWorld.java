@@ -1,11 +1,11 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-package com.azure.v2.security.keyvault.secrets;
-
 import com.azure.v2.core.http.polling.PollResponse;
 import com.azure.v2.core.http.polling.Poller;
 import com.azure.v2.identity.DefaultAzureCredentialBuilder;
+import com.azure.v2.security.keyvault.secrets.SecretClient;
+import com.azure.v2.security.keyvault.secrets.SecretClientBuilder;
 import com.azure.v2.security.keyvault.secrets.models.DeletedSecret;
 import com.azure.v2.security.keyvault.secrets.models.KeyVaultSecret;
 import com.azure.v2.security.keyvault.secrets.models.SecretProperties;
