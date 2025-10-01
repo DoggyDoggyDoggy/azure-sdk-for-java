@@ -1,9 +1,9 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-package com.azure.v2.security.keyvault.keys;
-
 import com.azure.v2.identity.DefaultAzureCredentialBuilder;
+import com.azure.v2.security.keyvault.keys.KeyClient;
+import com.azure.v2.security.keyvault.keys.KeyClientBuilder;
 import com.azure.v2.security.keyvault.keys.models.CreateRsaKeyOptions;
 import com.azure.v2.security.keyvault.keys.models.KeyRotationLifetimeAction;
 import com.azure.v2.security.keyvault.keys.models.KeyRotationPolicy;
