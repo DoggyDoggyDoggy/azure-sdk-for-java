@@ -37,6 +37,9 @@ recipeList:
       methodPattern: com.azure.security.keyvault.administration.KeyVaultBackupClientBuilder vaultUrl(..)
       newMethodName: endpoint
 
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: com.azure.security.keyvault.administration.KeyVaultBackupClientBuilder
+      newFullyQualifiedTypeName: com.azure.v2.security.keyvault.administration.KeyVaultBackupClientBuilder
   # --------------------------------------------------------------------
   # KeyVaultAccessControlClient
   # --------------------------------------------------------------------
@@ -44,3 +47,11 @@ recipeList:
   - org.openrewrite.java.ChangeType:
       oldFullyQualifiedTypeName: com.azure.security.keyvault.administration.KeyVaultAccessControlClient
       newFullyQualifiedTypeName: com.azure.v2.security.keyvault.administration.KeyVaultAccessControlClient
+
+  # --------------------------------------------------------------------
+  # KeyVaultBackupClient
+  # --------------------------------------------------------------------
+
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: com.azure.security.keyvault.administration.KeyVaultBackupClient
+      newFullyQualifiedTypeName: com.azure.v2.security.keyvault.administration.KeyVaultBackupClient
