@@ -10,6 +10,4 @@ description: This recipe migrates the Azure appconfiguration library to the next
 recipeList:
 
   - com.azure.openrewrite.recipe.azure.data.appconfiguration
-  - com.azure.openrewrite.recipe.azure.data.appconfiguration.implementation
-  - com.azure.openrewrite.recipe.azure.data.appconfiguration.implementation.models
   - com.azure.openrewrite.recipe.azure.data.appconfiguration.models

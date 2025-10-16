@@ -31,6 +31,7 @@ import java.util.Locale;
 import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -127,7 +128,8 @@ public class DefaultAzureCredentialTest {
         try (MockedConstruction<IdentityClient> mocked
             = mockConstruction(IdentityClient.class, (identityClient, context) -> {
                 when(identityClient.authenticateWithAzureDeveloperCli(request)).thenReturn(Mono.empty());
-                when(identityClient.authenticateWithWorkloadIdentityConfidentialClient(request))
+                when(identityClient.authenticateWithConfidentialClientCache(any())).thenReturn(Mono.empty());
+                when(identityClient.authenticateWithConfidentialClient(any(TokenRequestContext.class)))
                     .thenReturn(TestUtils.getMockAccessToken(token1, expiresAt));
             });
             MockedConstruction<IntelliJCredential> ijcredential
@@ -163,7 +165,8 @@ public class DefaultAzureCredentialTest {
         // mock
         try (MockedConstruction<IdentityClient> mocked
             = mockConstruction(IdentityClient.class, (identityClient, context) -> {
-                when(identityClient.authenticateWithWorkloadIdentityConfidentialClient(request))
+                when(identityClient.authenticateWithConfidentialClientCache(any())).thenReturn(Mono.empty());
+                when(identityClient.authenticateWithConfidentialClient(any(TokenRequestContext.class)))
                     .thenReturn(TestUtils.getMockAccessToken(token1, expiresAt));
             })) {
             // test
@@ -322,9 +325,9 @@ public class DefaultAzureCredentialTest {
                     when(intelliJCredential.getToken(request)).thenReturn(
                         Mono.error(new CredentialUnavailableException("Cannot get token from IntelliJ Credential")));
                 });
-            MockedConstruction<OSBrokerCredential> osBrokerCredentialMock
-                = mockConstruction(OSBrokerCredential.class, (osBrokerCredential, context) -> {
-                    when(osBrokerCredential.getToken(request)).thenReturn(
+            MockedConstruction<BrokerCredential> brokerCredentialMock
+                = mockConstruction(BrokerCredential.class, (brokerCredential, context) -> {
+                    when(brokerCredential.getToken(request)).thenReturn(
                         Mono.error(new CredentialUnavailableException("Cannot get token from OS Broker credential")));
                 })) {
             // test
@@ -339,7 +342,7 @@ public class DefaultAzureCredentialTest {
             Assertions.assertNotNull(azureDeveloperCliCredentialMock);
             Assertions.assertNotNull(azurePowerShellCredentialMock);
             Assertions.assertNotNull(intelliJCredentialMock);
-            Assertions.assertNotNull(osBrokerCredentialMock);
+            Assertions.assertNotNull(brokerCredentialMock);
         }
     }
 
@@ -374,9 +377,9 @@ public class DefaultAzureCredentialTest {
                     when(AzureDeveloperCliCredential.getToken(request)).thenReturn(Mono.error(
                         new CredentialUnavailableException("Cannot get token from Azure Developer CLI credential")));
                 });
-            MockedConstruction<OSBrokerCredential> osBrokerCredentialMock
-                = mockConstruction(OSBrokerCredential.class, (osBrokerCredential, context) -> {
-                    when(osBrokerCredential.getToken(request)).thenReturn(
+            MockedConstruction<BrokerCredential> brokerCredentialMock
+                = mockConstruction(BrokerCredential.class, (brokerCredential, context) -> {
+                    when(brokerCredential.getToken(request)).thenReturn(
                         Mono.error(new CredentialUnavailableException("Cannot get token from OS Broker credential")));
                 })) {
 
@@ -392,7 +395,7 @@ public class DefaultAzureCredentialTest {
             Assertions.assertNotNull(powerShellCredentialMock);
             Assertions.assertNotNull(azureCliCredentialMock);
             Assertions.assertNotNull(azureDeveloperCliCredentialMock);
-            Assertions.assertNotNull(osBrokerCredentialMock);
+            Assertions.assertNotNull(brokerCredentialMock);
         }
     }
 
@@ -678,7 +681,7 @@ public class DefaultAzureCredentialTest {
         assertInstanceOf(AzureCliCredential.class, credentials.get(2));
         assertInstanceOf(AzurePowerShellCredential.class, credentials.get(3));
         assertInstanceOf(AzureDeveloperCliCredential.class, credentials.get(4));
-        assertInstanceOf(OSBrokerCredential.class, credentials.get(5));
+        assertInstanceOf(BrokerCredential.class, credentials.get(5));
     }
 
     @ParameterizedTest
@@ -794,7 +797,7 @@ public class DefaultAzureCredentialTest {
         assertInstanceOf(AzureCliCredential.class, credentials.get(5));
         assertInstanceOf(AzurePowerShellCredential.class, credentials.get(6));
         assertInstanceOf(AzureDeveloperCliCredential.class, credentials.get(7));
-        assertInstanceOf(OSBrokerCredential.class, credentials.get(8));
+        assertInstanceOf(BrokerCredential.class, credentials.get(8));
     }
 
     /**
@@ -810,5 +813,89 @@ public class DefaultAzureCredentialTest {
         } catch (NoSuchFieldException | IllegalAccessException e) {
             throw new RuntimeException("Failed to extract credentials", e);
         }
+    }
+
+    @Test
+    public void testRequireEnvVarsSuccess() {
+        // Setup - create configuration with required environment variables present
+        TestConfigurationSource configSource = new TestConfigurationSource().put("AZURE_CLIENT_ID", CLIENT_ID)
+            .put("AZURE_TENANT_ID", TENANT_ID)
+            .put("AZURE_CLIENT_SECRET", "test-secret");
+        Configuration configuration = TestUtils.createTestConfiguration(configSource);
+
+        // Test - should not throw when all required env vars are present
+        DefaultAzureCredential credential
+            = new DefaultAzureCredentialBuilder()
+                .requireEnvVars(AzureIdentityEnvVars.AZURE_CLIENT_ID, AzureIdentityEnvVars.AZURE_TENANT_ID,
+                    AzureIdentityEnvVars.AZURE_CLIENT_SECRET)
+                .configuration(configuration)
+                .build();
+
+        // Verify the credential was created successfully
+        Assertions.assertNotNull(credential);
+    }
+
+    @Test
+    public void testRequireEnvVarsSingleMissing() {
+        // Setup - create configuration missing one required environment variable
+        TestConfigurationSource configSource
+            = new TestConfigurationSource().put("AZURE_CLIENT_ID", CLIENT_ID).put("AZURE_TENANT_ID", TENANT_ID);
+        // AZURE_CLIENT_SECRET is missing
+        Configuration configuration = TestUtils.createTestConfiguration(configSource);
+
+        // Test - should throw when required env var is missing
+        IllegalStateException exception = assertThrows(IllegalStateException.class,
+            () -> new DefaultAzureCredentialBuilder()
+                .requireEnvVars(AzureIdentityEnvVars.AZURE_CLIENT_ID, AzureIdentityEnvVars.AZURE_TENANT_ID,
+                    AzureIdentityEnvVars.AZURE_CLIENT_SECRET)
+                .configuration(configuration)
+                .build());
+
+        // Verify error message
+        assertTrue(exception.getMessage().contains("Required environment variable is missing: AZURE_CLIENT_SECRET"));
+    }
+
+    @Test
+    public void testRequireEnvVarsMultipleMissing() {
+        // Setup - create configuration missing multiple required environment variables
+        TestConfigurationSource configSource = new TestConfigurationSource().put("AZURE_CLIENT_ID", CLIENT_ID);
+        // AZURE_TENANT_ID and AZURE_CLIENT_SECRET are missing
+        Configuration configuration = TestUtils.createTestConfiguration(configSource);
+
+        // Test - should throw when multiple required env vars are missing
+        IllegalStateException exception = assertThrows(IllegalStateException.class,
+            () -> new DefaultAzureCredentialBuilder()
+                .requireEnvVars(AzureIdentityEnvVars.AZURE_CLIENT_ID, AzureIdentityEnvVars.AZURE_TENANT_ID,
+                    AzureIdentityEnvVars.AZURE_CLIENT_SECRET)
+                .configuration(configuration)
+                .build());
+
+        // Verify error message contains all missing variables
+        assertTrue(exception.getMessage().contains("Required environment variables are missing:"));
+        assertTrue(exception.getMessage().contains("AZURE_TENANT_ID"));
+        assertTrue(exception.getMessage().contains("AZURE_CLIENT_SECRET"));
+        // Should not contain AZURE_CLIENT_ID since it is present
+        String message = exception.getMessage();
+        assertFalse(message.contains("AZURE_CLIENT_ID"));
+    }
+
+    @Test
+    public void testRequireEnvVarsEmptyValue() {
+        // Setup - create configuration with empty string for required environment variable
+        TestConfigurationSource configSource = new TestConfigurationSource().put("AZURE_CLIENT_ID", CLIENT_ID)
+            .put("AZURE_TENANT_ID", TENANT_ID)
+            .put("AZURE_CLIENT_SECRET", ""); // Empty string should be treated as missing
+        Configuration configuration = TestUtils.createTestConfiguration(configSource);
+
+        // Test - should throw when required env var is empty
+        IllegalStateException exception = assertThrows(IllegalStateException.class,
+            () -> new DefaultAzureCredentialBuilder()
+                .requireEnvVars(AzureIdentityEnvVars.AZURE_CLIENT_ID, AzureIdentityEnvVars.AZURE_TENANT_ID,
+                    AzureIdentityEnvVars.AZURE_CLIENT_SECRET)
+                .configuration(configuration)
+                .build());
+
+        // Verify error message
+        assertTrue(exception.getMessage().contains("Required environment variable is missing: AZURE_CLIENT_SECRET"));
     }
 }
