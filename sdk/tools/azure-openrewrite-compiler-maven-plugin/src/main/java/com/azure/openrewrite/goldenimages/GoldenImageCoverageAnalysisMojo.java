@@ -108,7 +108,7 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
 
         File repoRoot = baseDir.getParentFile().getParentFile();
 
-        // Define the relative paths to the source directories with their simplified names
+        // define the relative paths to the source directories with their simplified names
         Map<String, String> pathMappings = new java.util.LinkedHashMap<>();
         pathMappings.put("appconfiguration-v2/azure-data-appconfiguration/src/main/java/com/azure/v2/data/appconfiguration",
             "com/azure/v2/data/appconfiguration");
@@ -178,6 +178,7 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
     private void logDetailedCoverageMetrics(Map<String, Set<MethodCall>> publicApiByModule,
                                             Set<MethodCall> goldenImageMethods,
                                             Set<MethodCall> uncoveredMethods) {
+        getLog().info("");
         getLog().info("=== DETAILED COVERAGE ANALYSIS BY MODULE ===");
 
         int totalPublicMethods = 0;
@@ -190,7 +191,7 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
             int modulePublicMethods = moduleMethods.size();
             int moduleCoveredMethods = 0;
 
-            // Count how many methods from this module are covered
+            // count how many methods from this module are covered
             for (MethodCall moduleMethod : moduleMethods) {
                 boolean isCovered = goldenImageMethods.stream()
                     .anyMatch(goldenMethod -> methodsMatch(moduleMethod, goldenMethod));
@@ -234,7 +235,6 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
             }
         }
 
-        getLog().info("Found " + uncoveredMethods.size() + " uncovered API methods");
         return uncoveredMethods;
     }
 
@@ -253,6 +253,7 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
                 .filter(path -> {
                     for (Path part : path) {
                         String partName = part.toString();
+                        // filter out folders that are not publicly available
                         if ("implementation".equals(partName) || "cryptography".equals(partName)) {
                             return false;
                         }
@@ -513,7 +514,7 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
     private boolean isSyntheticClass(String className) {
         return className.contains(".Anonymous-")
             || className.contains("$Lambda$")
-            || className.matches(".*\\$\\d+.*"); // e.g., MyClass$1
+            || className.matches(".*\\$\\d+.*");
     }
 
     private void outputMethodCallsToFile(Set<MethodCall> methodCalls, String filename) {
@@ -542,10 +543,8 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
 
             File outputFile = new File("azure-openrewrite-compiler-maven-plugin", filename);
             mapper.writerWithDefaultPrettyPrinter().writeValue(outputFile, root);
+            getLog().info("");
             getLog().info("Method usage analysis written to: " + outputFile.getAbsolutePath());
-//            getLog().info("Total unique method calls found in " + filename + ": " + methodCalls.size());
-//            getLog().info("Classes with method calls: " +
-//                methodCalls.stream().map(MethodCall::getClassName).collect(Collectors.toSet()).size());
         } catch (IOException e) {
             getLog().error("Failed to write method usage analysis to file", e);
         }
@@ -600,30 +599,29 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
             return className + "." + signature;
         }
     }
-    
+
     private void generateHtmlReport(Map<String, Set<MethodCall>> publicApiByModule,
                                     Set<MethodCall> goldenImageMethodCalls,
                                     Set<MethodCall> uncoveredMethods) {
         try {
-            // Calculate overall metrics
+            // calculate overall metrics
             int totalPublicMethods = publicApiByModule.values().stream()
                 .mapToInt(Set::size).sum();
             int totalCoveredMethods = totalPublicMethods - uncoveredMethods.size();
             double overallCoverage = totalPublicMethods > 0 ?
                 ((double) totalCoveredMethods / totalPublicMethods) * 100 : 0;
 
-            // Build module data structure
             Map<String, ModuleData> moduleDataMap = new LinkedHashMap<>();
 
             for (Map.Entry<String, Set<MethodCall>> entry : publicApiByModule.entrySet()) {
                 String modulePath = entry.getKey();
                 Set<MethodCall> moduleMethods = entry.getValue();
 
-                // Group methods by class
+                // group methods by class
                 Map<String, List<MethodCall>> methodsByClass = moduleMethods.stream()
                     .collect(Collectors.groupingBy(MethodCall::getClassName));
 
-                // Calculate class-level coverage
+                // calculate class-level coverage
                 Map<String, ClassData> classDataMap = new LinkedHashMap<>();
                 int moduleCovered = 0;
 
@@ -686,6 +684,7 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
             File outputFile = new File("azure-openrewrite-compiler-maven-plugin", "coverage-report.html");
             Files.write(outputFile.toPath(), html.getBytes());
             getLog().info("HTML coverage report written to: " + outputFile.getAbsolutePath());
+            getLog().info("");
 
         } catch (IOException e) {
             getLog().error("Failed to generate HTML report", e);
@@ -711,7 +710,6 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
         html.append("    <div class=\"container\">\n");
         html.append("        <h1>Azure SDK Golden Image Coverage Report</h1>\n");
 
-        // Overall coverage section
         html.append("        <div class=\"overall-coverage\">\n");
         html.append("            <h2>Overall Coverage</h2>\n");
         html.append("            <div class=\"metric-card\">\n");
@@ -723,7 +721,6 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
         html.append("            </div>\n");
         html.append("        </div>\n");
 
-        // Module list
         html.append("        <div class=\"modules\">\n");
         html.append("            <h2>Modules</h2>\n");
 
@@ -808,7 +805,7 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
             "body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; background: #f5f5f5; color: #333; line-height: 1.6; }\n" +
             ".container { max-width: 1200px; margin: 0 auto; padding: 20px; }\n" +
             "h1 { margin-bottom: 30px; color: #2c3e50; }\n" +
-            "h2 { margin: 20px 0 15px 0; color: #34495e; font-size: 1.5em; }\n" +
+            "h2 { margin: 0px 0 15px 0; color: #34495e; font-size: 1.5em; }\n" +
             ".overall-coverage { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 30px; }\n" +
             ".metric-card { text-align: center; }\n" +
             ".metric-value { font-size: 3em; font-weight: bold; color: #3498db; margin-bottom: 10px; }\n" +
@@ -816,18 +813,19 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
             ".progress-bar { width: 100%; height: 30px; background: #ecf0f1; border-radius: 15px; overflow: hidden; }\n" +
             ".progress-fill { height: 100%; background: linear-gradient(90deg, #3498db, #2ecc71); transition: width 0.3s ease; }\n" +
             ".modules { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }\n" +
-            ".module { border: 1px solid #e0e0e0; border-radius: 6px; margin-bottom: 15px; overflow: hidden; }\n" +
-            ".module-header, .class-header { padding: 15px; background: #f8f9fa; cursor: pointer; display: flex; align-items: center; gap: 10px; transition: background 0.2s; }\n" +
+            ".module { border: 1.5px solid #e0e0e0; border-radius: 6px; margin-bottom: 15px; overflow: hidden; }\n" +
+            ".module-header, .class-header { padding: 15px; cursor: pointer; display: flex; align-items: center; gap: 10px; transition: background 0.2s; }\n" +
             ".module-header:hover, .class-header:hover { background: #e9ecef; }\n" +
             ".toggle-icon { font-size: 0.8em; width: 20px; transition: transform 0.2s; }\n" +
             ".toggle-icon.expanded { transform: rotate(90deg); }\n" +
-            ".module-name, .class-name { flex: 1; font-weight: 600; }\n" +
+            ".module-name { flex: 1; font-weight: 600; }\n" +
+            ".class-name { flex: 1; font-weight: 400; }\n" +
             ".coverage-badge { padding: 4px 12px; border-radius: 12px; font-size: 0.9em; font-weight: bold; background: #3498db; color: white; }\n" +
             ".method-count { color: #7f8c8d; font-size: 0.9em; }\n" +
             ".module-content, .class-content { display: none; }\n" +
-            ".class { margin: 10px; border: 1px solid #e0e0e0; border-radius: 4px; }\n" +
+            ".class { margin: 15px; border: 1px solid #e0e0e0; border-radius: 4px; }\n" +
             ".class-header { background: #ffffff; }\n" +
-            ".methods-table { width: 100%; border-collapse: collapse; margin: 10px; }\n" +
+            ".methods-table { width: 98%; border-collapse: collapse; margin: 10px; }\n" +
             ".methods-table th { background: #f8f9fa; padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid #dee2e6; }\n" +
             ".methods-table td { padding: 5px 12px; border-bottom: 1px solid #e9ecef; }\n" +
             ".methods-table tr.covered { background: #f0f8f2; }\n" +
