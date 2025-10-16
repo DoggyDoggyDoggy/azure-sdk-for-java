@@ -1,5 +1,37 @@
 # Release History
 
+## 5.22.0-beta.1 (Unreleased)
+
+### Features Added
+
+### Breaking Changes
+
+### Bugs Fixed
+
+## 5.21.1 (2025-09-25)
+
+### Other Changes
+
+#### Dependency Updates
+
+- Upgraded `azure-core` from `1.56.0` to version `1.56.1`.
+- Upgraded `azure-core-amqp` from `2.11.0` to version `2.11.1`.
+
+## 5.21.0 (2025-08-11)
+
+### Features Added
+
+- Added support for geo-replication capability. ([44272](https://github.com/Azure/azure-sdk-for-java/pull/44272))
+
+### Other Changes
+
+- The `getOffset()` method, which returns a `Long`, has been deprecated in `EventData`, `SystemProperties`, and `Checkpoint`. Replaced with `getOffsetString()`.
+
+#### Dependency Updates
+
+- Upgraded `azure-core` from `1.55.4` to version `1.56.0`.
+- Upgraded `azure-core-amqp` from `2.10.2` to version `2.11.0`.
+
 ## 5.20.5 (2025-07-24)
 
 ### Other Changes
@@ -37,7 +69,6 @@
 - Upgraded `azure-core` from `1.55.2` to version `1.55.3`.
 - Upgraded `azure-core-amqp` from `2.9.15` to version `2.9.16`.
 
-
 ## 5.20.1 (2025-02-25)
 
 ### Other Changes
@@ -46,6 +77,21 @@
 
 - Upgraded `azure-core-amqp` from `2.9.12` to version `2.9.15`.
 - Upgraded `azure-core` from `1.54.1` to version `1.55.2`.
+
+## 5.21.0-beta.1 (2025-02-21)
+
+### Features Added
+
+- Added support for geo-replication capability. ([44272](https://github.com/Azure/azure-sdk-for-java/pull/44272))
+
+### Other Changes
+
+- The `getOffset()` method, which returns a `Long`, has been deprecated in `EventData`, `SystemProperties`, and `Checkpoint`. Replaced with `getOffsetString()`.
+
+#### Dependency Updates
+
+- Upgraded `azure-core` from `1.53.0` to version `1.55.2`.
+- Upgraded `azure-core-amqp` from `2.9.12` to version `2.9.15`.
 
 ## 5.20.0 (2025-02-11)
 
@@ -236,7 +282,6 @@
 - Upgraded `azure-core` from `1.46.0` to version `1.47.0`.
 - Upgraded `azure-core-amqp` from `2.9.1` to version `2.9.2`.
 
-
 ## 5.18.1 (2024-02-16)
 
 ### Bugs Fixed
@@ -329,7 +374,6 @@
 
 - Upgraded `azure-core-amqp` from `2.8.6` to version `2.8.7`.
 - Upgraded `azure-core` from `1.40.0` to version `1.41.0`.
-
 
 ## 5.15.6 (2023-06-20)
 
@@ -859,5 +903,4 @@ For release notes and more information please visit https://aka.ms/azure-sdk-pre
   by calling `EventHubPublisher.close()` or `EventHubConsumer.close()`.
 - Creating more than two concurrent `EventHubClients` or `EventHubConsumers` does not work. Limit usage of concurrent
   clients and consumers to two to avoid failures.
-
 
