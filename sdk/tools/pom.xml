@@ -12,7 +12,7 @@
     <module>azure-sdk-archetype</module>
     <module>azure-sdk-build-tool</module>
     <module>azure-openrewrite</module>
-    <module>azure-openrewrite-compiler-maven-plugin</module>
+    <module>azure-openrewrite-compiler-and-coverage-plugin</module>
     <module>linting-extensions</module>
   </modules>
 </project>
