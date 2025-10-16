@@ -5,7 +5,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.azure</groupId>
-  <artifactId>azure-openrewrite-compiler-maven-plugin</artifactId>
+  <artifactId>azure-openrewrite-compiler-and-coverage-maven-plugin</artifactId>
   <version>1.0.0-beta.1</version>
   <packaging>maven-plugin</packaging>
 

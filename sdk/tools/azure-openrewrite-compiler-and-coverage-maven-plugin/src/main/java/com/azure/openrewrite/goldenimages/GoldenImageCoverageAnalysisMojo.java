@@ -541,7 +541,7 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
                     root.set(className, methodArray);
                 });
 
-            File outputFile = new File("azure-openrewrite-compiler-maven-plugin", filename);
+            File outputFile = new File("azure-openrewrite-compiler-and-coverage-maven-plugin", filename);
             mapper.writerWithDefaultPrettyPrinter().writeValue(outputFile, root);
             getLog().info("");
             getLog().info("Method usage analysis written to: " + outputFile.getAbsolutePath());
@@ -681,7 +681,7 @@ public class GoldenImageCoverageAnalysisMojo extends AbstractMojo {
             );
 
             // Write to file
-            File outputFile = new File("azure-openrewrite-compiler-maven-plugin", "coverage-report.html");
+            File outputFile = new File("azure-openrewrite-compiler-and-coverage-maven-plugin", "coverage-report.html");
             Files.write(outputFile.toPath(), html.getBytes());
             getLog().info("HTML coverage report written to: " + outputFile.getAbsolutePath());
             getLog().info("");
